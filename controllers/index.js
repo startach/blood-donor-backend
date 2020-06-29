@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const customers = require('./customers')
 
-const axios = require('axios')
-const { StringDecoder } = require('string_decoder')
 const body = { "RequestHeader": { "Application": 101, "Module": "BloodBank", "Function": "GetAllDetailsDonations", "Token": "" }, "RequestData": "" }
 
 let headers = {
@@ -68,7 +65,14 @@ getAllCustomers = () => {
     req.end();
 }
 
-getAllCustomers();
+//getAllCustomers();
+
+router.get('/', (req, res) => {
+    res.render("home", {
+      title: 'blod donation organaization',
+      username: "cordinator",
+    })
+  })
 
 
 module.exports = router;
