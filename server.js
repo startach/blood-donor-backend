@@ -1,7 +1,8 @@
-const app = require('./app');
+const app = require('./src/app');
 
-const port = process.env.PORT || 4000
+app.set('port', process.env.PORT || 4000)
+let port = app.get('port')
 
-app.listen(app.get('port'), () => {
+app.listen(port, () => {
     console.log(`App running on port:${port}`)
 })
