@@ -2,12 +2,16 @@
 <div class="login">
 
     <main class="login_container">
-        <img src="/img/img-login.svg" alt="">
-        <span>Admin login</span>
-        <form action="" class="login_form">
-            <input type="password" placeholder="password">
-            <input type="submit">
+        <img src="/img/img-logo.svg" alt="" class="login_logo" >
+        <h2 class="login-formTitle">Admin Login</h2>
+        <form action="" class="login_form {{#if error}}input_incorrect{{/if}}">
+            <input type="password" placeholder="password" >
+            <input type="submit" value="">
         </form>
+        <button class="login_forgotPass">Forgot your password?</button>
+
+        <h2 class="login_error">{{error}}</h2>
+
     </main>
 
 
