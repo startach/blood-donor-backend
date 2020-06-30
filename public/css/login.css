@@ -26,4 +26,14 @@
 }
 .login_form input[type="password"]{
     height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.login_form input[type="submit"]{
+    height: 100%;
+    /*padding: 0;*/
+    margin: 0;
+    background-color: var(--color-navy);
+    color: white;
+    border: 0;
 }
