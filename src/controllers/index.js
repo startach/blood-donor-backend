@@ -9,6 +9,17 @@ router.get('/', (req, res) => {
     })
   })
 
+router.get('/goals', (req, res) => {
+  res.render('goals', {
+    goal: '10,000',
+    current:'2033',
+  })
+})
+
+router.get('/login', (req, res) => {
+  res.render('login')
+})
+
  router.get('/locations',locations.getAllLocations ); 
 
 
