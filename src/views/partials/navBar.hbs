@@ -1,4 +1,4 @@
-
+{{#if signedIn}}
 <div class="mainWrapper">
     <div class="mainWrapper_navbar">
         <img src="/img/img-logo.svg" alt="blood-donor">
@@ -10,9 +10,10 @@
         </div>
         <div class="navbar_bottom_links">
             <a><span>Change password</span></a>
-            <a><span>Logout</span></a>
+            <a href="/logout"><span>Logout</span></a>
         </div>
         </div>
         
     </div>
 </div>
+{{/if}}

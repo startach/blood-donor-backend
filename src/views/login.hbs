@@ -3,10 +3,10 @@
     <main class="login_container">
         <img src="/img/img-logo.svg" alt="" class="login_logo">
         <h2 class="login-formTitle">Admin Login</h2>
-        <form action="" class="login_form {{#if error}}input_incorrect{{/if}}" onsubmit="{{onSubmit}}">
+        <form action="/login"  method="post" class="login_form {{#if error}}input_incorrect{{/if}}" >
             <div class="login_form_inputs">
-                <input type="email" placeholder="email..." />
-                <input type="password" placeholder="password"/>
+                <input type="email" placeholder="email..." name="email"  />
+                <input type="password" placeholder="password" name="password" />
             </div>
             <input type="submit" value="">
         </form>

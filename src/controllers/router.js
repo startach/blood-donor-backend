@@ -1,7 +1,8 @@
 const locations = require("./locations");
-
+const {redirectIfLoggedIn} = require("../middleware/authValidator");
+const {redirectIfLoggedOut} = require("../middleware/authValidator");
 const router = require("express").Router()
-
+const {firebase} = require("../database")
 
 router.get('/', (req, res) => {
     res.render("home", {
@@ -10,26 +11,34 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/goals', (req, res) => {
+router.get('/goals', redirectIfLoggedOut("/login"), (req, res) => {
     res.render('goals', {
         goal: '10,000',
-        current:'2033',
+        current: '2033',
     })
 })
 
-router.get('/login', (req, res) => {
-    res.render('login',{
-        error:"incorrect password",
-        onSubmit:(e)=>{
-            // e.preventDefault()
-            console.log("test")
-        }
+router.route('/login')
+    .all(redirectIfLoggedIn("/login"))
+    .get((req, res) => {
+        if (firebase.auth().currentUser)
+            return res.redirect("/")
+        res.render('login')
     })
+    .post((req, res) => {
+
+        firebase.auth().signInWithEmailAndPassword(req.body.email, req.body.password)
+            .then(() => res.redirect("/"))
+            .catch((e) => res.render("login", {error: e.message}))
+    })
+
+router.get("/logout",(req,res)=>{
+    firebase.auth().signOut().finally(()=> res.redirect("/login"))
 })
 
-router.get('/locations',locations.getAllLocations );
+
+router.get('/api/locations', locations.getAllLocations);
 
 
-
-module.exports =  router;
+module.exports = router;
 

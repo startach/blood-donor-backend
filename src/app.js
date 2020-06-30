@@ -5,19 +5,21 @@ const helmet = require('helmet')
 const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
+const {loadUserData} = require("./middleware/authValidator");
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded());
 app.use(cookieParser())
 app.use(helmet())
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-
-
+app.use(loadUserData)
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(router)
+
 
 app.engine(
 	"hbs",
