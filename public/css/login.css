@@ -27,31 +27,36 @@
 .login_form {
     display: flex;
     justify-content: stretch;
-    height: 50px;
+    align-items: stretch;
+    height: fit-content;
     width: 100%;
     margin-bottom: 10px;
 
 }
-.login_form input[type="password"] {
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-
-    padding: 5px 5px 5px 10px;
-    border: 0;
-
-    background-color: var(--color-gray-lite);
+.login_form_inputs{
+    width: 80%;
 
 }
+
+
+.login_form input[type="password"], .login_form input[type="email"] {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 10px;
+    border: 0;
+    background-color: var(--color-gray-lite);
+    box-shadow: inset 0 2px 2px rgba(0,0,0,.3);
+}
 .login_form input[type="submit"] {
-    height: 100%;
     width: 60px;
     /*padding: 0;*/
-    margin: 0;
+    /*margin: 0;*/
     color: white;
     border: 0;
     background: url("/img/icon-arrow.svg") center no-repeat  , var(--color-navy);
-    background-size: 50% 50%;
+    background-size: 30% 30%;
+    /*margin-left: 5px;*/
 }
 
 
