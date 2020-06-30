@@ -1,8 +1,43 @@
 const locations = require("./locations");
-const {redirectIfLoggedIn} = require("../middleware/authValidator");
-const {redirectIfLoggedOut} = require("../middleware/authValidator");
+const { redirectIfLoggedIn } = require("../middleware/authValidator");
+const { redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
-const {firebase} = require("../database")
+const { firebase } = require("../database")
+
+let array1 = [
+    {
+        title: {
+            he: "...",
+            en: "Blood donation needed, Haifa, A+",
+            ar: "..."
+        },
+        context: {
+            he: "...",
+            en: "Haifa District",
+            ar: "..."
+        },
+        bloodType: "A+",
+        addedDate: new Date(),
+        expDate: new Date(),
+        hidden: true
+    },
+    {
+        title: {
+            he: "...",
+            en: "Blood donation Needed, Tel Aviv, O-",
+            ar: "..."
+        },
+        context: {
+            he: "...",
+            en: "Tel Aviv",
+            ar: "..."
+        },
+        bloodType: "O-",
+        addedDate: new Date(),
+        expDate: new Date(),
+        hidden: true
+    }
+]
 
 router.get('/', (req, res) => {
     res.render("home", {
@@ -29,13 +64,21 @@ router.route('/login')
 
         firebase.auth().signInWithEmailAndPassword(req.body.email, req.body.password)
             .then(() => res.redirect("/"))
-            .catch((e) => res.render("login", {error: e.message}))
+            .catch((e) => res.render("login", { error: e.message }))
     })
 
-router.get("/logout",(req,res)=>{
-    firebase.auth().signOut().finally(()=> res.redirect("/login"))
+router.get("/logout", (req, res) => {
+    firebase.auth().signOut().finally(() => res.redirect("/login"))
 })
 
+router.get("/home", (req, res) => {
+
+    res.render("login");
+})
+
+router.get('/desktop', (req, res) => {
+    res.render("desktop", { data: array1 })
+})
 
 router.get('/api/locations', locations.getAllLocations);
 

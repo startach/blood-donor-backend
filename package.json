@@ -13,6 +13,7 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "axios": "^0.19.2",
+    "connect-livereload": "^0.6.1",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -20,6 +21,7 @@
     "express-handlebars": "^4.0.4",
     "firebase": "^7.15.5",
     "helmet": "^3.23.3",
+    "livereload": "^0.9.1",
     "nodemon": "^2.0.4"
   }
 }

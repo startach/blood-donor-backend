@@ -6,7 +6,16 @@ const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
 const {loadUserData} = require("./middleware/authValidator");
+const showEditPanelHelper = require('./views/helpers/showEditPanel.js')
+const dateHelper = require('./views/helpers/dateHelper.js')
+
+const livereload = require("livereload");
+var liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'public'));
+
+var connectLivereload = require("connect-livereload");
 const app = express();
+app.use(connectLivereload());
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -27,7 +36,11 @@ app.engine(
 		extname: "hbs",
 		layoutsDir: path.join(__dirname, "views", "layouts"),
 		partialsDir: path.join(__dirname, 'views', 'partials'),
-		defaultLayout: "main"
+		defaultLayout: "main",
+		helpers: {
+			showEditPanelHelper: showEditPanelHelper,
+			dateHelper: dateHelper
+		}
 	})
 );
 
