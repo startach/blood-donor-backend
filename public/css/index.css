@@ -2,6 +2,7 @@
     --color-navy : #314E71;
     --color-white : white;
     --color-gray-lite : #E8E8E8;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -34,3 +35,4 @@ body{
         transform: translateX(0px);
     }
 }
+
