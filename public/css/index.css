@@ -1,0 +1,12 @@
+:root{
+    --color-navy : #314E71;
+    --color-white : white;
+    /*--box-shadow: ;*/
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
