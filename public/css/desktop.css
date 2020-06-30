@@ -1,0 +1,84 @@
+section.desktop3Section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    font-family: 'Alef';
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #B9819229;
+}
+
+div.editContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.editContainer button {
+    width: 70px;
+    background-color: #1D886D;
+    border: none;
+    color: white;
+    font: inherit;
+}
+
+.editContainer p {
+    width: 100px;
+    background-color: white;
+    color: black;
+    height: 100%;
+    text-align: right;
+    line-height: 50px;
+    margin: 0 5px 0 0;
+    padding-right: 15px;
+}
+
+p.titleParagraph {
+    flex-grow: 1;
+    color: black;
+    border: none;
+    margin: 0;
+    text-align: center;
+}
+ #finalEdit{
+    margin-top: 15px;
+    margin-bottom: 15px;
+ }
+
+div.languageContainer {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #A38A8A;
+    margin: 10px 0 0px 0;
+    padding: 0 0 10px 0;
+}
+
+div.languageContainer:last-of-type {
+    margin-bottom: 10px;
+}
+
+.languageContainer h2 {
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.languageContainer input {
+    width: 95%;
+    height: 40px;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.languageContainer label {
+    align-self: flex-end;
+    margin-right: 2.5%;
+    justify-content: right;
+}

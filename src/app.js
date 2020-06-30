@@ -6,7 +6,14 @@ const helmet = require('helmet')
 const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
+
+const livereload = require("livereload");
+var liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'public'));
+
+var connectLivereload = require("connect-livereload");
 const app = express();
+app.use(connectLivereload());
 
 app.use(express.json());
 app.use(cookieParser())

@@ -1,14 +1,15 @@
+<link rel="stylesheet" href="/css/desktop.css">
+<link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
+
 <section class="desktop3Section">
+    {{#each data }}
     <div class="editContainer">
-        <button />
-        <input />
-        <p>Today's Date?</p>
+        <button>Edit</button>
+        <p class="titleParagraph">{{title.en}}</p>
+        <p>{{addedDate}}</p>
     </div>
-    <div class="editContainer">
-        <button />
-        <input />
-        <p>Today's Date?</p>
-    </div>
+    {{/each}}
+
     <div class="languageContainer">
         <h2>Hebrew</h2>
         <label>Title</label>
@@ -16,14 +17,14 @@
         <label>Subtitle</label>
         <input type="text" placeholder="Do we want a placeholder?" />
     </div>
-        <div class="languageContainer">
+    <div class="languageContainer">
         <h2>English</h2>
         <label>Title</label>
         <input type="text" placeholder="Do we want a placeholder?" />
         <label>Subtitle</label>
         <input type="text" placeholder="Do we want a placeholder?" />
     </div>
-        <div class="languageContainer">
+    <div class="languageContainer">
         <h2>Arabic</h2>
         <label>Title</label>
         <input type="text" placeholder="Do we want a placeholder?" />
@@ -31,20 +32,9 @@
         <input type="text" placeholder="Do we want a placeholder?" />
     </div>
 
-    <div class="editContainer">
-        <button />
+    <div class="editContainer" id="finalEdit">
+        <button>Edit</button>
         <input />
         <p>Today's Date?</p>
     </div>
 </section>
-
-section.desktop3Section{}
-div.editContainer{}
-.editContainer button {}
-.editContainer input {}
-.editContainer p {}
-
-div.languageContainer{}
-languageContainer h2 {}
-languageContainer input {}
-languageContainer label {}
