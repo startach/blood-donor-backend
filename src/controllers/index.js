@@ -4,7 +4,7 @@ const locations = require('./locations');
 
 router.get('/', (req, res) => {
     res.render("home", {
-      title: 'blod donation organaization',
+      title: 'blood donation organaization',
       username: "cordinator",
     })
   })
