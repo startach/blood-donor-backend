@@ -1,0 +1,15 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+
+.mainWrapper_navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainWrapper_navbar img {
+    width: 70%;
+    height: 70%;
+}
