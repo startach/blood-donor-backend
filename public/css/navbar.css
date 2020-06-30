@@ -1,12 +1,17 @@
 .mainWrapper {
     display: flex;
     flex-direction: row;
-    background-color: blue;
+
 }
 
 .mainWrapper_navbar {
     display: flex;
     flex-direction: column;
+}
+
+.navbar_top_links {
+    display: flex;
+    flex-direction: row;
 }
 
 .mainWrapper_navbar img {
