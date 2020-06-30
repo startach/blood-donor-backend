@@ -15,7 +15,8 @@ let array1 = [
      }, 
     bloodType: "A+",
     addedDate:new Date(),
-    expDate:new Date()
+    expDate:new Date(),
+    hidden: true
 },
 {
     title:{
@@ -30,7 +31,8 @@ let array1 = [
      }, 
     bloodType: "O-",
     addedDate:new Date(),
-    expDate:new Date()
+    expDate:new Date(),
+    hidden: true
 }
 ]
 

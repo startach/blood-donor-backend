@@ -82,3 +82,15 @@ div.languageContainer:last-of-type {
     margin-right: 2.5%;
     justify-content: right;
 }
+
+div.editExpand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.hidden {
+    display: none;
+}

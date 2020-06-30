@@ -6,6 +6,8 @@ const helmet = require('helmet')
 const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
+const showEditPanelHelper = require('./views/helpers/showEditPanel.js')
+const dateHelper = require('./views/helpers/dateHelper.js')
 
 const livereload = require("livereload");
 var liveReloadServer = livereload.createServer();
@@ -34,7 +36,11 @@ app.engine(
 		extname: "hbs",
 		layoutsDir: path.join(__dirname, "views", "layouts"),
 		partialsDir: path.join(__dirname, 'views', 'partials'),
-		defaultLayout: "main"
+		defaultLayout: "main",
+		helpers: {
+			showEditPanelHelper: showEditPanelHelper,
+			dateHelper: dateHelper
+		}
 	})
 );
 
