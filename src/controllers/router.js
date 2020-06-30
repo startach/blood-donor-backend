@@ -3,6 +3,7 @@ const { redirectIfLoggedIn } = require("../middleware/authValidator");
 const { redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
 const { firebase } = require("../database")
+const { goalGet, goalEdit } = require('../modules/goals')
 
 let array1 = [
     {
@@ -46,12 +47,19 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/goals', redirectIfLoggedOut("/login"), (req, res) => {
-    res.render('goals', {
-        goal: '10,000',
-        current: '2033',
+router.route('/goals')
+    .all(redirectIfLoggedOut("/login"))
+    .get((req, res) => {
+        const goalData = goalGet().then((data) => {
+            res.render('goals', {
+                data
+            })
+        })
     })
-})
+    .post((req, res) => {
+        goalEdit(Number(req.body.current), Number(req.body.goal))
+        return res.redirect('/goals')
+    })
 
 router.route('/login')
     .all(redirectIfLoggedIn("/login"))
