@@ -15,11 +15,7 @@ const goalEdit = (current, goal) => {
         return new Error('current should be bigger than zero');
     }
 
-    result = editGoal({ "current" : current, "goal": goal })
-
-    if (typeof result === 'Error') {
-        return result
-    }
+    return editGoal({ "current" : current, "goal": goal })
 }
 
 
