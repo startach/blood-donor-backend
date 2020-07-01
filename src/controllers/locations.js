@@ -1,18 +1,20 @@
+const fs = require('fs');
+
+// let rawdata = fs.readFileSync('../database/locations.json');
+// let student = JSON.parse(rawdata);
+
 exports.getAllLocations = (req, res) => {
-    getAllCustomers().then((result) => {
-        res.status(200).json({result, code: 200});
-    })
+    let rawdata = fs.readFileSync('/home/farid/WebAhead/WebAheadProjects/blood-donr-back-end/src/database/locations.json');
+    let locations = JSON.parse(rawdata);
+    console.log(locations);
+    res.status(200).json(locations);
 
+    // getAllCustomers().then((result) => {
+    //     res.status(200).json({ "result": result, "code": 200 });
+    // })
 }
 
-const body = {
-    "RequestHeader": {
-        "Application": 101,
-        "Module": "BloodBank",
-        "Function": "GetAllDetailsDonations",
-        "Token": ""
-    }, "RequestData": ""
-}
+const body = { "RequestHeader": { "Application": 101, "Module": "BloodBank", "Function": "GetAllDetailsDonations", "Token": "" }, "RequestData": "" }
 
 let headers = {
     Accept: 'application/json, text/plain, */*',
@@ -62,19 +64,19 @@ getAllCustomers = () => {
 
                 res.on("end", function () {
                     var obj = JSON.parse(chunks);
-
+                    
                     resolve(obj.Result);
                 });
             });
 
             req.write(JSON.stringify({
                 RequestHeader:
-                    {
-                        Application: 101,
-                        Module: 'BloodBank',
-                        Function: 'GetAllDetailsDonations',
-                        Token: ''
-                    },
+                {
+                    Application: 101,
+                    Module: 'BloodBank',
+                    Function: 'GetAllDetailsDonations',
+                    Token: ''
+                },
                 RequestData: ''
             }));
             req.end();
