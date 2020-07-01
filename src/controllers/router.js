@@ -118,6 +118,7 @@ router.route("/changePassword")
     })
     .post((req, res) => {
         const {password, confirmPassword} = req.body;
+        console.log(req.body)
         if (password !== confirmPassword)
             return res.render("changePassword", {error: "passwords do not match"});
 
