@@ -9,13 +9,9 @@ const {loadUserData} = require("./middleware/authValidator");
 const showEditPanelHelper = require('./views/helpers/showEditPanel.js')
 const dateHelper = require('./views/helpers/dateHelper.js')
 
-const livereload = require("livereload");
-var liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, 'public'));
 
-var connectLivereload = require("connect-livereload");
 const app = express();
-app.use(connectLivereload());
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
