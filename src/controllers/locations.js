@@ -15,7 +15,7 @@ exports.getLocationsIframe = (req, res) => {
 
 exports.getAllLocations = (req, res) => {
 
-    getAllCustomers().then((result) => {
+    fetchLocations().then((result) => {
         res.status(200).json({ result, code: 200 });
     })
 }
