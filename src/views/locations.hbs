@@ -48,7 +48,7 @@
         var filteredResults = result.filter(({ DateDonation }) =>
             DateDonation && (new Date(DateDonation + '.000+00:00').toJSON().split('T')[0] === date.toJSON().split('T')[0]))
 
-        var cities = filteredResults.map(({ City }) => City)
+        var cities = Array.from(new Set(filteredResults.map(({ City }) => City)))
 
         if (city) {
             filteredResults = filteredResults.filter(({ City }) => City === city)
