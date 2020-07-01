@@ -4,7 +4,7 @@
     <div class="goals_form_title">
         <span>Goal</span>
     </div>
-    <form class="goals_form" action="/goals" method="POST" onload="updateDropValue()">
+    <form class="goals_form" action="/goals" method="POST" >
         <label for="Current">Current 
             <input type="number" name="current" value="{{data.current}}" min="0" id="current" oninput="updateDropValue()"/>
         </label>
@@ -39,9 +39,8 @@
     const dropFill =  document.getElementById("drop-fill");
 
     function updateDropValue(){
-
-        console.log(currentInput.value,goalInput.value)
         dropPercentage.textContent=`${parseInt(currentInput.value/goalInput.value * 100)}%`;
         dropFill.style.height=`${parseInt(currentInput.value/goalInput.value * 100)}%`;
     }
+    updateDropValue();
 </script>
