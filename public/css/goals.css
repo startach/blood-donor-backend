@@ -62,3 +62,19 @@
     width: 100%;
     background-color: var(--color-gray-lite);
 }
+
+.message {
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-gray-lite);
+    height: 20px;
+}
+
+.error_message {
+    color: red;
+}
+
+.success_message {
+    color: green;
+    
+}
