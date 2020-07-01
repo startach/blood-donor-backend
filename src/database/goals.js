@@ -11,17 +11,13 @@ const editGoal = (data) => new Promise( (resolve, reject) => {
 
 const getGoal = () => new Promise(async (resolve, reject) => {
     const goalsRef = db.collection('general').doc('yearly_goals');
-    const doucsRef = db.collection('general');
     const doc = await goalsRef.get();
-    const ducs = await doucsRef.get();
     if (!doc.exists) {
         return new Error('No such document!')
     } else {
         try {
             const data = await doc.data();
-            const id = await doc.id;
             resolve(data);
-            console.log(id);
         } catch (e) {
             reject(e);
         }
