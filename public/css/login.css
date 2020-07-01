@@ -39,26 +39,14 @@
 }
 
 
-.login_form input[type="password"], .login_form input[type="email"] {
-    height: 50px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px 5px 5px 10px;
-    border: 0;
-    background-color: var(--color-gray-lite);
-    box-shadow: inset 0 2px 2px rgba(0,0,0,.3);
-}
 .login_form input[type="submit"] {
     width: 60px;
-    /*padding: 0;*/
-    /*margin: 0;*/
-    color: white;
-    border: 0;
+    height: unset;
+    margin-left:5px ;
     background: url("/img/icon-arrow.svg") center no-repeat  , var(--color-navy);
     background-size: 30% 30%;
-    /*margin-left: 5px;*/
-}
 
+}
 
 .login_forgotPass{
     height: 50px;
