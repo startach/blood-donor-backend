@@ -1,22 +1,6 @@
 const db = require('./index')
-const Joi = require('@hapi/joi');
 
-const schema = Joi.object({
-    current: Joi.number()
-        .integer()
-        .min(0)
-        .max(1000000)
-        .required(),
-    goal: Joi.number()
-        .integer()
-        .min(0)
-        .max(1000000)
-        .required()
-
-})
-const editGoal = (data) => new Promise(async (resolve, reject) => {
-    if (schema.validate(data).error)
-         return new Error(schema.validate(data).error.message)
+const editGoal = (data) => new Promise( (resolve, reject) => {
     db.collection('general').doc('yearly_goals').set(data).then(()=>{
         resolve('objobject updated');
     }).catch((e)=>{
