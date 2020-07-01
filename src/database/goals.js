@@ -1,4 +1,4 @@
-const db = require('./index')
+const {db} = require('./index')
 
 const editGoal = (data) => new Promise( (resolve, reject) => {
     db.collection('general').doc('yearly_goals').set(data).then(()=>{

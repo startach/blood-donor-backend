@@ -38,7 +38,6 @@ const goalEdit = (current, goal) => {
     return editGoal()
 }
 
-
 const goalGet = () => {
     return getGoal();
 }
