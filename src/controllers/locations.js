@@ -1,11 +1,18 @@
 exports.getAllLocations = (req, res) => {
     getAllCustomers().then((result) => {
-        res.status(200).json({ result, code: 200 });
+        res.status(200).json({result, code: 200});
     })
-    
+
 }
 
-const body = { "RequestHeader": { "Application": 101, "Module": "BloodBank", "Function": "GetAllDetailsDonations", "Token": "" }, "RequestData": "" }
+const body = {
+    "RequestHeader": {
+        "Application": 101,
+        "Module": "BloodBank",
+        "Function": "GetAllDetailsDonations",
+        "Token": ""
+    }, "RequestData": ""
+}
 
 let headers = {
     Accept: 'application/json, text/plain, */*',
@@ -62,12 +69,12 @@ getAllCustomers = () => {
 
             req.write(JSON.stringify({
                 RequestHeader:
-                {
-                    Application: 101,
-                    Module: 'BloodBank',
-                    Function: 'GetAllDetailsDonations',
-                    Token: ''
-                },
+                    {
+                        Application: 101,
+                        Module: 'BloodBank',
+                        Function: 'GetAllDetailsDonations',
+                        Token: ''
+                    },
                 RequestData: ''
             }));
             req.end();

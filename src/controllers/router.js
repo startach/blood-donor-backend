@@ -1,9 +1,15 @@
 const locations = require("./locations");
+const home = require("./routes/home");
+const goals = require("./routes/goals");
+const login = require("./routes/login");
+const logout = require("./routes/logout");
+const resetPassword = require("./routes/resetPassword");
+const changePassword = require("./routes/changePassword");
 const {redirectIfLoggedIn} = require("../middleware/authValidator");
 const {redirectIfLoggedOut} = require("../middleware/authValidator");
 const router = require("express").Router()
 const {firebase} = require("../database")
-const {goalGet, goalEdit} = require('../modules/goals')
+
 
 let array1 = [
     {
@@ -40,92 +46,35 @@ let array1 = [
     }
 ]
 
-router.get('/', redirectIfLoggedOut("/login"), (req, res) => {
-    res.render("home", {
-        title: 'blood donation organaization',
-        username: "cordinator",
-    })
-})
+router.get('/', redirectIfLoggedOut("/login"), home.get)
 
 
 router.route('/goals')
     .all(redirectIfLoggedOut("/login"))
-    .get((req, res) => {
-        const goalData = goalGet().then((data) => {
-            res.render('goals', {
-                data
-            })
-        })
-    })
-    .post((req, res) => {
+    .get(goals.get)
+    .post(goals.post);
 
-        const request = goalEdit(Number(req.body.current), Number(req.body.goal));
-        res.render('goals', {
-            data: {
-                current: req.body.current,
-                goal: req.body.goal
-            },
-            error: (request instanceof Error) ? request.message : null,
-            message: (request instanceof Error) ? null : 'Saved',
-        })
-
-    })
 
 
 router.route('/login')
     .all(redirectIfLoggedIn("/login"))
-    .get((req, res) => {
-        if (firebase.auth().currentUser)
-            return res.redirect("/")
-        res.render('login')
-    })
-    .post((req, res) => {
+    .get(login.get)
+    .post(login.post)
 
-        firebase.auth().signInWithEmailAndPassword(req.body.email, req.body.password)
-            .then(() => res.redirect("/"))
-            .catch((e) => res.render("login", {error: e.message}))
-    })
 
-router.route('/resetPassword') 
-.get((req, res) => {
-    return res.render('resetpassword')
-})
-.post((req, res) => {
-    const emailAddress = req.body.emailAddress;
+router.route('/resetPassword')
+    .get(resetPassword.get)
+    .post(resetPassword.post)
 
-    firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
-        return res.render('resetpassword', {
-            message: 'Please check your email to reset your password',
-        }) // Email sent.
-      }).catch((e) => {
-        return res.render('resetpassword', {
-            error: e,
-        }) // An error happened.
-      });
-})
 
-router.get("/logout", (req, res) => {
-    firebase.auth().signOut().finally(() => res.redirect("/login"))
-})
-router.get("/home", redirectIfLoggedOut("/login"), (req, res) => {
+router.get("/logout", logout.get)
 
-    res.render("login");
-})
+
 router.route("/changePassword")
     .all(redirectIfLoggedOut("/login"))
-    .get((req, res) => {
-        res.render("changePassword");
-    })
-    .post((req, res) => {
-        const {password, confirmPassword} = req.body;
-        console.log(req.body)
-        if (password !== confirmPassword)
-            return res.render("changePassword", {error: "passwords do not match"});
+    .get(changePassword.get)
+    .post(changePassword.post)
 
-        firebase.auth().currentUser.updatePassword(password)
-            .then(() => res.render("changePassword", {message: "updated successfully"}))
-            .catch(e => res.render("changePassword", {error: e.message}))
-    })
 
 router.get('/desktop', redirectIfLoggedOut("/login"), (req, res) => {
     res.render("desktop", {data: array1})

@@ -4,6 +4,7 @@
     function log(index) { document.getElementById(`alerts_${index}`).classList.toggle("hidden") }
 </script>
 
+
 <section class="desktop3Section">
     {{#each data}}
     <div class="editContainer">
@@ -11,6 +12,9 @@
         <p class="titleParagraph">{{title.en}}</p>
         <p>{{dateHelper addedDate}}</p>
     </div>
+
+
+
     <div class="editExpand hidden" id="alerts_{{@index}}">
         <div class="languageContainer">
             <h2>Hebrew</h2>
