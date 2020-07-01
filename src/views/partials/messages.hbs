@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/index.css">
+
+{{#if message}}
+    <div class="message {{className}} {{#if
+            message}} success_message {{else}} error_message {{/if}}">{{message}}{{error}}</div>
+
+{{/if}}
+
+{{#if error}}
+    <div class="message {{className}} {{#if
+            message}} success_message {{else}} error_message {{/if}}">{{message}}{{error}}</div>
+{{/if}}
