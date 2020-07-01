@@ -1,4 +1,4 @@
-const db = require('./index')
+const {db} = require('./index')
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
