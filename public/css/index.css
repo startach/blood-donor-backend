@@ -28,9 +28,11 @@ body {
 
 
 .input_incorrect{
-    border-bottom: 3px red solid;
+    border-bottom: 3px red solid !important;
+    
     box-sizing: border-box;
     animation: shake .5s linear ;
+
 }
 @keyframes shake {
     0%{
