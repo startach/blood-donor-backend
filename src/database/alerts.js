@@ -1,4 +1,4 @@
-const db = require('./index')
+const {db} = require('./index')
 
 const addAlert = (data) => new Promise((resolve, reject) => {
     db.collection('alerts').doc().set(data).then(() => {

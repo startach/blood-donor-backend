@@ -1,0 +1,64 @@
+.goals_form_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.goals_form_title {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-navy);
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+    color: var(--color-white);
+}
+
+
+.goals_form_title span {
+    padding: 5px;
+}
+
+.goals_form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100px;
+    background-color: var(--color-gray-lite);
+    padding: 5px;
+}
+
+.goals_form label{
+    margin: 2px;
+}
+
+.goals_form button {
+    margin: 2px;
+    border: none;
+    background-color: #1D886D;
+    color: var(--color-white);
+    height: 30px;
+    user-select: none;
+}
+
+
+.goals_form label input {
+    border: none;
+    height: 30px;
+    outline: none;
+    user-select: none;
+
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-gray-lite);
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-gray-lite);
+}

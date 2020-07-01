@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 const db = require('./index')
+=======
+const {db} = require('./index')
+const Joi = require('@hapi/joi');
+>>>>>>> 9ab3e834293ee8347573fd4892145d32238d19b1
 
 const editGoal = (data) => new Promise( (resolve, reject) => {
     db.collection('general').doc('yearly_goals').set(data).then(()=>{
