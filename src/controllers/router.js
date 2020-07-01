@@ -57,8 +57,28 @@ router.route('/goals')
         })
     })
     .post((req, res) => {
-        goalEdit(Number(req.body.current), Number(req.body.goal))
-        return res.redirect('/goals')
+
+        const request = goalEdit(Number(req.body.current), Number(req.body.goal));
+
+        if (request instanceof Error) {
+            return res.render('goals', {
+                error : request.message,
+            })
+        } else {
+            return res.render('goals', {
+                message: 'Saved',
+                data: {
+                    current: req.body.current,
+                    goal: req.body.goal
+                }
+            })
+
+        }
+        
+
+
+
+        
     })
 
 router.route('/login')

@@ -11,4 +11,9 @@
         </label>
         <button type="submit" class="goals_form_saveButton">Save</button>
     </form>
+    {{#if error}}
+        <div class="error-message">{{error}}</div>
+        {{else}}
+        <div class="success-message">{{message}}</div>
+    {{/if}}
 </div>
