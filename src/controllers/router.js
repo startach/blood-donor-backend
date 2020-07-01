@@ -1,9 +1,9 @@
 const locations = require("./locations");
-const { redirectIfLoggedIn } = require("../middleware/authValidator");
-const { redirectIfLoggedOut } = require("../middleware/authValidator");
+const {redirectIfLoggedIn} = require("../middleware/authValidator");
+const {redirectIfLoggedOut} = require("../middleware/authValidator");
 const router = require("express").Router()
-const { firebase } = require("../database")
-const { goalGet, goalEdit } = require('../modules/goals')
+const {firebase} = require("../database")
+const {goalGet, goalEdit} = require('../modules/goals')
 
 let array1 = [
     {
@@ -52,36 +52,22 @@ router.route('/goals')
     .get((req, res) => {
         const goalData = goalGet().then((data) => {
             res.render('goals', {
-                data,
-                percentage: 50
-
+                data
             })
         })
     })
     .post((req, res) => {
 
         const request = goalEdit(Number(req.body.current), Number(req.body.goal));
+        res.render('goals', {
+            data: {
+                current: req.body.current,
+                goal: req.body.goal
+            },
+            error: (request instanceof Error) ? request.message : null,
+            message: (request instanceof Error) ? null : 'Saved',
+        })
 
-        if (request instanceof Error) {
-            return res.render('goals', {
-                error : request.message,
-                percentage: 100
-            })
-        } else {
-            return res.render('goals', {
-                message: 'Saved',
-                data: {
-                    current: req.body.current,
-                    goal: req.body.goal
-                }
-            })
-
-        }
-        
-
-
-
-        
     })
 
 router.route('/login')
@@ -95,7 +81,7 @@ router.route('/login')
 
         firebase.auth().signInWithEmailAndPassword(req.body.email, req.body.password)
             .then(() => res.redirect("/"))
-            .catch((e) => res.render("login", { error: e.message }))
+            .catch((e) => res.render("login", {error: e.message}))
     })
 
 router.get("/logout", (req, res) => {
@@ -108,7 +94,7 @@ router.get("/home", (req, res) => {
 })
 
 router.get('/desktop', (req, res) => {
-    res.render("desktop", { data: array1 })
+    res.render("desktop", {data: array1})
 })
 
 router.get('/api/locations', locations.getAllLocations);
