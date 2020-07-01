@@ -19,7 +19,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "firebase": "^7.15.5",
-    "helmet": "^3.23.3",
+    "helmet": "^3.23.3"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }

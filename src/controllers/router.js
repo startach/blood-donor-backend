@@ -5,7 +5,7 @@ const login = require("./routes/login");
 const logout = require("./routes/logout");
 const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
-const {redirectIfLoggedIn, redirectIfLoggedOut} = require("../middleware/authValidator");
+const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
 
 
@@ -75,11 +75,12 @@ router.route("/changePassword")
 
 
 router.get('/desktop', redirectIfLoggedOut("/login"), (req, res) => {
-    res.render("desktop", {data: array1})
+    res.render("desktop", { data: array1 })
 })
 
 
 router.get('/api/locations', locations.getAllLocations);
+router.get('/iframe/locations', locations.getLocationsIframe);
 
 
 module.exports = router;
