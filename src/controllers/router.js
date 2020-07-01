@@ -5,10 +5,8 @@ const login = require("./routes/login");
 const logout = require("./routes/logout");
 const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
-const {redirectIfLoggedIn} = require("../middleware/authValidator");
-const {redirectIfLoggedOut} = require("../middleware/authValidator");
+const {redirectIfLoggedIn, redirectIfLoggedOut} = require("../middleware/authValidator");
 const router = require("express").Router()
-const {firebase} = require("../database")
 
 
 let array1 = [
