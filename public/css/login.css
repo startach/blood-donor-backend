@@ -59,3 +59,6 @@
     color: red;
 }
 
+.resetpassword_form, input.fullWidth, div.fullWidth{
+    width: 100%;
+}
