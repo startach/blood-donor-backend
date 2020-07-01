@@ -52,7 +52,9 @@ router.route('/goals')
     .get((req, res) => {
         const goalData = goalGet().then((data) => {
             res.render('goals', {
-                data
+                data,
+                percentage: 50
+
             })
         })
     })
@@ -63,6 +65,7 @@ router.route('/goals')
         if (request instanceof Error) {
             return res.render('goals', {
                 error : request.message,
+                percentage: 100
             })
         } else {
             return res.render('goals', {
