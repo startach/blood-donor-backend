@@ -95,7 +95,7 @@ router.route('/resetPassword')
 
     firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
         return res.render('resetpassword', {
-            message: 'please check your email to reset your password',
+            message: 'Please check your email to reset your password',
         }) // Email sent.
       }).catch((e) => {
         return res.render('resetpassword', {
