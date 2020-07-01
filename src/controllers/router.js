@@ -84,9 +84,28 @@ router.route('/login')
             .catch((e) => res.render("login", {error: e.message}))
     })
 
+router.route('/resetPassword') 
+.get((req, res) => {
+    return res.render('resetpassword')
+})
+.post((req, res) => {
+    const emailAddress = req.body.emailAddress;
+
+    firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
+        return res.render('resetpassword', {
+            message: 'please check your email to reset your password',
+        }) // Email sent.
+      }).catch((e) => {
+        return res.render('resetpassword', {
+            error: e,
+        }) // An error happened.
+      });
+})
+
 router.get("/logout", (req, res) => {
     firebase.auth().signOut().finally(() => res.redirect("/login"))
 })
+
 
 router.get("/home", (req, res) => {
 
