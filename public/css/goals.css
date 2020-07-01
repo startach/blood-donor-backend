@@ -21,11 +21,11 @@
 
 .goals_form {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    height: 100px;
     background-color: var(--color-gray-lite);
-    padding: 5px;
+    padding: 10px 5px 10px 5px;
 }
 
 .goals_form label{
@@ -50,20 +50,9 @@
 
 }
 
-.success-message {
-    color: green;
-    text-align: center;
-    width: 100%;
-    background-color: var(--color-gray-lite);
+.goals_message{
+    margin-top: 10px;
 }
-
-.error-message {
-    color: red;
-    text-align: center;
-    width: 100%;
-    background-color: var(--color-gray-lite);
-}
-
 
 .goals_drop {
     margin: 40px;
@@ -102,18 +91,3 @@
     color: white;
 }
 
-.message {
-    text-align: center;
-    width: 100%;
-    background-color: var(--color-gray-lite);
-    height: 20px;
-}
-
-.error_message {
-    color: red;
-}
-
-.success_message {
-    color: green;
-    
-}

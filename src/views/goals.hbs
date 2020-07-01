@@ -1,42 +1,45 @@
-
-
 <div class="goals_form_container">
     <div class="goals_form_title">
         <span>Goal</span>
     </div>
-    <form class="goals_form" action="/goals" method="POST" >
-        <label for="Current">Current 
-            <input type="number" name="current" value="{{data.current}}" min="0" id="current" oninput="updateDropValue()"/>
-        </label>
-        <label for="Current">Yearly Goal 
-            <input type="number" name="goal" value="{{data.goal}}" min="0" id="goal" oninput="updateDropValue()"/>
-        </label>
-        <button type="submit" class="goals_form_saveButton">Save</button>
-    </form>
+    <div class="goals_form">
 
+        <form action="/goals" method="POST">
+            <label for="Current">Current
+                <input type="number" name="current" value="{{data.current}}" min="0" id="current"
+                       oninput="updateDropValue()"/>
+            </label>
+            <label for="Current">Yearly Goal
+                <input type="number" name="goal" value="{{data.goal}}" min="0" id="goal" oninput="updateDropValue()"/>
+            </label>
+            <button type="submit" class="goals_form_saveButton">Save</button>
 
-    <div class="message {{#if message}} success_message {{else}} error_message {{/if}}">{{message}}{{error}}</div>
+        </form>
+        {{>messages className="goals_message"}}
+
+    </div>
 
 
     <div class="goals_drop">
         <div class="goals_drop_percentage" id="drop-percentage"></div>
-        <div class="goals_drop_dropFill" id="drop-fill" >
+        <div class="goals_drop_dropFill" id="drop-fill">
         </div>
     </div>
 
 
 </div>
 
-<script type="application/javascript" defer >
+<script type="application/javascript" defer>
 
-    const currentInput =  document.getElementById("current");
-    const goalInput =  document.getElementById("goal");
-    const dropPercentage=  document.getElementById("drop-percentage");
-    const dropFill =  document.getElementById("drop-fill");
+    const currentInput = document.getElementById("current");
+    const goalInput = document.getElementById("goal");
+    const dropPercentage = document.getElementById("drop-percentage");
+    const dropFill = document.getElementById("drop-fill");
 
-    function updateDropValue(){
-        dropPercentage.textContent=`${parseInt(currentInput.value/goalInput.value * 100)}%`;
-        dropFill.style.height=`${parseInt(currentInput.value/goalInput.value * 100)}%`;
+    function updateDropValue() {
+        dropPercentage.textContent = `${parseInt(currentInput.value / goalInput.value * 100)}%`;
+        dropFill.style.height = `${parseInt(currentInput.value / goalInput.value * 100)}%`;
     }
+
     updateDropValue();
 </script>
