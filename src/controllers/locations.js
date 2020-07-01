@@ -1,6 +1,6 @@
 const http = require("https");
 
-exports.getAllLocations = (req, res) => {
+exports.getLocationsIframe = (req, res) => {
 
     fetchLocations().then((result) => {
 
@@ -10,9 +10,24 @@ exports.getAllLocations = (req, res) => {
             layout: 'locations-iframe'
         });
     })
+
 }
 
-const body = { "RequestHeader": { "Application": 101, "Module": "BloodBank", "Function": "GetAllDetailsDonations", "Token": "" }, "RequestData": "" }
+exports.getAllLocations = (req, res) => {
+
+    getAllCustomers().then((result) => {
+        res.status(200).json({ result, code: 200 });
+    })
+}
+
+const body = {
+    "RequestHeader": {
+        "Application": 101,
+        "Module": "BloodBank",
+        "Function": "GetAllDetailsDonations",
+        "Token": ""
+    }, "RequestData": ""
+}
 
 let headers = {
     Accept: 'application/json, text/plain, */*',

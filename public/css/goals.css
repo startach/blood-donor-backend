@@ -1,0 +1,93 @@
+.goals_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.goals_form_title {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-navy);
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+    color: var(--color-white);
+}
+
+
+.goals_form_title span {
+    padding: 5px;
+}
+
+.goals_form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-gray-lite);
+    padding: 10px 5px 10px 5px;
+}
+
+.goals_form label{
+    margin: 2px;
+}
+
+.goals_form button {
+    margin: 2px;
+    border: none;
+    background-color: #1D886D;
+    color: var(--color-white);
+    height: 30px;
+    user-select: none;
+}
+
+
+.goals_form label input {
+    border: none;
+    height: 30px;
+    outline: none;
+    user-select: none;
+
+}
+
+.goals_message{
+    margin-top: 10px;
+}
+
+.goals_drop {
+    margin: 40px;
+    box-sizing: border-box;
+    height: 200px;
+    width: 150px;
+    background-color: black;
+    -webkit-mask-box-image: url("/img/icon-goal-drop.svg") stretch;
+    mask-border: url("/img/icon-goal-drop.svg") stretch;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.goals_drop_dropFill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-darkred);
+    z-index: 10;
+}
+.goals_drop_percentage {
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 35px;
+    z-index: 15;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
