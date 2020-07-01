@@ -40,12 +40,13 @@ let array1 = [
     }
 ]
 
-router.get('/', (req, res) => {
+router.get('/', redirectIfLoggedOut("/login"), (req, res) => {
     res.render("home", {
         title: 'blood donation organaization',
         username: "cordinator",
     })
 })
+
 
 router.route('/goals')
     .all(redirectIfLoggedOut("/login"))
@@ -69,6 +70,7 @@ router.route('/goals')
         })
 
     })
+
 
 router.route('/login')
     .all(redirectIfLoggedIn("/login"))
@@ -105,16 +107,29 @@ router.route('/resetPassword')
 router.get("/logout", (req, res) => {
     firebase.auth().signOut().finally(() => res.redirect("/login"))
 })
-
-
-router.get("/home", (req, res) => {
+router.get("/home", redirectIfLoggedOut("/login"), (req, res) => {
 
     res.render("login");
 })
+router.route("/changePassword")
+    .all(redirectIfLoggedOut("/login"))
+    .get((req, res) => {
+        res.render("changePassword");
+    })
+    .post((req, res) => {
+        const {password, confirmPassword} = req.body;
+        if (password !== confirmPassword)
+            return res.render("changePassword", {error: "passwords do not match"});
 
-router.get('/desktop', (req, res) => {
+        firebase.auth().currentUser.updatePassword(password)
+            .then(() => res.render("changePassword", {message: "updated successfully"}))
+            .catch(e => res.render("changePassword", {error: e.message}))
+    })
+
+router.get('/desktop', redirectIfLoggedOut("/login"), (req, res) => {
     res.render("desktop", {data: array1})
 })
+
 
 router.get('/api/locations', locations.getAllLocations);
 
