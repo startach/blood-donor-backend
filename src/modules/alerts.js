@@ -19,13 +19,13 @@ const schema = Joi.object({
 })
 
 const alertEdit = (id, alert) => {
-    if(!id){
+    if (!id) {
         return new Error("id should be defined");
     }
     if (schema.validate(alert).error)
         return (schema.validate(alert).error.message);
 
-    return editAlert(id,alert);
+    return editAlert(id, alert);
 }
 
 
@@ -34,7 +34,7 @@ const alertsGet = () => {
 }
 
 const alertDelete = (id) => {
-    if(!id){
+    if (!id) {
         return new Error("id should be defined");
     }
 

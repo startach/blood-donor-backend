@@ -5,7 +5,7 @@ const helmet = require('helmet')
 const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
-const {loadUserData} = require("./middleware/authValidator");
+const { loadUserData } = require("./middleware/authValidator");
 const showEditPanelHelper = require('./views/helpers/showEditPanel.js')
 const dateHelper = require('./views/helpers/dateHelper.js')
 
@@ -13,10 +13,14 @@ const dateHelper = require('./views/helpers/dateHelper.js')
 const app = express();
 
 
+
+app.use(cors({ credentials: true, origin: ['http://localhost:3000'] }));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(helmet())
+
+
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");

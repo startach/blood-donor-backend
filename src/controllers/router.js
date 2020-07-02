@@ -7,6 +7,7 @@ const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
 const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
+const alertsApi = require('../controllers/api/alertsApi');
 
 
 let array1 = [
@@ -78,10 +79,10 @@ router.get('/desktop', redirectIfLoggedOut("/login"), (req, res) => {
     res.render("desktop", { data: array1 })
 })
 
-
+//APIs
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);
-
+router.get('/api/alerts', alertsApi.getAlertsApi)
 
 module.exports = router;
 
