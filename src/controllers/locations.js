@@ -34,15 +34,13 @@ exports.getAllLocationsFromServer = () => {
 
     fetchLocations().then((result) => {
         try {
-            fs.writeFile('src/database/locations.json', '', () => {
-                const jsonString =`{ "data" : ${JSON.stringify(result)} , "ok":${true}, "message":"", "code":${200} }`;
-                fs.writeFile('src/database/locations.json', jsonString, err => {
-                    if (err) {
-                        console.log('Error writing file', err)
-                    } else {
-                        console.log('Successfully wrote file')
-                    }
-                })
+            const jsonString = `{ "data" : ${JSON.stringify(result)} , "ok":${true}, "message":"", "code":${200} }`;
+            fs.writeFile('src/database/locations.json', jsonString, err => {
+                if (err) {
+                    console.log('Error writing file', err)
+                } else {
+                    console.log('Successfully wrote file')
+                }
             })
         } catch (e) {
 
