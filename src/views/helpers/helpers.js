@@ -1,6 +1,6 @@
-exports.equals = (a,b) => {
-    return a === b;
-}
+exports.equals = (a,b) => a === b;
+
+exports.includes = (arr, item) => arr.includes(item)
 
 exports.dateHelper = (dateposted) => {
 
@@ -10,3 +10,4 @@ exports.dateHelper = (dateposted) => {
 
     return mydate
   }
+

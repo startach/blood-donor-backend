@@ -5,6 +5,7 @@ const login = require("./routes/login");
 const logout = require("./routes/logout");
 const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
+const alerts = require("./routes/alerts");
 const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
 
@@ -24,7 +25,7 @@ let array1 = [
         bloodType: "A+",
         addedDate: new Date(),
         expDate: new Date(),
-        hidden: true
+        id:0,
     },
     {
         title: {
@@ -40,7 +41,7 @@ let array1 = [
         bloodType: "O-",
         addedDate: new Date(),
         expDate: new Date(),
-        hidden: true
+        id:1,
     }
 ]
 
@@ -74,10 +75,9 @@ router.route("/changePassword")
     .post(changePassword.post)
 
 
-router.get('/desktop', redirectIfLoggedOut("/login"), (req, res) => {
-    res.render("desktop", { data: array1 })
-})
-
+router.get('/alerts', redirectIfLoggedOut("/login"), alerts.get)
+router.post("/alerts/delete/:id",alerts.delete)
+router.post("/alerts/:id",alerts.post)
 
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);

@@ -15,6 +15,7 @@
 
 .entry {
     width: 100%;
+    padding-bottom: 10px;
 }
 
 .entry_header {
@@ -23,9 +24,10 @@
     align-items: stretch;
     height: 50px;
     padding-left: 15px;
-    background: var(--color-navy);
+    background: var(--color-white);
     box-sizing: border-box;
-    color:var(--color-white)
+    color:black;
+    border: 1px solid black;
 
 }
 
@@ -47,6 +49,12 @@
     border: none;
     color: white;
 }
+.entry_button-orange{
+    width: 100px;
+    background-color: var(--color-drop-orange);
+    border: none;
+    color: white;
+}
 .entry_body {
     width: 100%;
     height: 100%;
@@ -60,15 +68,18 @@
     background-color: var(--color-entry-background);
 
 }
+.entry_body_group-ver{
+    background-color: var(--color-entry-background);
+    display: flex;
+
+}
 
 .entry_body_group legend {
     font-size: large;
 }
-
 .entry_body_group label {
     width: 100%;
 }
-
 .entry_body_group label input {
     width: 100%;
 }

@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="/css/desktop.css">
+<script type="application/javascript" defer>
+    function expand(element) {
+        element.parentElement.parentElement.querySelector(".entry_body").classList.toggle("hidden")
+    }
+
+    function edit(element) {
+        element.parentElement.parentElement.children[1].classList.toggle("notClickable")
+        element.parentElement.querySelector("[data-name='edit']").classList.toggle("hidden")
+        element.parentElement.querySelector("[data-name='save']").classList.toggle("hidden")
+        element.parentElement.querySelector("[data-name='delete']").classList.toggle("hidden")
+        element.parentElement.querySelector("[data-name='cancel']").classList.toggle("hidden")
+    }
+    function cancel() {
+        window.location.reload()
+    }
+
+    function selectAll(element) {
+        element.parentElement.querySelectorAll("[type='checkbox']").forEach(element=>element.checked = true)
+    }
+    function deselectAll(element) {
+        element.parentElement.querySelectorAll("[type='checkbox']").forEach(element=>element.checked = false)
+    }
+
+    function del(element, id) {
+        fetch(`/alerts/delete/${id}`, {method: "post"}).finally(() => window.location.reload())
+    }
+</script>
+
+
+<section class="page">
+    <div class="scrollable">
+
+        {{#each data}}
+            <form class="entry" method="post" action="/alerts/{{id}}">
+
+                <div class="entry_header">
+                    <div class="entry_header_content" onclick="expand(this)">
+                        <span class="titleParagraph">{{title.en}}</span>
+                    </div>
+
+                    <input type="button" class="entry_button-green" data-name="edit" value="Edit" onclick="edit(this)"/>
+                    <input type="submit" class="entry_button-green hidden" onclick="edit(this)" data-name="save"
+                           value="Save"/>
+                    <input type="button" class="entry_button-red hidden" data-name="delete" onclick="del(this,'{{id}}')"
+                           value="Delete"/>
+                    <input type="button" class="entry_button-orange hidden" data-name="cancel" value="cancel" onclick="cancel()"/>
+
+                </div>
+
+                <div class="entry_body hidden notClickable">
+
+                    <div class="entry_body_group-ver">
+                        <fieldset >
+                            <legend align="center">expiration date</legend>
+                            <input name="expDate" value="{{title}}" type="date"/>
+                        </fieldset>
+                        <fieldset style="width: 100%;"  >
+                            <input type="button"  value="all" onclick="selectAll(this)" />
+                            <input type="button"  value="none" onclick="deselectAll(this)" />
+
+                            <legend align="center">blood type filter</legend>
+                            <label><input type="checkbox" name="bloodType.A+" value="A+"  {{#if (includes bloodType "A+")}}checked{{/if}} >A+</label>
+                            <label><input type="checkbox" name="bloodType.A-" value="A-" {{#if (includes bloodType "A-")}}checked{{/if}}>A-</label>
+                            <label><input type="checkbox" name="bloodType.B+" value="B+" {{#if (includes bloodType "B+")}}checked{{/if}}>B+</label>
+                            <label><input type="checkbox" name="bloodType.B-" value="B-" {{#if (includes bloodType "B-")}}checked{{/if}}>B-</label>
+                            <label><input type="checkbox" name="bloodType.AB+" value="AB+" {{#if (includes bloodType "AB+")}}checked{{/if}}>AB+</label>
+                            <label><input type="checkbox" name="bloodType.AB-" value="AB-" {{#if (includes bloodType "AB-")}}checked{{/if}}>AB-</label>
+                            <label><input type="checkbox" name="bloodType.O+" value="O+" {{#if (includes bloodType "O+")}}checked{{/if}}>O+</label>
+                            <label><input type="checkbox" name="bloodType.O-" value="O-" {{#if (includes bloodType "O-")}}checked{{/if}}>O-</label>
+                        </fieldset>
+
+                    </div>
+
+
+
+                    {{>fieldset
+                            group="hebrew"
+
+                            title=title.he
+                            titleName="title_he"
+                            titleLabel="title"
+
+                            subTitle=context.he
+                            subTitleName="context_he"
+                            subTitleLabel="sub-title"
+
+                    }}
+                    {{>fieldset
+                            group="English"
+                            title=title.en
+                            titleName="title_en"
+                            titleLabel="title"
+
+                            subTitle=context.en
+                            subTitleName="context_en"
+                            subTitleLabel="sub-title"
+                    }}
+                    {{>fieldset
+                            group="Arabic"
+
+                            title=title.ar
+                            titleName="title_ar"
+                            titleLabel="title"
+
+                            subTitle=context.ar
+                            subTitleName="context_ar"
+                            subTitleLabel="sub-title"
+                    }}
+
+                </div>
+            </form>
+        {{/each}}
+    </div>
+</section>
+
+
