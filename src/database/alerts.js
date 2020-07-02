@@ -32,7 +32,7 @@ const getAlerts = () => new Promise(async (resolve, reject) => {
         const doc = await alertsRef.get();
         var result = []
         doc.forEach(doc => {
-            result.push({ [doc.id]: doc.data() })
+            result.push({ id:doc.id, ...doc.data() })
         });
         resolve(result);
     } catch (e) {
