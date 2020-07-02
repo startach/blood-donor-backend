@@ -1,17 +1,21 @@
-:root{
-    --color-navy : #314E71;
-    --color-white : white;
-    --color-gray-lite : #E8E8E8;
-    /*--box-shadow: ;*/
-    --color-red: #C30000;
-    --color-darkred: #7E1212;
+:root {
+    --color-navy: #314E71;
+    --color-white: white;
+    --color-gray-lite: #E8E8E8;
+    --color-green: #1D886D;
+
+    --color-drop-red: #921616;
+
+    --color-entry-background:rgba(185, 129, 146,.3);
+
     --color-gray: #F5F5F5;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html{
+html {
     height: 100%;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -28,30 +32,30 @@ body {
 }
 
 
-
-.input_incorrect{
+.input_incorrect {
     border-bottom: 3px red solid !important;
-    
+
     box-sizing: border-box;
-    animation: shake .5s linear ;
+    animation: shake .5s linear;
 
 }
+
 @keyframes shake {
-    0%{
+    0% {
         transform: translateX(5px);
     }
-    25%{
+    25% {
         transform: translateX(-5px);
 
     }
-    50%{
+    50% {
         transform: translateX(5px);
     }
-    75%{
+    75% {
         transform: translateX(-5px);
 
     }
-    100%{
+    100% {
         transform: translateX(0px);
     }
 }
@@ -63,14 +67,15 @@ body {
     padding: 5px 5px 5px 10px;
     border: 0;
     background-color: var(--color-gray-lite);
-    box-shadow: inset 0 2px 2px rgba(0,0,0,.3);
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .3);
     margin-bottom: 5px;
 }
-.input[type="submit"], .input[type="button"]  {
+
+.input[type="submit"], .input[type="button"] {
     width: 100%;
     color: white;
     border: 0;
-    background:  var(--color-navy);
+    background: var(--color-navy);
 }
 
 .message {
@@ -78,10 +83,20 @@ body {
     width: 100%;
     height: 20px;
 }
+
 .error_message {
     color: red;
 }
+
 .success_message {
     color: green;
 
+}
+
+.hidden{
+    display: none;
+}
+
+.notClickable{
+    pointer-events: none;
 }
