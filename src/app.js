@@ -8,6 +8,8 @@ const router = require("./controllers/router")
 const { loadUserData } = require("./middleware/authValidator");
 const showEditPanelHelper = require('./views/helpers/showEditPanel.js')
 const dateHelper = require('./views/helpers/dateHelper.js')
+const schedule = require('node-schedule');
+const {getAllLocationsFromServer} = require('./controllers/locations');
 
 
 const app = express();
@@ -41,6 +43,10 @@ app.engine(
 		}
 	})
 );
+
+var getLocationScheduleJob = schedule.scheduleJob('00 00 * * *', function(){
+	getAllLocationsFromServer();
+});
 
 
 module.exports = app;
