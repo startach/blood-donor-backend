@@ -30,12 +30,24 @@ exports.getLocationsIframe = (req, res) => {
     })
 }
 
-// exports.getAllLocations = (req, res) => {
+exports.getAllLocationsFromServer = () => {
 
-//     fetchLocations().then((result) => {
-//         res.status(200).json({ result, code: 200 });
-//     })
-// }
+    fetchLocations().then((result) => {
+        try {
+            const jsonString = `{ "data" : ${JSON.stringify(result)} , "ok":${true}, "message":"", "code":${200} }`;
+            fs.writeFile('src/database/locations.json', jsonString, err => {
+                if (err) {
+                    console.log('Error writing file', err)
+                } else {
+                    console.log('Successfully wrote file')
+                }
+            })
+        } catch (e) {
+
+        }
+
+    })
+}
 
 const body = {
     "RequestHeader": {
