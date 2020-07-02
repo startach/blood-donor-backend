@@ -4,7 +4,8 @@ exports.get = (req, res) => {
 
    goalGet().then((data) => {
         res.render('goals', {
-            data
+            data,
+            selectedNavbarItem: 'goals'
         })
     })
 
@@ -20,5 +21,6 @@ exports.post = (req, res) => {
         },
         error: (request instanceof Error) ? request.message : null,
         message: (request instanceof Error) ? null : 'Saved',
+        selectedNavbarItem: 'goals'
     })
 }
