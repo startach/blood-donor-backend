@@ -2,14 +2,21 @@ const fs = require('fs');
 const http = require("https");
 
 exports.getAllLocations = (req, res) => {
-    let rawdata = fs.readFileSync('/home/farid/WebAhead/WebAheadProjects/blood-donr-back-end/src/database/locations.json');
-    let locations = JSON.parse(rawdata);
-    console.log(locations);
-    res.status(200).json(locations);
 
-    // getAllCustomers().then((result) => {
-    //     res.status(200).json({ "result": result, "code": 200 });
-    // })
+    let rawdata = "";
+    try {
+        rawdata = fs.readFileSync('src/database/locations.json');
+        let locations = JSON.parse(rawdata);
+        res.status(200).json(locations);
+    } catch (e) {
+        res.status(200).json(
+            {
+                "code": 500,
+                "ok": false,
+                "message": "error in reading file"
+            }
+        );
+    }
 }
 
 
@@ -23,12 +30,12 @@ exports.getLocationsIframe = (req, res) => {
     })
 }
 
-exports.getAllLocations = (req, res) => {
+// exports.getAllLocations = (req, res) => {
 
-    fetchLocations().then((result) => {
-        res.status(200).json({ result, code: 200 });
-    })
-}
+//     fetchLocations().then((result) => {
+//         res.status(200).json({ result, code: 200 });
+//     })
+// }
 
 const body = {
     "RequestHeader": {
