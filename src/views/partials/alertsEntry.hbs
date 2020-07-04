@@ -18,7 +18,7 @@
             hideButton3 = true
 
             button4Class="entry_button-orange hidden"
-            onButton4Click="cancel()"
+            onButton4Click="edit(this); expand(this); cancel(this)"
             button4Label="Cancel"
     }}
 {{else}}
@@ -39,7 +39,7 @@
             button3Label="Delete"
 
             button4Class="entry_button-orange hidden"
-            onButton4Click="cancel()"
+            onButton4Click="cancel(this); edit(this);"
             button4Label="Cancel"
     }}
 {{/if}}

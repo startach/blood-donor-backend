@@ -24,8 +24,11 @@ function edit(element) {
     if(ref) ref.classList.toggle("hidden")
 }
 
-function cancel() {
-    window.location.reload()
+function cancel(element) {
+    // window.location.reload()
+   const ref = element.parentElement.parentElement.querySelector("form")
+    if (ref)
+        ref.reset();
 }
 
 function selectAll(element) {
