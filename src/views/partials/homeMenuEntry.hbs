@@ -1,0 +1,106 @@
+<script src="/scripts/homeMenu.js" defer></script>
+<script src="/scripts/entries.js" defer></script>
+<link rel="stylesheet" href="/css/entries.css">
+<link rel="stylesheet" href="/css/homeMenuEntry.css">
+
+
+<div class="entry">
+    {{#if headerMode}}
+        {{>entryHeader
+                title=title
+                headerClass=headerClass
+
+                button1Class="entry_button-green"
+                onButton1Click="edit(this);expand(this)"
+                button1Label="Add"
+
+                button2Class="entry_button-green hidden"
+                onButton2Click="submitForm(this);"
+                button2Label="Save"
+
+                hideButton3 = true
+
+                button4Class="entry_button-orange hidden"
+                onButton4Click="edit(this); expand(this); cancel(this)"
+                button4Label="Cancel"
+        }}
+    {{else}}
+        {{>entryHeader
+                title=title.en
+                onHeaderClick="expand(this)"
+
+                button1Class="entry_button-green"
+                onButton1Click="edit(this)"
+                button1Label="Edit"
+
+                button2Class="entry_button-green hidden"
+                onButton2Click="submitForm(this)"
+                button2Label="Save"
+
+                button3Class="entry_button-red hidden"
+                onButton3Click=(strConcat "delete_homeMenuItem(this,'" id "')")
+                button3Label="Delete"
+
+                button4Class="entry_button-orange hidden"
+                onButton4Click="cancel(this); edit(this);"
+                button4Label="Cancel"
+        }}
+    {{/if}}
+
+
+    <form method="post" action="{{#if headerMode}}/homeMenu{{else}}/homeMenu/{{id}}{{/if}}"
+          class="entry_body {{#if showBody}}{{else}}hidden{{/if}} notClickable">
+
+        <div class="entry_body_group-ver">
+
+
+            <fieldset class="entry_urlContainer">
+                <legend align="center">redirection link</legend>
+                <input name="redirectionLink" value="{{redirectionLink}}" type="url" required/>
+            </fieldset>
+
+
+            <fieldset class="entry_uploadImgContainer">
+                <legend align="center">icon src</legend>
+                <input value="{{#if headerMode}}/img/icon-info.svg{{else}}{{src}}{{/if}}" type="file" class="hidden" accept="image/*"   />
+                <input name="src" value="{{#if headerMode}}/img/icon-info.svg{{else}}{{src}}{{/if}}" type="text" class="hidden"   />
+                <img src="{{#if headerMode}}/img/icon-info.svg{{else}}{{src}}{{/if}}" class="largeImg" alt="home menu icon"  onclick="uploadImg_click(this)">
+                <img src="/img/icon-add.svg" alt="add button" class="smallImg" onclick="uploadImg_click(this)">
+            </fieldset>
+
+        </div>
+
+
+
+        {{>fieldset
+                group="hebrew"
+
+                title=title.he
+                titleName="title_he"
+                titleLabel="title"
+
+                hideSub=true
+
+        }}
+        {{>fieldset
+                group="English"
+                title=title.en
+                titleName="title_en"
+                titleLabel="title"
+
+                hideSub=true
+        }}
+        {{>fieldset
+                group="Arabic"
+
+                title=title.ar
+                titleName="title_ar"
+                titleLabel="title"
+
+                hideSub=true
+        }}
+
+        <input type="submit" style="display: none">
+    </form>
+
+</div>

@@ -1,9 +1,13 @@
 <fieldset class="entry_body_group">
     <legend align="center">{{group}}</legend>
-    <label >{{titleLabel}}
+    <label>{{titleLabel}}
         <input name="{{titleName}}" value="{{title}}" type="text" required/>
     </label>
-    <label>{{subTitleLabel}}
-        <input name="{{subTitleName}}" value="{{subTitle}}" type="text" required/>
-    </label>
+
+    {{#if hideSub}}
+    {{else}}
+        <label>{{subTitleLabel}}
+            <input name="{{subTitleName}}" value="{{subTitle}}" type="text" required/>
+        </label>
+    {{/if}}
 </fieldset>

@@ -6,6 +6,7 @@ const logout = require("./routes/logout");
 const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
 const alerts = require("./routes/alerts");
+const homeMenu = require("./routes/homeMenu");
 const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
 
@@ -46,6 +47,15 @@ router.get('/alerts', redirectIfLoggedOut("/login"), alerts.get)
 router.post("/alerts",redirectIfLoggedOut("/login"),alerts.add)
 router.post("/alerts/delete/:id",redirectIfLoggedOut("/login"),alerts.delete)
 router.post("/alerts/:id",redirectIfLoggedOut("/login"),alerts.post)
+
+router.get('/homeMenu', redirectIfLoggedOut("/login"), homeMenu.get)
+router.post("/homeMenu",redirectIfLoggedOut("/login"),homeMenu.add)
+router.post("/homeMenu/delete/:id",redirectIfLoggedOut("/login"),homeMenu.delete)
+router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
+
+
+
+
 
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);

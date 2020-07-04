@@ -1,0 +1,34 @@
+.entry_uploadImgContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.entry_uploadImgContainer .largeImg{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px white solid;
+}
+
+.entry_uploadImgContainer  .smallImg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+    border: 2px white solid;
+    border-radius: 50%;
+}
+
+.entry_urlContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.entry_urlContainer input{
+    width: 100%;
+}

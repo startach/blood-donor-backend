@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/alerts.css">
+
+
+
+<section class="alerts_page">
+
+    <div class="alerts_headerContainer">
+
+        {{>homeMenuEntry headerMode=true title="Home Menu Items" headerClass="alerts_header"  }}
+
+    </div>
+
+
+    <div class="alerts_scrollable">
+
+        {{#each data}}
+            {{>homeMenuEntry}}
+        {{/each}}
+    </div>
+</section>
+
+
