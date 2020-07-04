@@ -1,6 +1,6 @@
 exports.equals = (a,b) => a === b;
 
-exports.includes = (arr, item) => arr.includes(item)
+exports.includes = (arr, item) => arr && arr.includes(item)
 
 exports.dateHelper = (dateposted) => {
 
@@ -11,3 +11,9 @@ exports.dateHelper = (dateposted) => {
     return mydate
   }
 
+exports.strConcat = (...strArr)=>{
+    if(!strArr || !strArr.length)
+        return;
+
+    return strArr.join("")
+}
