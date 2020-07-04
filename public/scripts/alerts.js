@@ -6,7 +6,7 @@ function expand(element) {
 function edit(element) {
     let ref;
 
-    ref = element.parentElement.parentElement.children[1]
+    ref = element.parentElement.parentElement.querySelector("form")
     if(ref) ref.classList.toggle("notClickable")
 
 
@@ -42,6 +42,9 @@ function del(element, id) {
 function submitForm(element) {
     let ref;
 
-    ref = element.parentElement.parentElement.children[1]
-    if(ref) ref.submit();
+    ref = element.parentElement.parentElement.querySelector("[type='submit']")
+    console.log(ref)
+
+    if(ref) ref.click();
 }
+

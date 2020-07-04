@@ -1,9 +1,27 @@
 <script src="/scripts/alerts.js" defer></script>
 
 
-<div class="entry">
-   {{#if hideHeader}}
-   {{else}}
+<div class="entry" >
+{{#if headerMode}}
+    {{>entryHeader
+            title=title
+            headerClass=headerClass
+
+            button1Class="entry_button-green"
+            onButton1Click="edit(this);expand(this)"
+            button1Label="Add"
+
+            button2Class="entry_button-green hidden"
+            onButton2Click="submitForm(this);"
+            button2Label="Save"
+
+            hideButton3 = true
+
+            button4Class="entry_button-orange hidden"
+            onButton4Click="cancel()"
+            button4Label="Cancel"
+    }}
+{{else}}
     {{>entryHeader
             title=title.en
             onHeaderClick="expand(this)"
@@ -13,27 +31,29 @@
             button1Label="Edit"
 
             button2Class="entry_button-green hidden"
-            onButton2Click="edit(this); submitForm(this)"
+            onButton2Click="submitForm(this)"
             button2Label="Save"
 
             button3Class="entry_button-red hidden"
-            onButton3Click=(strConcat "del(this," id ")")
+            onButton3Click=(strConcat "del(this,'" id "')")
             button3Label="Delete"
 
             button4Class="entry_button-orange hidden"
             onButton4Click="cancel()"
             button4Label="Cancel"
     }}
-   {{/if}}
+{{/if}}
 
-    <form  method="post" action="/alerts/{{id}}"  class="entry_body {{#if showBody}}{{else}}hidden{{/if}} notClickable">
 
-        <div class="entry_body_group-ver">
+        <form  method="post" action="{{#if headerMode}}/alerts{{else}}/alerts/{{id}}{{/if}}"
+               class="entry_body {{#if showBody}}{{else}}hidden{{/if}} notClickable" >
+
+        <div class="entry_body_group-ver" >
 
 
             <fieldset>
                 <legend align="center">expiration date</legend>
-                <input name="expDate" value="{{expDate}}" type="date"/>
+                <input name="expDate" value="{{expDate}}" type="date" min="{{getDateStr}}" required/>
             </fieldset>
 
 
@@ -59,7 +79,6 @@
                 <label><input type="checkbox" name="bloodType.O-" value="O-"
                               {{#if (includes bloodType "O-")}}checked{{/if}}>O-</label>
             </fieldset>
-
 
 
         </div>
@@ -100,6 +119,7 @@
                 subTitleLabel="sub-title"
         }}
 
+            <input type="submit" style="display: none">
     </form>
 
 </div>

@@ -8,30 +8,8 @@
 <section class="alerts_page">
 
     <div class="alerts_headerContainer">
-        {{>entryHeader
-                title="Alerts"
-                headerClass="alerts_header"
 
-
-                button1Class="entry_button-green"
-                onButton1Click="edit(this)"
-                button1Label="add"
-
-                button2Class="entry_button-green hidden"
-                onButton2Click="edit(this)"
-                button2Label="Save"
-
-                button2Class="entry_button-green hidden"
-                onButton2Click="edit(this)"
-                button2Label="Save"
-
-                button3Class="entry_button-orange hidden"
-                onButton3Click="cancel()"
-                button3Label="Cancel"
-
-                hideButton4=true
-        }}
-        {{>alertsEntry hideHeader=true  }}
+        {{>alertsEntry headerMode=true title="Alerts" headerClass="alerts_header"  }}
 
     </div>
 

@@ -4,8 +4,8 @@ const moment = require("moment")
 
 exports.get = (req, res, next) => {
     alertsDB.getAlerts().then(data => {
-       data = data.map(x=>({...x,expDate: moment(x.expDate.toDate()).format("YYYY-MM-DD") }));
-        res.render("alerts", {data,selectedNavbarItem: 'alerts'})
+        data = data.map(x => ({...x, expDate: moment(x.expDate.toDate()).format("YYYY-MM-DD")}));
+        res.render("alerts", {data, selectedNavbarItem: 'alerts'})
     }).catch(next)
 
 }
@@ -31,14 +31,14 @@ exports.post = ({params: {id}, body}, res) => {
 
 }
 
-exports.delete = ({req}, res) => {
-    alertsDB.deleteAlert(req.params.id).finally(() => res.end())
+exports.delete = ({params:{id}}, res) => {
+    alertsDB.deleteAlert(id).finally(() => res.end())
 
 }
 
-exports.add = ({body},res)=>{
+exports.add = ({body}, res) => {
 
-    alertsDB.editAlert({
+    alertsDB.addAlert({
         title: {
             he: body.title_he,
             en: body.title_en,
@@ -49,9 +49,9 @@ exports.add = ({body},res)=>{
             en: body.context_en,
             ar: body.context_ar,
         },
-        bloodType: Object.keys(body).filter(x => x.includes("bloodType")).map(x => body[x]),
+        bloodType: Object.keys(body).filter(x => x.includes("bloodType")).map(x => body[x]) || [],
         expDate: moment(body.expDate, "YYYY-MM-DD").toDate(),
-        addedDate :Date.now()
+        addedDate: new Date()
 
     }).finally(() => res.redirect("/alerts"))
 }

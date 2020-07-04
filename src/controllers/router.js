@@ -10,40 +10,7 @@ const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authV
 const router = require("express").Router()
 
 
-let array1 = [
-    {
-        title: {
-            he: "...",
-            en: "Blood donation needed, Haifa, A+",
-            ar: "..."
-        },
-        context: {
-            he: "...",
-            en: "Haifa District",
-            ar: "..."
-        },
-        bloodType: "A+",
-        addedDate: new Date(),
-        expDate: new Date(),
-        id:0,
-    },
-    {
-        title: {
-            he: "...",
-            en: "Blood donation Needed, Tel Aviv, O-",
-            ar: "..."
-        },
-        context: {
-            he: "...",
-            en: "Tel Aviv",
-            ar: "..."
-        },
-        bloodType: "O-",
-        addedDate: new Date(),
-        expDate: new Date(),
-        id:1,
-    }
-]
+
 
 router.get('/', redirectIfLoggedOut("/login"), home.get)
 
@@ -76,8 +43,9 @@ router.route("/changePassword")
 
 
 router.get('/alerts', redirectIfLoggedOut("/login"), alerts.get)
-router.post("/alerts/delete/:id",alerts.delete)
-router.post("/alerts/:id",alerts.post)
+router.post("/alerts",redirectIfLoggedOut("/login"),alerts.add)
+router.post("/alerts/delete/:id",redirectIfLoggedOut("/login"),alerts.delete)
+router.post("/alerts/:id",redirectIfLoggedOut("/login"),alerts.post)
 
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);

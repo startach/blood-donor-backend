@@ -14,6 +14,17 @@ exports.dateHelper = (dateposted) => {
 exports.strConcat = (...strArr)=>{
     if(!strArr || !strArr.length)
         return;
-
+    strArr.pop()
     return strArr.join("")
+}
+
+exports.getDateStr = ()=>{
+    let today = new Date()
+    let day = today.getDay();
+    day=(day < 10 ? '0' : '') + day;
+
+    let month = today.getMonth();
+    month=(month < 10 ? '0' : '') + month;
+
+  return `${today.getFullYear()}-${month}-${day}`
 }
