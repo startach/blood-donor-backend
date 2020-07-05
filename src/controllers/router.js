@@ -61,6 +61,7 @@ router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);
 router.get('/api/alerts', alertsApi.getAlertsApi)
+router.get('/api/goals', goals.apiGet)
 
 module.exports = router;
 
