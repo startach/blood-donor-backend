@@ -15,6 +15,7 @@ const homeMenuApi = require('../controllers/api/homeMenuApi');
 
 
 
+
 router.get('/', redirectIfLoggedOut("/login"), home.get)
 
 
@@ -61,8 +62,11 @@ router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
 //APIs
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);
+router.get('/api/alerts', alerts.getAlertsApi)
+router.get('/api/goals', goals.apiGet)
 router.get('/api/alerts', alertsApi.getAlertsApi)
 router.get('/api/homeMenu', homeMenuApi.get)
+
 
 module.exports = router;
 
