@@ -13,38 +13,36 @@ const schema = Joi.object({
         he: Joi.string(),
         ar: Joi.string()
     }),
-    bloodType: Joi.string(),
+    bloodType: Joi.array().items(Joi.string()),
     addedDate: Joi.date(),
     expDate: Joi.date(),
 })
 
-const alertEdit = (id, alert) => {
+const alertEdit = async (id, alert) => {
     if (!id) {
-        return new Error("id should be defined");
+        throw new Error("id should be defined");
     }
     if (schema.validate(alert).error)
-        return (schema.validate(alert).error.message);
+        throw new Error (schema.validate(alert).error.message);
 
-    return editAlert(id, alert);
+    return await editAlert(id, alert);
 }
 
 
-const alertsGet = () => {
-    return getAlerts();
-}
+const alertsGet = getAlerts;
 
-const alertDelete = (id) => {
+const alertDelete = async (id) => {
     if (!id) {
-        return new Error("id should be defined");
+        throw new Error("id should be defined");
     }
 
-    return deleteAlert(id)
+    return await deleteAlert(id)
 
 }
 
 const alertAdd = async (alert) => {
-    if (schema.validate(alert))
-        throw (schema.validate(alert).error);
+    if (schema.validate(alert).error)
+        throw new Error(schema.validate(alert).error);
     return await addAlert(alert);
 }
 

@@ -15,32 +15,30 @@ const schema = Joi.object({
 
 })
 
-const goalEdit = (current, goal) => {
+const goalEdit = async (current, goal) => {
     if (!current || typeof current !== 'number')
-        return new Error('current should be defined as number');
+        throw new Error('current should be defined as number');
 
     if (current < 0) {
-        return new Error('current should be bigger than zero');
+        throw  new Error('current should be bigger than zero');
     }
 
     if (!goal || typeof goal !== 'number')
-        return new Error('current should be defined as number');
+        throw  new Error('current should be defined as number');
 
     if (goal < 0) {
-        return new Error('current should be bigger than zero');
+        throw  new Error('current should be bigger than zero');
     }
 
-    let data = { "current": current, "goal": goal }
+    let data = { current, goal }
 
     if (schema.validate(data).error)
-        return new Error(schema.validate(data).error.message)
+        throw  new Error(schema.validate(data).error.message)
 
-    return editGoal()
+    return await editGoal(data)
 }
 
-const goalGet = () => {
-    return getGoal();
-}
+const goalGet = getGoal;
 
 
 
