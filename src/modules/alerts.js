@@ -42,10 +42,10 @@ const alertDelete = (id) => {
 
 }
 
-const alertAdd = (alert) => {
-    if (schema.validate(alert).error)
-        return (schema.validate(alert).error.message);
-    return addAlert(alert);
+const alertAdd = async (alert) => {
+    if (schema.validate(alert))
+        throw (schema.validate(alert).error);
+    return await addAlert(alert);
 }
 
 
