@@ -11,7 +11,7 @@
 
 
 .alerts_headerContainer {
-    width: 600px !important;
+    width: min( 80%,600px) !important;
 }
 .alerts_header{
     background-color: var(--color-navy) !important;
@@ -20,6 +20,6 @@
 }
 .alerts_scrollable {
     overflow-y: auto;
-    width: 600px;
+    width:  min( 80%,600px);
     height: 90%;
 }
