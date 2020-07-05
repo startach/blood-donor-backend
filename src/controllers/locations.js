@@ -1,22 +1,51 @@
+const fs = require('fs');
 const http = require("https");
 
+exports.getAllLocations = (req, res) => {
+
+    let rawdata = "";
+    try {
+        rawdata = fs.readFileSync('src/database/locations.json');
+        let locations = JSON.parse(rawdata);
+        res.status(200).json(locations);
+    } catch (e) {
+        res.status(200).json(
+            {
+                "code": 500,
+                "ok": false,
+                "message": "error in reading file"
+            }
+        );
+    }
+}
+
+
 exports.getLocationsIframe = (req, res) => {
-
     fetchLocations().then((result) => {
-
         res.status(200).render('locations', {
             // encodeURIComponent so later we can use the data in the script tag as a javascript value
             result: encodeURIComponent(JSON.stringify(result)),
             layout: 'locations-iframe'
         });
     })
-
 }
 
-exports.getAllLocations = (req, res) => {
+exports.getAllLocationsFromServer = () => {
 
     fetchLocations().then((result) => {
-        res.status(200).json({ result, code: 200 });
+        try {
+            const jsonString = `{ "data" : ${JSON.stringify(result)} , "ok":${true}, "message":"", "code":${200} }`;
+            fs.writeFile('src/database/locations.json', jsonString, err => {
+                if (err) {
+                    console.log('Error writing file', err)
+                } else {
+                    console.log('Successfully wrote file')
+                }
+            })
+        } catch (e) {
+
+        }
+
     })
 }
 

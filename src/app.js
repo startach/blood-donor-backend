@@ -7,15 +7,19 @@ const path = require('path');
 const router = require("./controllers/router")
 const {loadUserData} = require("./middleware/authValidator");
 const helpers = require('./views/helpers/helpers')
+const schedule = require('node-schedule');
+const {getAllLocationsFromServer} = require('./controllers/locations');
 
 
 const app = express();
 
-
+app.use(cors({credentials: true, origin: ['http://localhost:3000']}));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(helmet())
+
+
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -35,6 +39,10 @@ app.engine(
 		helpers,
 	})
 );
+
+var getLocationScheduleJob = schedule.scheduleJob('00 00 * * *', function(){
+	getAllLocationsFromServer();
+});
 
 
 module.exports = app;
