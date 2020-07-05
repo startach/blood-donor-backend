@@ -37,8 +37,6 @@ function submitForm(element) {
     let ref;
 
     ref = element.parentElement.parentElement.querySelector("[type='submit']")
-    console.log(ref)
-
     if(ref) ref.click();
 }
 

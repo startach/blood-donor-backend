@@ -24,9 +24,7 @@ exports.post = ({params: {id}, body}, res) => {
 }
 
 exports.delete = ({params:{id}}, res) => {
-    console.log(id)
     homeMenuDB.deleteHomeMenuItem(id).finally(() => res.end())
-
 }
 
 exports.add = ({body}, res) => {

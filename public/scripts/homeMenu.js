@@ -2,11 +2,11 @@ function uploadImg_click(element) {
     const fileElement = element.parentElement.querySelector("[type='file']")
     fileElement.click()
 }
-function delete_homeMenuItem(element,id) {
+
+function delete_homeMenuItem(element, id) {
     fetch(`/homeMenu/delete/${id}`, {method: "post"}).finally(() => window.location.reload())
 
 }
-
 
 
 function getBase64(file, callback) {
@@ -16,18 +16,24 @@ function getBase64(file, callback) {
     reader.readAsDataURL(file);
 }
 
+function cancel_homeMenu(element) {
+    cancel(element)
+    const textElement = element.parentElement.parentElement.querySelector("[name='src']")
+    const imgElement = element.parentElement.parentElement.querySelector(".largeImg")
+    imgElement.src = textElement.value;
+}
 
 
-const elements = document.querySelectorAll(".entry_uploadImgContainer")
-elements.forEach(value => {
+const elementsRef = document.querySelectorAll(".entry_uploadImgContainer")
+elementsRef.forEach(value => {
     const fileElement = value.querySelector("[type='file']")
     const imgElement = value.querySelector(".largeImg")
     const textElement = value.querySelector("[type='text']")
     fileElement.addEventListener("change", e => {
-        imgElement.src = e.target.value;
-        getBase64(e.target.files[0],(res)=>{
+        getBase64(e.target.files[0], (res) => {
             imgElement.src = res;
-            textElement.value=res
+            textElement.value = res;
         })
     })
 })
+
