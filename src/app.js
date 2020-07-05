@@ -5,9 +5,8 @@ const helmet = require('helmet')
 const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
-const { loadUserData } = require("./middleware/authValidator");
-const showEditPanelHelper = require('./views/helpers/showEditPanel.js')
-const dateHelper = require('./views/helpers/dateHelper.js')
+const {loadUserData} = require("./middleware/authValidator");
+const helpers = require('./views/helpers/helpers')
 const schedule = require('node-schedule');
 const {getAllLocationsFromServer} = require('./controllers/locations');
 
@@ -37,10 +36,7 @@ app.engine(
 		layoutsDir: path.join(__dirname, "views", "layouts"),
 		partialsDir: path.join(__dirname, 'views', 'partials'),
 		defaultLayout: "main",
-		helpers: {
-			showEditPanelHelper: showEditPanelHelper,
-			dateHelper: dateHelper
-		}
+		helpers,
 	})
 );
 

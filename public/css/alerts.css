@@ -1,0 +1,25 @@
+.alerts_page {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.alerts_headerContainer {
+    width: 600px !important;
+}
+.alerts_header{
+    background-color: var(--color-navy) !important;
+    color: white !important;
+
+}
+.alerts_scrollable {
+    overflow-y: auto;
+    width: 600px;
+    height: 90%;
+}

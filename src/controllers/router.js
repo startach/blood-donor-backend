@@ -5,45 +5,14 @@ const login = require("./routes/login");
 const logout = require("./routes/logout");
 const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
+const alerts = require("./routes/alerts");
+const homeMenu = require("./routes/homeMenu");
 const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
 const alertsApi = require('../controllers/api/alertsApi');
 
 
-let array1 = [
-    {
-        title: {
-            he: "...",
-            en: "Blood donation needed, Haifa, A+",
-            ar: "..."
-        },
-        context: {
-            he: "...",
-            en: "Haifa District",
-            ar: "..."
-        },
-        bloodType: "A+",
-        addedDate: new Date(),
-        expDate: new Date(),
-        hidden: true
-    },
-    {
-        title: {
-            he: "...",
-            en: "Blood donation Needed, Tel Aviv, O-",
-            ar: "..."
-        },
-        context: {
-            he: "...",
-            en: "Tel Aviv",
-            ar: "..."
-        },
-        bloodType: "O-",
-        addedDate: new Date(),
-        expDate: new Date(),
-        hidden: true
-    }
-]
+
 
 router.get('/', redirectIfLoggedOut("/login"), home.get)
 
@@ -75,9 +44,18 @@ router.route("/changePassword")
     .post(changePassword.post)
 
 
-router.get('/desktop', redirectIfLoggedOut("/login"), (req, res) => {
-    res.render("desktop", { data: array1 })
-})
+router.get('/alerts', redirectIfLoggedOut("/login"), alerts.get)
+router.post("/alerts",redirectIfLoggedOut("/login"),alerts.add)
+router.post("/alerts/delete/:id",redirectIfLoggedOut("/login"),alerts.delete)
+router.post("/alerts/:id",redirectIfLoggedOut("/login"),alerts.post)
+
+router.get('/homeMenu', redirectIfLoggedOut("/login"), homeMenu.get)
+router.post("/homeMenu",redirectIfLoggedOut("/login"),homeMenu.add)
+router.post("/homeMenu/delete/:id",redirectIfLoggedOut("/login"),homeMenu.delete)
+router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
+
+
+
 
 //APIs
 router.get('/api/locations', locations.getAllLocations);

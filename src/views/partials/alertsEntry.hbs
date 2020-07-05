@@ -1,0 +1,127 @@
+<script src="/scripts/alerts.js" defer></script>
+<script src="/scripts/entries.js" defer></script>
+<link rel="stylesheet" href="/css/entries.css">
+
+
+<div class="entry" >
+{{#if headerMode}}
+    {{>entryHeader
+            title=title
+            headerClass=headerClass
+
+            button1Class="entry_button-green"
+            onButton1Click="edit(this);expand(this)"
+            button1Label="Add"
+
+            button2Class="entry_button-green hidden"
+            onButton2Click="submitForm(this);"
+            button2Label="Save"
+
+            hideButton3 = true
+
+            button4Class="entry_button-orange hidden"
+            onButton4Click="edit(this); expand(this); cancel(this)"
+            button4Label="Cancel"
+    }}
+{{else}}
+    {{>entryHeader
+            title=title.en
+            onHeaderClick="expand(this)"
+
+            button1Class="entry_button-green"
+            onButton1Click="edit(this)"
+            button1Label="Edit"
+
+            button2Class="entry_button-green hidden"
+            onButton2Click="submitForm(this)"
+            button2Label="Save"
+
+            button3Class="entry_button-red hidden"
+            onButton3Click=(strConcat "del(this,'" id "')")
+            button3Label="Delete"
+
+            button4Class="entry_button-orange hidden"
+            onButton4Click="cancel(this); edit(this);"
+            button4Label="Cancel"
+    }}
+{{/if}}
+
+
+        <form  method="post" action="{{#if headerMode}}/alerts{{else}}/alerts/{{id}}{{/if}}"
+               class="entry_body {{#if showBody}}{{else}}hidden{{/if}} notClickable" >
+
+        <div class="entry_body_group-ver" >
+
+
+            <fieldset>
+                <legend align="center">expiration date</legend>
+                <input name="expDate" value="{{expDate}}" type="date" min="{{getDateStr}}" required/>
+            </fieldset>
+
+
+            <fieldset style="width: 100%;">
+                <input type="button" value="all" onclick="selectAll(this)"/>
+                <input type="button" value="none" onclick="deselectAll(this)"/>
+
+                <legend align="center">blood type filter</legend>
+                <label><input type="checkbox" name="bloodType.A+" value="A+"
+                              {{#if (includes bloodType "A+")}}checked{{/if}} >A+</label>
+                <label><input type="checkbox" name="bloodType.A-" value="A-"
+                              {{#if (includes bloodType "A-")}}checked{{/if}}>A-</label>
+                <label><input type="checkbox" name="bloodType.B+" value="B+"
+                              {{#if (includes bloodType "B+")}}checked{{/if}}>B+</label>
+                <label><input type="checkbox" name="bloodType.B-" value="B-"
+                              {{#if (includes bloodType "B-")}}checked{{/if}}>B-</label>
+                <label><input type="checkbox" name="bloodType.AB+" value="AB+"
+                              {{#if (includes bloodType "AB+")}}checked{{/if}}>AB+</label>
+                <label><input type="checkbox" name="bloodType.AB-" value="AB-"
+                              {{#if (includes bloodType "AB-")}}checked{{/if}}>AB-</label>
+                <label><input type="checkbox" name="bloodType.O+" value="O+"
+                              {{#if (includes bloodType "O+")}}checked{{/if}}>O+</label>
+                <label><input type="checkbox" name="bloodType.O-" value="O-"
+                              {{#if (includes bloodType "O-")}}checked{{/if}}>O-</label>
+            </fieldset>
+
+
+        </div>
+
+
+
+        {{>fieldset
+                group="hebrew"
+
+                title=title.he
+                titleName="title_he"
+                titleLabel="title"
+
+                subTitle=context.he
+                subTitleName="context_he"
+                subTitleLabel="sub-title"
+
+        }}
+        {{>fieldset
+                group="English"
+                title=title.en
+                titleName="title_en"
+                titleLabel="title"
+
+                subTitle=context.en
+                subTitleName="context_en"
+                subTitleLabel="sub-title"
+        }}
+        {{>fieldset
+                group="Arabic"
+
+                title=title.ar
+                titleName="title_ar"
+                titleLabel="title"
+
+                subTitle=context.ar
+                subTitleName="context_ar"
+                subTitleLabel="sub-title"
+        }}
+
+            <input type="submit" style="display: none">
+    </form>
+
+</div>

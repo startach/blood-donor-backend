@@ -72,7 +72,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: var(--color-darkred);
+    background-color: var(--color-drop-red);
     z-index: 10;
 }
 .goals_drop_percentage {
