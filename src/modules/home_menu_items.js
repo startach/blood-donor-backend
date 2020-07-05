@@ -35,10 +35,10 @@ const homeMenuItemDelete = (id) => {
 
 }
 
-const homeMenuItemAdd = (item) => {
+const homeMenuItemAdd = async (item) => {
     if (schema.validate(item).error)
-        return (schema.validate(item).error.message);
-    return addHomeMenuItem(item);
+        throw (schema.validate(item).error);
+    return await addHomeMenuItem(item);
 }
 
 

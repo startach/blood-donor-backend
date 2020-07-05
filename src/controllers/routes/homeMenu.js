@@ -35,11 +35,6 @@ exports.add = ({body}, res) => {
             en: body.title_en,
             ar: body.title_ar,
         },
-        context: {
-            he: body.context_he,
-            en: body.context_en,
-            ar: body.context_ar,
-        },
         src:body.src,
         redirectionLink:body.redirectionLink
     }).finally(() => res.redirect("/homeMenu"))
