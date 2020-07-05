@@ -11,34 +11,33 @@ const schema = Joi.object({
     redirectionLink: Joi.string(),
 })
 
-const homeMenuItemEdit = (id, item) => {
-    if(!id){
-        return new Error("id should be defined");
-    }
+const homeMenuItemEdit = async (id, item) => {
+    if(!id)
+        throw new Error("id should be defined");
+
     if (schema.validate(item).error)
-        return (schema.validate(item).error.message);
+        throw new Error(schema.validate(item).error.message);
 
-    return editHomeMenuItem(id,item);
+    return await editHomeMenuItem(id,item);
 }
 
 
-const homeMenuItemsGet = () => {
-    return getHomeMenuItems();
+const homeMenuItemsGet = getHomeMenuItems;
+
+
+const homeMenuItemDelete = async (id) => {
+    if(!id)
+        throw new Error("id should be defined");
+
+
+    return await deleteHomeMenuItem(id)
+
 }
 
-const homeMenuItemDelete = (id) => {
-    if(!id){
-        return new Error("id should be defined");
-    }
-
-    return deleteHomeMenuItem(id)
-
-}
-
-const homeMenuItemAdd = (item) => {
+const homeMenuItemAdd = async (item) => {
     if (schema.validate(item).error)
-        return (schema.validate(item).error.message);
-    return addHomeMenuItem(item);
+        throw new Error(schema.validate(item).error);
+    return await addHomeMenuItem(item);
 }
 
 
