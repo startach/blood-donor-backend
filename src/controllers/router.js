@@ -10,6 +10,7 @@ const homeMenu = require("./routes/homeMenu");
 const { redirectIfLoggedIn, redirectIfLoggedOut } = require("../middleware/authValidator");
 const router = require("express").Router()
 const alertsApi = require('../controllers/api/alertsApi');
+const homeMenuApi = require('../controllers/api/homeMenuApi');
 
 
 
@@ -61,6 +62,7 @@ router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
 router.get('/api/locations', locations.getAllLocations);
 router.get('/iframe/locations', locations.getLocationsIframe);
 router.get('/api/alerts', alertsApi.getAlertsApi)
+router.get('/api/homeMenu', homeMenuApi.get)
 
 module.exports = router;
 
