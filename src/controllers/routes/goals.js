@@ -1,5 +1,4 @@
 const { goalEdit, goalGet } = require("../../modules/goals");
-const { response } = require("express");
 
 exports.get = (req, res) => {
 
@@ -8,22 +7,38 @@ exports.get = (req, res) => {
             data,
             selectedNavbarItem: 'goals'
         })
+    }).catch(() => {
+        res.render('goals', {
+            data,
+            selectedNavbarItem: 'goals'
+        })
     })
-
 }
 
-exports.post = (req, res) => {
+exports.post = async (req, res) => {
 
-    const request = goalEdit(Number(req.body.current), Number(req.body.goal));
-    res.render('goals', {
-        data: {
-            current: req.body.current,
-            goal: req.body.goal
-        },
-        error: (request instanceof Error) ? request.message : null,
-        message: (request instanceof Error) ? null : 'Saved',
-        selectedNavbarItem: 'goals'
-    })
+    try {
+        await goalEdit(Number(req.body.current), Number(req.body.goal));
+
+        res.render('goals', {
+            data: {
+                current: req.body.current,
+                goal: req.body.goal
+            },
+            message:  'Saved',
+            selectedNavbarItem: 'goals'
+        })
+    } catch(e) {
+        console.error(e)
+        res.render('goals', {
+            data: {
+                current: req.body.current,
+                goal: req.body.goal
+            },
+            error:  e.message,
+            selectedNavbarItem: 'goals'
+        })    
+    }
 }
 
 exports.apiGet = (req, res) => {
