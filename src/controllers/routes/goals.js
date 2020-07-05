@@ -44,10 +44,10 @@ exports.post = async (req, res) => {
 exports.apiGet = (req, res) => {
    try{
     goalGet().then((data) => 
-        res.status(200).json({ data: data || [], message: 'successful request', ok: true })
+        res.status(200).json({ data: data || [], message: 'successful request', ok: true , code:200 })
     )
    } catch(e) {
         console.error(e)
-        res.status(500).json({message: 'Ops, could not retreive data',ok: false})
+        res.status(500).json({message: 'Ops, could not retrieve data',ok: false , code:500})
    }
 }

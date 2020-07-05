@@ -46,9 +46,9 @@ exports.getApi = async (req, res) => {
 
     try {
         const goals = await homeMenuItemsGet()
-        res.json({data: goals || [], ok: true})
+        res.json({data: goals || [], ok: true,code:200})
     } catch (e) {
-        res.status(500).json({message: e.message, ok: false})
+        res.status(500).json({message: e.message, ok: false, code:500})
     }
 
 }

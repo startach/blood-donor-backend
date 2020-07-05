@@ -60,11 +60,11 @@ exports.add = ({ body }, res) => {
 exports.getAlertsApi = (req, res) => {
 
     alertsGet().then((data) => {
-        res.status(200).json({ data: data || [], message: 'successful request', ok: true })
+        res.status(200).json({ data: data || [], message: 'successful request', ok: true ,code:200})
     })
         .catch((err) => {
             console.log(err);
-            res.status(500).json({ message: 'Ops, could not retreive data', ok: false })
+            res.status(500).json({ message: 'Ops, could not retreive data', ok: false,code:500 })
 
         })
 
