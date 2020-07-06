@@ -24,6 +24,7 @@ function cancel_homeMenu(element) {
 }
 
 
+// assign onChange function to every <input type="file"> tag
 const elementsRef = document.querySelectorAll(".entry_uploadImgContainer")
 elementsRef.forEach(value => {
     const fileElement = value.querySelector("[type='file']")
