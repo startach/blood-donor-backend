@@ -1,5 +1,11 @@
 const fs = require('fs');
 const http = require("https");
+const {updateGeolocations} = require('./updateGeolocations')
+
+
+let everySixHours = 1000*60*60*6;
+setInterval(updateGeolocations, everySixHours)
+
 
 exports.getAllLocations = (req, res) => {
 
