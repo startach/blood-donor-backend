@@ -21,7 +21,7 @@
                 hideButton3 = true
 
                 button4Class="entry_button-orange hidden"
-                onButton4Click="edit(this); expand(this); cancel_homeMenu(this);"
+                onButton4Click="edit(this); expand(this); cancel_homeMenu(this); loadNewImgIcon();"
                 button4Label="Cancel"
         }}
     {{else}}
@@ -63,7 +63,7 @@
             <fieldset class="entry_uploadImgContainer">
                 <legend align="center">icon src</legend>
                 <input type="file" class="hidden" accept="image/*"   />
-                <input name="src" value="{{#if headerMode}}/img/icon-info.svg{{else}}{{src}}{{/if}}" type="text" class="hidden"    />
+        <input name="src" value="{{#if headerMode}}/img/icon-info.svg{{else}}{{src}}{{/if}}" type="text" class="hidden"    />
                 <img src="{{#if headerMode}}/img/icon-info.svg{{else}}{{src}}{{/if}}" class="largeImg" alt="home menu icon"  onclick="uploadImg_click(this)">
                 <img src="/img/icon-add.svg" alt="add button" class="smallImg" onclick="uploadImg_click(this)">
             </fieldset>
@@ -104,3 +104,23 @@
     </form>
 
 </div>
+
+{{#if headerMode}}
+<script defer type="application/javascript">
+
+    function loadNewImgIcon() {
+        const imgElement = document.querySelector(".largeImg")
+        const textElement = document.querySelector("[name='src']")
+        fetch(imgElement.src).then(res=>res.blob()).then(blob=>new Promise((resolve, reject) => {
+            const reader = new FileReader()
+            reader.onloadend = () => resolve(reader.result)
+            reader.onerror = reject
+            reader.readAsDataURL(blob)
+        })).then(text=> textElement.value = text)
+
+    }
+    loadNewImgIcon();
+
+
+</script>
+{{/if}}
