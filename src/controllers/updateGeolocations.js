@@ -37,14 +37,14 @@ async function getGeolocation(donationLocationsObject) {
     }
     let queryString = querystring.stringify(params);
     let concat = `${urlStart}${queryString}`;
+    
 
     return await axios.get(concat)
         .then(res => {
-            console.log("api response", res.data.results.status);
             return res.data
         })
         .catch(err => {
-            console.log("first api call failed, try with just city");
+            console.error("first api call failed, try with just city", err);
         })
 }
 
@@ -52,7 +52,6 @@ async function returnLocationObject(objectFromFile) {
     // Iterate through the data prop to add lon and lat to each location. 
 
     for (let locationInfoObj of objectFromFile.data) {
-        console.log("check we're for looping over an element", locationInfoObj);
 
         if (locationInfoObj.lon > 0) continue
 
@@ -65,8 +64,8 @@ async function returnLocationObject(objectFromFile) {
 
         } catch (error) {
             console.error("the api didn't return coords", error.message);
-            locationInfoObj.lon = "error retrieving coords";
-            locationInfoObj.lat = "error retrieving coords";
+            locationInfoObj.lon = 0;
+            locationInfoObj.lat = 0;
         }
 
     }

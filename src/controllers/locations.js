@@ -3,10 +3,6 @@ const http = require("https");
 const {updateGeolocations} = require('./updateGeolocations')
 
 
-let everySixHours = 1000*60*60*6;
-setInterval(updateGeolocations, everySixHours)
-
-
 exports.getAllLocations = (req, res) => {
 
     let rawdata = "";
@@ -46,6 +42,7 @@ exports.getAllLocationsFromServer = () => {
                     console.log('Error writing file', err)
                 } else {
                     console.log('Successfully wrote file')
+                    updateGeolocations();
                 }
             })
         } catch (e) {
