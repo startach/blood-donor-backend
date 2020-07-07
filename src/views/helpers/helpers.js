@@ -39,5 +39,5 @@ exports.nextIndex = (list , index )=>{
 }
 exports.prevIndex = (index )=>{
     // return num1+num2;
-    return Math.max(0,index)
+    return Math.max(0,index-1)
 }
