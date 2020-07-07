@@ -1,5 +1,7 @@
 const fs = require('fs');
 const http = require("https");
+const {updateGeolocations} = require('./updateGeolocations')
+
 
 exports.getAllLocations = (req, res) => {
 
@@ -40,6 +42,7 @@ exports.getAllLocationsFromServer = () => {
                     console.log('Error writing file', err)
                 } else {
                     console.log('Successfully wrote file')
+                    updateGeolocations();
                 }
             })
         } catch (e) {
