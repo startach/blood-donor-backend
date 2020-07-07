@@ -46,7 +46,6 @@ const swapSettingsMenuItems = async (id1, id2) => {
     const collection = db.collection('settings_menu')
     const item1 = (await collection.doc(id1).get()).data()
     const item2 = (await collection.doc(id2).get()).data()
-    console.log(item1)
     await collection.doc(id1).set({...item1, addedDate: item2["addedDate"]})
     await collection.doc(id2).set({...item2, addedDate: item1["addedDate"]})
 
