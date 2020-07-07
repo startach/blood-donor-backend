@@ -9,22 +9,13 @@ function edit(element) {
     ref = element.parentElement.parentElement.querySelector("form")
     if(ref) ref.classList.toggle("notClickable")
 
+    for (let i = 1; i <= 6; i++) {
+        ref = element.parentElement.querySelector(`[data-name='button${i}']`)
+        if(ref)
+            ref.classList.toggle("hidden")
+    }
 
-    ref = element.parentElement.querySelector("[data-name='button1']")
-    if(ref) ref.classList.toggle("hidden")
 
-
-    ref = element.parentElement.querySelector("[data-name='button2']")
-    if(ref) ref.classList.toggle("hidden")
-
-    ref = element.parentElement.querySelector("[data-name='button3']")
-    if(ref) ref.classList.toggle("hidden")
-
-    ref = element.parentElement.querySelector("[data-name='button4']")
-    if(ref) ref.classList.toggle("hidden")
-
-    ref = element.parentElement.querySelector("[data-name='button5']")
-    if(ref) ref.classList.toggle("hidden")
 }
 
 function cancel(element) {
@@ -43,6 +34,10 @@ function submitForm(element) {
     if(ref) ref.click();
 }
 
-function del(route) {
+function postReq(route) {
     fetch(route, {method: "post"}).finally(() => window.location.reload())
+}
+
+function swap(route,id1,id2) {
+    fetch(`${route}/${id1}/${id2}`, {method: "post"}).finally(() => window.location.reload())
 }

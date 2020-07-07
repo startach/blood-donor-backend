@@ -1,4 +1,4 @@
-const {settingsMenuItemAdd,settingsMenuItemDelete,settingsMenuItemEdit,settingsMenuItemsGet} = require('../../modules/settingsMenu');
+const {settingsMenuItemAdd,settingsMenuItemDelete,settingsMenuItemEdit,settingsMenuItemsGet,settingsMenuSwapItems} = require('../../modules/settingsMenu');
 
 
 exports.get = (req, res, next) => {
@@ -36,7 +36,8 @@ exports.add = ({body}, res) => {
             ar: body.title_ar,
         },
         src:body.src,
-        redirectionLink:body.redirectionLink
+        redirectionLink:body.redirectionLink,
+        addedDate: new Date()
     }).finally(() => res.redirect("/settingsMenu"))
 }
 
@@ -50,5 +51,11 @@ exports.getApi = async (req, res) => {
     } catch (e) {
         res.status(500).json({message: e.message, ok: false, code:500})
     }
+
+}
+
+exports.swap = async ({params:{id1,id2}}, res) => {
+
+    settingsMenuSwapItems(id1,id2).finally(() => res.redirect("/settingsMenu"))
 
 }

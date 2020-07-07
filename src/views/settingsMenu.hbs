@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/css/redirectionLinkEntry.css">
 <script src="/scripts/redirectionLinkEntry.js" defer></script>
 <style>
-    .largeImg{
+    .largeImg {
         border-radius: unset !important;
         border: unset !important;
         background-color: unset !important;
@@ -32,8 +32,11 @@
             {{>redirectionLinkEntry
                     routeName="settingsMenu"
                     defaultIconRoute="/img/icon-info-black.svg"
-                    deleteRoute=(strConcat "/settingsmenu/delete/" id )
-                    draggable="true"
+                    deleteRoute=(strConcat "/settingsMenu/delete/" id )
+                    reorderable="true"
+                    reorderable_list = ../data
+                    reorderable_Route="/settingsMenu/swap"
+
             }}
         {{/each}}
     </div>

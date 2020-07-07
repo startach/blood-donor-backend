@@ -1,5 +1,4 @@
 
-
 .entry {
     width: 100%;
     margin-bottom: 10px;
@@ -44,6 +43,26 @@
     border: none;
     color: white;
 }
+
+.entry-moveUp {
+    width: 40px !important;
+    margin-right: 10px;
+    background-image: url("/img/icon-arrow-down-white.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleY(-1);
+
+}
+.entry-moveDown {
+    width: 40px !important;
+    margin-right: 10px;
+    background-image: url("/img/icon-arrow-down-white.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .entry_body {
     width: 100%;

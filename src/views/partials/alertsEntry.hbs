@@ -41,13 +41,23 @@
 
             showButton3=true
             button3Class="entry_button-red hidden"
-            onButton3Click=(strConcat "del('" deleteRoute "')")
+            onButton3Click=(strConcat "postReq('" deleteRoute "')")
             button3Label="Delete"
 
             showButton4=true
-            button4Class="entry_button-orange hidden"
-            onButton4Click="cancel(this); edit(this);"
-            button4Label="Cancel"
+            button4Class="entry_button-green hidden"
+            onButton4Click="submitForm(this)"
+            button4Label="Save"
+
+            showButton5=true
+            button5Class="entry_button-red hidden"
+            onButton5Click=(strConcat "postReq('" deleteRoute "')")
+            button5Label="Delete"
+
+            showButton6=true
+            button6Class="entry_button-orange hidden"
+            onButton6Click="cancel(this); edit(this);"
+            button6Label="Cancel"
     }}
 {{/if}}
 

@@ -31,25 +31,36 @@
                 title=title.en
                 onHeaderClick="expand(this)"
 
-                showButton1=true
-                button1Class="entry_button-green"
-                onButton1Click="edit(this)"
-                button1Label="Edit"
 
-                showButton2=true
-                button2Class="entry_button-green hidden"
-                onButton2Click="submitForm(this)"
-                button2Label="Save"
+                showButton1= reorderable
+                button1Class="entry_button-orange entry-moveUp"
+                onButton1Click=(strConcat "swap('" reorderable_Route "','" id "','"  (lookup (lookup reorderable_list (prevIndex @index)) "id")  "')" )
+
+
+                showButton2= reorderable
+                button2Class="entry_button-orange entry-moveDown"
+                onButton2Click=(strConcat "swap('" reorderable_Route "','" id "','"  (lookup (lookup reorderable_list (nextIndex reorderable_list @index)) "id") "')" )
+
 
                 showButton3=true
-                button3Class="entry_button-red hidden"
-                onButton3Click=(strConcat "del('" deleteRoute "')")
-                button3Label="Delete"
+                button3Class="entry_button-green"
+                onButton3Click="edit(this)"
+                button3Label="Edit"
 
                 showButton4=true
-                button4Class="entry_button-orange hidden"
-                onButton4Click="cancelRedirection(this); edit(this);"
-                button4Label="Cancel"
+                button4Class="entry_button-green hidden"
+                onButton4Click="submitForm(this)"
+                button4Label="Save"
+
+                showButton5=true
+                button5Class="entry_button-red hidden"
+                onButton5Click=(strConcat "postReq('" deleteRoute "')")
+                button5Label="Delete"
+
+                showButton6=true
+                button6Class="entry_button-orange hidden"
+                onButton6Click="cancelRedirection(this); edit(this);"
+                button6Label="Cancel"
         }}
     {{/if}}
 
@@ -117,14 +128,16 @@
     <script defer type="application/javascript">
 
         function loadNewImgIcon() {
-            const imgElement = document.querySelector(".largeImg")
             const textElement = document.querySelector("[name='src']")
-            fetch(imgElement.src).then(res => res.blob()).then(blob => new Promise((resolve, reject) => {
+            fetch("{{defaultIconRoute}}").then(res => res.blob()).then(blob => new Promise((resolve, reject) => {
                 const reader = new FileReader()
                 reader.onloadend = () => resolve(reader.result)
                 reader.onerror = reject
                 reader.readAsDataURL(blob)
-            })).then(text => textElement.value = text)
+            })).then(text => {
+
+                textElement.value = text
+            })
 
         }
 

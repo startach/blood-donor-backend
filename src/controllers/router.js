@@ -59,6 +59,7 @@ router.get('/settingsMenu', redirectIfLoggedOut("/login"), settingsMenu.get)
 router.post("/settingsMenu",redirectIfLoggedOut("/login"),settingsMenu.add)
 router.post("/settingsMenu/delete/:id",redirectIfLoggedOut("/login"),settingsMenu.delete)
 router.post("/settingsMenu/:id",redirectIfLoggedOut("/login"),settingsMenu.post)
+router.post("/settingsMenu/swap/:id1/:id2",redirectIfLoggedOut("/login"),settingsMenu.swap)
 
 
 
