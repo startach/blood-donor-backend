@@ -71,6 +71,7 @@ router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/goals', goals.apiGet)
 router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/homeMenu', homeMenu.getApi)
+router.get('/api/settingsMenu', settingsMenu.getApi)
 
 
 module.exports = router;
