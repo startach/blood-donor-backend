@@ -27,7 +27,7 @@ elementsRef.forEach(value => {
     const textElement = value.querySelector("[type='text']")
     fileElement.addEventListener("change", e => {
         getBase64(e.target.files[0], (res) => {
-            imgElement.src = res;
+            imgElement.style.backgroundImage = `url(${res})`;
             textElement.value = res;
         })
     })
