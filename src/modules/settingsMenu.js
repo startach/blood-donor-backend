@@ -1,4 +1,4 @@
-const { addSettingsMenuItem,editSettingsMenuItem,deleteSettingsMenuItem,getSettingsMenuItems } = require('../database/settingsMenu');
+const { addSettingsMenuItem,editSettingsMenuItem,deleteSettingsMenuItem,getSettingsMenuItems,swapSettingsMenuItems } = require('../database/settingsMenu');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -9,6 +9,7 @@ const schema = Joi.object({
     }),
     src: Joi.string(),
     redirectionLink: Joi.string(),
+    addedDate: Joi.date()
 })
 
 const settingsMenuItemEdit = async (id, item) => {
@@ -41,10 +42,16 @@ const settingsMenuItemAdd = async (item) => {
 }
 
 
+const settingsMenuSwapItems = async (id1, id2) => {
+    await swapSettingsMenuItems(id1, id2);
+}
+
+
 
 module.exports = {
     settingsMenuItemEdit,
     settingsMenuItemsGet,
     settingsMenuItemDelete,
-    settingsMenuItemAdd
+    settingsMenuItemAdd,
+    settingsMenuSwapItems
 }
