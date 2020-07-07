@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/lists.css">
+<script src="/scripts/homeMenu.js" defer></script>
+<script src="/scripts/entries.js" defer></script>
+<link rel="stylesheet" href="/css/entries.css">
+<link rel="stylesheet" href="/css/homeMenuEntry.css">
+
+
+
+<section class="list_page">
+
+    <div class="list_titleContainer">
+
+        {{>homeMenuEntry headerMode=true title="Settings" headerClass="list_title"  }}
+
+    </div>
+
+
+    <div class="list_scrollableContent">
+
+        {{#each data}}
+            {{>homeMenuEntry}}
+        {{/each}}
+    </div>
+</section>
+
+
