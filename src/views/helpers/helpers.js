@@ -28,3 +28,16 @@ exports.getDateStr = ()=>{
 
   return `${today.getFullYear()}-${month}-${day}`
 }
+
+exports.sum = (num1 , num2)=>{
+    return num1+num2;
+}
+
+exports.nextIndex = (list , index )=>{
+    // return num1+num2;
+    return Math.min((list?list.length-1:index) ,index+1)
+}
+exports.prevIndex = (index )=>{
+    // return num1+num2;
+    return Math.max(0,index)
+}
