@@ -29,20 +29,11 @@
             title=title.en
             onHeaderClick="expand(this)"
 
-            showButton1=true
-            button1Class="entry_button-green"
-            onButton1Click="edit(this)"
-            button1Label="Edit"
-
-            showButton2=true
-            button2Class="entry_button-green hidden"
-            onButton2Click="submitForm(this)"
-            button2Label="Save"
-
             showButton3=true
-            button3Class="entry_button-red hidden"
-            onButton3Click=(strConcat "postReq('" deleteRoute "')")
-            button3Label="Delete"
+            button3Class="entry_button-green"
+            onButton3Click="edit(this)"
+            button3Label="Edit"
+
 
             showButton4=true
             button4Class="entry_button-green hidden"
