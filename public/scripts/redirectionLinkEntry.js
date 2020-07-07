@@ -3,11 +3,6 @@ function uploadImg_click(element) {
     fileElement.click()
 }
 
-function delete_homeMenuItem(element, id) {
-    fetch(`/homeMenu/delete/${id}`, {method: "post"}).finally(() => window.location.reload())
-
-}
-
 
 function getBase64(file, callback) {
 
@@ -16,7 +11,7 @@ function getBase64(file, callback) {
     reader.readAsDataURL(file);
 }
 
-function cancel_homeMenu(element) {
+function cancelRedirection(element) {
     cancel(element)
     const textElement = element.parentElement.parentElement.querySelector("[name='src']")
     const imgElement = element.parentElement.parentElement.querySelector(".largeImg")

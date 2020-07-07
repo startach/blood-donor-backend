@@ -16,7 +16,7 @@
     <div class="list_scrollableContent">
 
         {{#each data}}
-            {{>alertsEntry}}
+            {{>alertsEntry deleteRoute=(strConcat "/alerts/delete/" id )}}
         {{/each}}
     </div>
 </section>

@@ -40,3 +40,6 @@ function submitForm(element) {
     if(ref) ref.click();
 }
 
+function del(route) {
+    fetch(route, {method: "post"}).finally(() => window.location.reload())
+}
