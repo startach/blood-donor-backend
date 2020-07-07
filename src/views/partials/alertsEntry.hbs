@@ -9,16 +9,17 @@
             title=title
             headerClass=headerClass
 
+            showButton1=true
             button1Class="entry_button-green"
             onButton1Click="edit(this);expand(this)"
             button1Label="Add"
 
+            showButton2=true
             button2Class="entry_button-green hidden"
             onButton2Click="submitForm(this);"
             button2Label="Save"
 
-            hideButton3 = true
-
+            showButton4=true
             button4Class="entry_button-orange hidden"
             onButton4Click="edit(this); expand(this); cancel(this)"
             button4Label="Cancel"
@@ -28,18 +29,22 @@
             title=title.en
             onHeaderClick="expand(this)"
 
+            showButton1=true
             button1Class="entry_button-green"
             onButton1Click="edit(this)"
             button1Label="Edit"
 
+            showButton2=true
             button2Class="entry_button-green hidden"
             onButton2Click="submitForm(this)"
             button2Label="Save"
 
+            showButton3=true
             button3Class="entry_button-red hidden"
             onButton3Click=(strConcat "del('" deleteRoute "')")
             button3Label="Delete"
 
+            showButton4=true
             button4Class="entry_button-orange hidden"
             onButton4Click="cancel(this); edit(this);"
             button4Label="Cancel"

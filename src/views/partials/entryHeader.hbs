@@ -1,34 +1,32 @@
 <script src="/scripts/alerts.js" defer></script>
 
 
-<div class="entry_header {{headerClass}}">
+<div class="entry_header  {{headerClass}}">
     <div class="entry_header_content" onclick="{{onHeaderClick}}">
         <span>{{title}}</span>
     </div>
 
 
-    {{#if hideButton1}}
-    {{else}}
+    {{#if showButton1}}
         <button class="{{button1Class}}" data-name="button1" onclick="{{onButton1Click}}">{{button1Label}}</button>
     {{/if}}
 
 
-    {{#if hideButton2}}
-    {{else}}
+    {{#if showButton2}}
         <button class="{{button2Class}}" data-name="button2" onclick="{{onButton2Click}}">{{button2Label}}</button>
     {{/if}}
 
 
-    {{#if hideButton3}}
-    {{else}}
+    {{#if showButton3}}
         <button class="{{button3Class}}" data-name="button3" onclick="{{onButton3Click}}">{{button3Label}}</button>
     {{/if}}
 
 
-    {{#if hideButton4}}
-    {{else}}
+    {{#if showButton4}}
         <button class="{{button4Class}}" data-name="button4" onclick="{{onButton4Click}}">{{button4Label}}</button>
     {{/if}}
 
-
+    {{#if showButton5}}
+        <button class="{{button5Class}}" data-name="button5" onclick="{{onButton5Click}}">{{button5Label}}</button>
+    {{/if}}
 </div>

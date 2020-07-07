@@ -10,37 +10,43 @@
                 title=title
                 headerClass=headerClass
 
-                button1Class="entry_button-green"
-                onButton1Click="edit(this);expand(this)"
-                button1Label="Add"
+                showButton3=true
+                button3Class="entry_button-green"
+                onButton3Click="edit(this);expand(this)"
+                button3Label="Add"
 
-                button2Class="entry_button-green hidden"
-                onButton2Click="submitForm(this);"
-                button2Label="Save"
+                showButton4=true
+                button4Class="entry_button-green hidden"
+                onButton4Click="submitForm(this);"
+                button4Label="Save"
 
-                hideButton3 = true
 
-                button4Class="entry_button-orange hidden"
-                onButton4Click="edit(this); expand(this); cancelRedirection(this); loadNewImgIcon();"
-                button4Label="Cancel"
+                showButton5= true
+                button5Class="entry_button-orange hidden"
+                onButton5Click="edit(this); expand(this); cancelRedirection(this); loadNewImgIcon();"
+                button5Label="Cancel"
         }}
     {{else}}
         {{>entryHeader
                 title=title.en
                 onHeaderClick="expand(this)"
 
+                showButton1=true
                 button1Class="entry_button-green"
                 onButton1Click="edit(this)"
                 button1Label="Edit"
 
+                showButton2=true
                 button2Class="entry_button-green hidden"
                 onButton2Click="submitForm(this)"
                 button2Label="Save"
 
+                showButton3=true
                 button3Class="entry_button-red hidden"
                 onButton3Click=(strConcat "del('" deleteRoute "')")
                 button3Label="Delete"
 
+                showButton4=true
                 button4Class="entry_button-orange hidden"
                 onButton4Click="cancelRedirection(this); edit(this);"
                 button4Label="Cancel"
@@ -62,10 +68,12 @@
 
             <fieldset class="entry_uploadImgContainer">
                 <legend align="center">icon</legend>
-                <input type="file" class="hidden" accept="image/*"   />
-        <input name="src" value="{{#if headerMode}}{{defaultIconRoute}}{{else}}{{src}}{{/if}}" type="text" class="hidden"    />
-                <div style="background-image: url('{{#if headerMode}}{{defaultIconRoute}}{{else}}{{src}}{{/if}}')" class="largeImg" alt="home menu icon"  onclick="uploadImg_click(this)">
-                <img src="/img/icon-add.svg" alt="add button" class="smallImg" onclick="uploadImg_click(this)">
+                <input type="file" class="hidden" accept="image/*"/>
+                <input name="src" value="{{#if headerMode}}{{defaultIconRoute}}{{else}}{{src}}{{/if}}" type="text"
+                       class="hidden"/>
+                <div style="background-image: url('{{#if headerMode}}{{defaultIconRoute}}{{else}}{{src}}{{/if}}')"
+                     class="largeImg" alt="home menu icon" onclick="uploadImg_click(this)">
+                    <img src="/img/icon-add.svg" alt="add button" class="smallImg" onclick="uploadImg_click(this)">
             </fieldset>
 
         </div>
@@ -106,21 +114,22 @@
 </div>
 
 {{#if headerMode}}
-<script defer type="application/javascript">
+    <script defer type="application/javascript">
 
-    function loadNewImgIcon() {
-        const imgElement = document.querySelector(".largeImg")
-        const textElement = document.querySelector("[name='src']")
-        fetch(imgElement.src).then(res=>res.blob()).then(blob=>new Promise((resolve, reject) => {
-            const reader = new FileReader()
-            reader.onloadend = () => resolve(reader.result)
-            reader.onerror = reject
-            reader.readAsDataURL(blob)
-        })).then(text=> textElement.value = text)
+        function loadNewImgIcon() {
+            const imgElement = document.querySelector(".largeImg")
+            const textElement = document.querySelector("[name='src']")
+            fetch(imgElement.src).then(res => res.blob()).then(blob => new Promise((resolve, reject) => {
+                const reader = new FileReader()
+                reader.onloadend = () => resolve(reader.result)
+                reader.onerror = reject
+                reader.readAsDataURL(blob)
+            })).then(text => textElement.value = text)
 
-    }
-    loadNewImgIcon();
+        }
+
+        loadNewImgIcon();
 
 
-</script>
+    </script>
 {{/if}}

@@ -22,6 +22,9 @@ function edit(element) {
 
     ref = element.parentElement.querySelector("[data-name='button4']")
     if(ref) ref.classList.toggle("hidden")
+
+    ref = element.parentElement.querySelector("[data-name='button5']")
+    if(ref) ref.classList.toggle("hidden")
 }
 
 function cancel(element) {
