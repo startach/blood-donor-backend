@@ -50,10 +50,14 @@ router.post("/alerts",redirectIfLoggedOut("/login"),alerts.add)
 router.post("/alerts/delete/:id",redirectIfLoggedOut("/login"),alerts.delete)
 router.post("/alerts/:id",redirectIfLoggedOut("/login"),alerts.post)
 
+
 router.get('/homeMenu', redirectIfLoggedOut("/login"), homeMenu.get)
 router.post("/homeMenu",redirectIfLoggedOut("/login"),homeMenu.add)
 router.post("/homeMenu/delete/:id",redirectIfLoggedOut("/login"),homeMenu.delete)
 router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
+router.post("/homeMenu/swap/:id1/:id2",redirectIfLoggedOut("/login"),homeMenu.swap)
+
+
 
 router.get('/settingsMenu', redirectIfLoggedOut("/login"), settingsMenu.get)
 router.post("/settingsMenu",redirectIfLoggedOut("/login"),settingsMenu.add)

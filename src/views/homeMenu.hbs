@@ -28,6 +28,9 @@
                     routeName="homeMenu"
                     defaultIconRoute="/img/icon-info.svg"
                     deleteRoute=(strConcat "/homeMenu/delete/" id )
+                    reorderable="true"
+                    reorderable_list = ../data
+                    reorderable_Route="/homeMenu/swap"
             }}
         {{/each}}
     </div>

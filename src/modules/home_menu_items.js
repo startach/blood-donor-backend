@@ -1,4 +1,4 @@
-const { addHomeMenuItem,editHomeMenuItem, deleteHomeMenuItem,getHomeMenuItems } = require('../database/home_menu_items');
+const { addHomeMenuItem,editHomeMenuItem, deleteHomeMenuItem,getHomeMenuItems,swapHomeMenuItems } = require('../database/home_menu_items');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -9,6 +9,7 @@ const schema = Joi.object({
     }),
     src: Joi.string(),
     redirectionLink: Joi.string(),
+    addedDate: Joi.date()
 })
 
 const homeMenuItemEdit = async (id, item) => {
@@ -40,11 +41,16 @@ const homeMenuItemAdd = async (item) => {
     return await addHomeMenuItem(item);
 }
 
+const homeMenuSwapItems = async (id1, id2) => {
+    await swapHomeMenuItems(id1, id2);
+}
+
 
 
 module.exports = {
     homeMenuItemEdit,
     homeMenuItemsGet,
     homeMenuItemDelete,
-    homeMenuItemAdd
+    homeMenuItemAdd,
+    homeMenuSwapItems
 }
