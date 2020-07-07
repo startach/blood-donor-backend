@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/alerts.css">
+<link rel="stylesheet" href="/css/lists.css">
 <script src="/scripts/homeMenu.js" defer></script>
 <script src="/scripts/entries.js" defer></script>
 <link rel="stylesheet" href="/css/entries.css">
@@ -6,16 +6,16 @@
 
 
 
-<section class="alerts_page">
+<section class="list_page">
 
-    <div class="alerts_headerContainer">
+    <div class="list_titleContainer">
 
-        {{>homeMenuEntry headerMode=true title="Home Menu Items" headerClass="alerts_header"  }}
+        {{>homeMenuEntry headerMode=true title="Home Menu Items" headerClass="list_title"  }}
 
     </div>
 
 
-    <div class="alerts_scrollable">
+    <div class="list_scrollableContent">
 
         {{#each data}}
             {{>homeMenuEntry}}

@@ -1,4 +1,4 @@
-.alerts_page {
+.list_page {
     width: 100%;
     height: 100%;
     padding: 20px 0;
@@ -10,15 +10,15 @@
 }
 
 
-.alerts_headerContainer {
+.list_titleContainer {
     width: min( 80%,600px) !important;
 }
-.alerts_header{
+.list_title{
     background-color: var(--color-navy) !important;
     color: white !important;
 
 }
-.alerts_scrollable {
+.list_scrollableContent {
     overflow-y: auto;
     width:  min( 80%,600px);
     height: 90%;
