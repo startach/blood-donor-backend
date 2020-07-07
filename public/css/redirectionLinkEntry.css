@@ -24,6 +24,10 @@
     cursor: pointer;
     border: 2px white solid;
     border-radius: 50%;
+
+    background-color: white;
+    opacity: .6;
+
 }
 
 .entry_urlContainer{
