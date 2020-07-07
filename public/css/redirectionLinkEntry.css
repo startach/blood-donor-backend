@@ -12,6 +12,7 @@
     border-radius: 50%;
     border: 5px white solid;
     background-color: white;
+    background-size: contain;
 }
 
 .entry_uploadImgContainer  .smallImg{
