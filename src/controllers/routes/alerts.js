@@ -27,7 +27,7 @@ exports.post = ({ params: { id }, body }, res) => {
         },
         bloodType: Object.keys(body).filter(x => x.includes("bloodType")).map(x => body[x]),
         expDate: moment(body.expDate, "YYYY-MM-DD").toDate(),
-        addedDate:moment(1594129444,"s").toDate()
+        addedDate:moment(Number(body.addedDate),"s").toDate()
 
     }).finally(() => res.redirect("/alerts"))
 
