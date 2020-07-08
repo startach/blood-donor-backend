@@ -27,7 +27,7 @@ const deleteAlert = (id) => new Promise((resolve, reject) => {
 })
 
 const getAlerts = () => new Promise(async (resolve, reject) => {
-    const alertsRef = db.collection('alerts');
+    const alertsRef = db.collection('alerts').orderBy("addedDate","desc");
     try {
         const doc = await alertsRef.get();
         var result = []
