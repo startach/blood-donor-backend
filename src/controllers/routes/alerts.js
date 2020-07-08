@@ -26,7 +26,8 @@ exports.post = ({ params: { id }, body }, res) => {
 
         },
         bloodType: Object.keys(body).filter(x => x.includes("bloodType")).map(x => body[x]),
-        expDate: moment(body.expDate, "YYYY-MM-DD").toDate()
+        expDate: moment(body.expDate, "YYYY-MM-DD").toDate(),
+        addedDate:moment(1594129444,"s").toDate()
 
     }).finally(() => res.redirect("/alerts"))
 
@@ -64,7 +65,7 @@ exports.getAlertsApi = (req, res) => {
     })
         .catch((err) => {
             console.log(err);
-            res.status(500).json({ message: 'Ops, could not retreive data', ok: false,code:500 })
+            res.status(500).json({ message: 'Ops, could not retrieve data', ok: false,code:500 })
 
         })
 
