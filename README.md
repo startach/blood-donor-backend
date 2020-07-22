@@ -1,3 +1,12 @@
+## The App
+
+This repo serves as a backend for [Blood-Donor-front-end](https://github.com/startach/blood-donor-frontend)
+
+#### what does it include? 
+
+- A Server side rendered desktop app for the organization coordinator, where he can update parts of the React Front-end App.
+- A connection point between Firebase to the front-end app.
+
 ## Installation 
 
 1. Clone the repo by running the following command
