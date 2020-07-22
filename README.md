@@ -4,7 +4,7 @@ This repo serves as a backend for [Blood-Donor-front-end](https://github.com/sta
 
 #### what does it include? 
 
-- A Server side rendered desktop app for the organization coordinator, where he can update parts of the React Front-end App.
+- A node.js server rendered via handlebars for the organization's coordinator, where he can update parts of the React Front-end App.
 - A connection point between Firebase to the front-end app.
 
 ## Installation 
@@ -19,7 +19,7 @@ git clone git@github.com:startach/blood-donor-backend.git
  ```
 3. setup env variables
     - Create new .env file in the root directory
-    - add the following variables(you can get them from the firebase project settings page)
+    - add the following variables to it(you can get them from the firebase project settings page)
         ```
         FIREBASE_API_KEY = 
         FIREBASE_AUTH_DOMAIN = 
