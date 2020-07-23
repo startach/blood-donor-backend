@@ -38,3 +38,15 @@ or
 npm run dev (runs with nodemon)
 ```
 4. Open http://localhost:4000/ 
+
+
+## Documintation 
+- api routes
+    - [GET /api/locations
+](https://github.com/startach/blood-donor-backend/issues/1)
+    - [GET /api/homeMenu
+](https://github.com/startach/blood-donor-backend/issues/13)
+    - [GET /api/goals
+](https://github.com/startach/blood-donor-backend/issues/14)
+    - [GET /api/alerts
+](https://github.com/startach/blood-donor-backend/issues/12)
