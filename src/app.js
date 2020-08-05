@@ -5,15 +5,15 @@ const helmet = require('helmet')
 const exphbs = require("express-handlebars");
 const path = require('path');
 const router = require("./controllers/router")
-const {loadUserData} = require("./middleware/authValidator");
+const { loadUserData } = require("./middleware/authValidator");
 const helpers = require('./views/helpers/helpers')
 const schedule = require('node-schedule');
-const {getAllLocationsFromServer} = require('./controllers/locations');
+const { getAllLocationsFromServer } = require('./controllers/locations');
 
 
 const app = express();
 
-app.use(cors({credentials: true, origin: ['http://localhost:3000',"https://sad-pare-c4309e.netlify.app"]}));
+app.use(cors({ credentials: true, origin: ['http://localhost:3000', "https://sad-pare-c4309e.netlify.app"] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
@@ -40,9 +40,14 @@ app.engine(
 	})
 );
 
-var getLocationScheduleJob = schedule.scheduleJob('00 00 * * *', function(){
+getAllLocationsFromServer();
+
+schedule.scheduleJob('00 00 * * *', function () {
 	getAllLocationsFromServer();
+
 });
+
+
 
 
 module.exports = app;
