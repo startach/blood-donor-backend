@@ -1,4 +1,4 @@
-const { getGoal, editGoal } = require('../database/goals');
+const QueriesGoals = require('../database/goals');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -15,7 +15,7 @@ const schema = Joi.object({
 
 })
 
-const goalEdit = async (current, goal) => {
+const edit = async (current, goal) => {
     if (!current || typeof current !== 'number')
         throw new Error('current should be defined as number');
 
@@ -35,14 +35,14 @@ const goalEdit = async (current, goal) => {
     if (schema.validate(data).error)
         throw  new Error(schema.validate(data).error.message)
 
-    return await editGoal(data)
+    return await QueriesGoals.edit(data)
 }
 
-const goalGet = getGoal;
+const get = QueriesGoals.get;
 
 
 
 module.exports = {
-    goalEdit,
-    goalGet
+    edit,
+    get
 }

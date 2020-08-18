@@ -1,4 +1,4 @@
-const { addHomeMenuItem,editHomeMenuItem, deleteHomeMenuItem,getHomeMenuItems } = require('../database/home_menu_items');
+const QueriesHomeMenu = require('../database/home_menu_items');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -11,40 +11,40 @@ const schema = Joi.object({
     redirectionLink: Joi.string(),
 })
 
-const homeMenuItemEdit = async (id, item) => {
+const edit = async (id, item) => {
     if(!id)
         throw new Error("id should be defined");
 
     if (schema.validate(item).error)
         throw new Error(schema.validate(item).error.message);
 
-    return await editHomeMenuItem(id,item);
+    return await QueriesHomeMenu.edit(id,item);
 }
 
 
-const homeMenuItemsGet = getHomeMenuItems;
+const get = QueriesHomeMenu.get;
 
 
-const homeMenuItemDelete = async (id) => {
+const del = async (id) => {
     if(!id)
         throw new Error("id should be defined");
 
 
-    return await deleteHomeMenuItem(id)
+    return await QueriesHomeMenu.delete(id)
 
 }
 
-const homeMenuItemAdd = async (item) => {
+const add = async (item) => {
     if (schema.validate(item).error)
         throw new Error(schema.validate(item).error);
-    return await addHomeMenuItem(item);
+    return await QueriesHomeMenu.add(item);
 }
 
 
 
 module.exports = {
-    homeMenuItemEdit,
-    homeMenuItemsGet,
-    homeMenuItemDelete,
-    homeMenuItemAdd
+    edit,
+    get,
+    del,
+    add
 }

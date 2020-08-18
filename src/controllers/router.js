@@ -45,14 +45,14 @@ router.route("/changePassword")
 
 
 router.get('/alerts', redirectIfLoggedOut("/login"), alerts.get)
-router.post("/alerts",redirectIfLoggedOut("/login"),alerts.add)
-router.post("/alerts/delete/:id",redirectIfLoggedOut("/login"),alerts.delete)
-router.post("/alerts/:id",redirectIfLoggedOut("/login"),alerts.post)
+router.post("/alerts", redirectIfLoggedOut("/login"), alerts.add)
+router.post("/alerts/delete/:id", redirectIfLoggedOut("/login"), alerts.delete)
+router.post("/alerts/:id", redirectIfLoggedOut("/login"), alerts.post)
 
 router.get('/homeMenu', redirectIfLoggedOut("/login"), homeMenu.get)
-router.post("/homeMenu",redirectIfLoggedOut("/login"),homeMenu.add)
-router.post("/homeMenu/delete/:id",redirectIfLoggedOut("/login"),homeMenu.delete)
-router.post("/homeMenu/:id",redirectIfLoggedOut("/login"),homeMenu.post)
+router.post("/homeMenu", redirectIfLoggedOut("/login"), homeMenu.add)
+router.post("/homeMenu/delete/:id", redirectIfLoggedOut("/login"), homeMenu.delete)
+router.post("/homeMenu/:id", redirectIfLoggedOut("/login"), homeMenu.post)
 
 
 
@@ -66,5 +66,9 @@ router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/homeMenu', homeMenu.getApi)
 
 
+
+router.use((err, req, res, next) => {
+    res.json({ ok: false, message: 'Server Error' })
+})
 module.exports = router;
 

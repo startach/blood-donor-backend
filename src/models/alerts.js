@@ -1,4 +1,4 @@
-const { editAlert, deleteAlert, addAlert, getAlerts } = require('../database/alerts');
+const QueriesAlerts = require('../database/alerts');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -18,39 +18,39 @@ const schema = Joi.object({
     expDate: Joi.date(),
 })
 
-const alertEdit = async (id, alert) => {
+const edit = async (id, alert) => {
     if (!id) {
         throw new Error("id should be defined");
     }
     if (schema.validate(alert).error)
         throw new Error (schema.validate(alert).error.message);
 
-    return await editAlert(id, alert);
+    return await QueriesAlerts.edit(id, alert);
 }
 
 
-const alertsGet = getAlerts;
+const get = QueriesAlerts.get
 
-const alertDelete = async (id) => {
+const del = async (id) => {
     if (!id) {
         throw new Error("id should be defined");
     }
 
-    return await deleteAlert(id)
+    return await QueriesAlerts.del(id)
 
 }
 
-const alertAdd = async (alert) => {
+const add = async (alert) => {
     if (schema.validate(alert).error)
         throw new Error(schema.validate(alert).error);
-    return await addAlert(alert);
+    return await QueriesAlerts.add(alert);
 }
 
 
 
 module.exports = {
-    alertEdit,
-    alertsGet,
-    alertDelete,
-    alertAdd,
+    edit,
+    get,
+    del,
+    add,
 }
