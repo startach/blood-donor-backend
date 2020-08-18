@@ -33,7 +33,7 @@ async function getGeolocation(donationLocationsObject) {
         address: `${donationLocationsObject.numHouse} ${donationLocationsObject.Name.trim()}, ${donationLocationsObject.City.trim()}`,
         region: "il",
         language: "he",
-        key: process.env.REACT_APP_GOOGLE_KEY,
+        key: process.env.GOOGLE_GEOCODER_API,
     }
     let queryString = querystring.stringify(params);
     let concat = `${urlStart}${queryString}`;

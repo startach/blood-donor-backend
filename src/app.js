@@ -13,7 +13,8 @@ const { getAllLocationsFromServer } = require('./controllers/locations');
 
 const app = express();
 
-app.use(cors({ credentials: true, origin: ['http://localhost:3000', "https://sad-pare-c4309e.netlify.app"] }));
+
+app.use(cors({credentials: true, origin: ['http://localhost:3000',"https://sad-pare-c4309e.netlify.app", "https://blood-donor.netlify.app"]}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
