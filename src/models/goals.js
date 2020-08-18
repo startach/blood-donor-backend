@@ -1,4 +1,4 @@
-const goals = require('../database/goals');
+const QueriesGoals = require('../database/goals');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -35,10 +35,10 @@ const edit = async (current, goal) => {
     if (schema.validate(data).error)
         throw  new Error(schema.validate(data).error.message)
 
-    return await goals.edit(data)
+    return await QueriesGoals.edit(data)
 }
 
-const get = goals.get;
+const get = QueriesGoals.get;
 
 
 

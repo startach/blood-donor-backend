@@ -1,4 +1,4 @@
-const alerts = require('../database/alerts');
+const QueriesAlerts = require('../database/alerts');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -25,25 +25,25 @@ const edit = async (id, alert) => {
     if (schema.validate(alert).error)
         throw new Error (schema.validate(alert).error.message);
 
-    return await alerts.edit(id, alert);
+    return await QueriesAlerts.edit(id, alert);
 }
 
 
-const get = alerts.get
+const get = QueriesAlerts.get
 
 const del = async (id) => {
     if (!id) {
         throw new Error("id should be defined");
     }
 
-    return await alerts.del(id)
+    return await QueriesAlerts.del(id)
 
 }
 
 const add = async (alert) => {
     if (schema.validate(alert).error)
         throw new Error(schema.validate(alert).error);
-    return await alerts.add(alert);
+    return await QueriesAlerts.add(alert);
 }
 
 

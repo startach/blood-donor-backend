@@ -1,10 +1,10 @@
-const goals = require("../../modules/goals");
+const ModelsGoals = require("../../models/goals");
 
 exports.get = async (req, res) => {
 
     let data;
     try {
-        data = await goals.get()
+        data = await ModelsGoals.get()
     } catch({message}) {
         console.error(message)
     }
@@ -19,7 +19,7 @@ exports.get = async (req, res) => {
 exports.post = async (req, res) => {
 
     try {
-        await goals.edit(Number(req.body.current), Number(req.body.goal));
+        await ModelsGoals.edit(Number(req.body.current), Number(req.body.goal));
 
         res.render('goals', {
             data: {

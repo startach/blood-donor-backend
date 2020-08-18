@@ -1,4 +1,4 @@
-const homeMenuModels= require('../database/home_menu_items');
+const QueriesHomeMenu = require('../database/home_menu_items');
 const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
@@ -18,11 +18,11 @@ const edit = async (id, item) => {
     if (schema.validate(item).error)
         throw new Error(schema.validate(item).error.message);
 
-    return await homeMenuModels.edit(id,item);
+    return await QueriesHomeMenu.edit(id,item);
 }
 
 
-const get = homeMenuModels.get;
+const get = QueriesHomeMenu.get;
 
 
 const del = async (id) => {
@@ -30,14 +30,14 @@ const del = async (id) => {
         throw new Error("id should be defined");
 
 
-    return await homeMenuModels.delete(id)
+    return await QueriesHomeMenu.delete(id)
 
 }
 
 const add = async (item) => {
     if (schema.validate(item).error)
         throw new Error(schema.validate(item).error);
-    return await homeMenuModels.add(item);
+    return await QueriesHomeMenu.add(item);
 }
 
 
