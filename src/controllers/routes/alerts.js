@@ -1,11 +1,11 @@
-const Modelsalerts = require('../../models/alerts');
+const ModelsAlerts = require('../../models/alerts');
 
 const moment = require("moment")
 
 
 exports.get = async (req, res, next) => {
     try {
-        let data = await Modelsalerts.get()
+        let data = await ModelsAlerts.get()
         data = data.map(x => ({ ...x, expDate: moment(x.expDate.toDate()).format("YYYY-MM-DD") }));
         res.render("alerts", { data, selectedNavbarItem: 'alerts' })
     } catch(e) {
@@ -14,7 +14,7 @@ exports.get = async (req, res, next) => {
 }
 
 exports.post = async ({ params: { id }, body }, res) => {
-    await Modelsalerts.edit(id, {
+    await ModelsAlerts.edit(id, {
         title: {
             he: body.title_he,
             en: body.title_en,
@@ -37,13 +37,13 @@ exports.post = async ({ params: { id }, body }, res) => {
 }
 
 exports.delete = async ({ params: { id } }, res) => {
-    await Modelsalerts.del(id)
+    await ModelsAlerts.del(id)
     res.end()
 }
 
 exports.add = async ({ body }, res) => {
     try {
-        await Modelsalerts.add({
+        await ModelsAlerts.add({
             title: {
                 he: body.title_he,
                 en: body.title_en,
@@ -66,7 +66,7 @@ exports.add = async ({ body }, res) => {
 
 exports.getAlertsApi = async (req, res) => {
     try {
-        const data = await Modelsalerts.get()
+        const data = await ModelsAlerts.get()
         res.status(200).json({ data: data || [], message: 'successful request', ok: true, code: 200 })
     } catch(e) {
         console.log(err);
