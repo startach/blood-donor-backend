@@ -1,7 +1,10 @@
 const { db } = require('./index')
 
 const add = async (data) => {
-    await db.collection('alerts').doc().set(data)
+    console.log('----------trying to send-----------')
+    await db.collection('alerts').doc().set(data);
+    const socket = require('../controllers/socketIo').getConnection()
+    socket.emit("FromAPI", data);
     return data
 }
 
