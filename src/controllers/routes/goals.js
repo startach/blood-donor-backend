@@ -44,7 +44,7 @@ exports.post = async (req, res) => {
 
 exports.apiGet = async (req, res) => {
     try {
-        const data = await goals.get() 
+        const data = await ModelsGoals.get() 
         res.status(200).json({ data: data || [], message: 'successful request', ok: true, code: 200 })
     } catch (e) {
         console.error(e)
