@@ -1,17 +1,19 @@
-//
-// const { exec } = require('pkg')
-// exec([ process.argv[2], '--target', 'host', '--output', 'app.exe' ]).then(function() {
-//
-// }).catch(function(error) {
-//     console.error(error)
-// })
 
-
-
+const path = require("path");
 const fs = require("fs")
-const path = require("path")
+const { exec} = require('pkg');
+require("dotenv").config();
 
 
-const outputPath = path.join(path.dirname(process.execPath), "test.json");
-const data = JSON.stringify({test: "123"})
-fs.writeFileSync(outputPath, data, {flag: 'w+'});
+const backendUrl = process.env.THIS_SERVER_URL;
+
+if(!backendUrl)
+    throw new Error("THIS_SERVER_URL must be set as an environment variable")
+
+fs.writeFileSync(path.join(__dirname,"data.json"), JSON.stringify({backendUrl}) , {flag:"w"} )
+
+exec([ path.join(__dirname,"exeScript.js") , '--target', 'host', '--output', path.join(__dirname,"..","..",process.argv[2]) ]).then(function() {
+    console.log('Done!')
+}).catch(function(error) {
+    console.error(error)
+})
