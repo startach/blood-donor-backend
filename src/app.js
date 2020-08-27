@@ -7,8 +7,6 @@ const path = require('path');
 const router = require("./controllers/router")
 const { loadUserData } = require("./middleware/authValidator");
 const helpers = require('./views/helpers/helpers')
-const schedule = require('node-schedule');
-const { getAllLocationsFromServer } = require('./controllers/locations');
 
 
 const app = express();
@@ -40,15 +38,6 @@ app.engine(
 		helpers,
 	})
 );
-
-getAllLocationsFromServer();
-
-schedule.scheduleJob('00 00 * * *', function () {
-	getAllLocationsFromServer();
-
-});
-
-
 
 
 module.exports = app;
