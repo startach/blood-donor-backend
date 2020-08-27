@@ -33,7 +33,7 @@ exports.getLocationsIframe = (req, res) => {
     })
 }
 
-const getCookies = async () => {
+exports.getDataFromMada = async () => {
     let response = await axios.get('https://www.mdais.org/7060ac19f50208cbb6b45328ef94140a612ee92387e015594234077b4d1e64f1/zGplDT8SMBbXs1VvdWNmrcNDNqCn22Oj')
     const firstCookie = (response.headers['set-cookie'][0]).split(" ")[0]
     response = await axios.post('https://www.mdais.org/umbraco/api/invoker/execute', {
@@ -53,21 +53,16 @@ const getCookies = async () => {
             "content-type": "application/json",
         },
     })
-
     return  JSON.parse(response.data.Result)
-
 }
 
-exports.getAllLocationsFromServer = async () => {
+exports.getAllGeolocations = async (madaDataArr) => {
 
 
     try {
-        const result = await getCookies()
-
-        const jsonString = `{ "data" : ${JSON.stringify(result)} , "ok":${true}, "message":"", "code":${200} }`;
+        const jsonString = `{ "data" : ${JSON.stringify(madaDataArr)} , "ok":${true}, "message":"", "code":${200} }`;
         await fs.writeFileSync('src/database/locations.json', jsonString);
         await updateGeolocations();
-
 
     } catch (e) {
         console.error(e)
