@@ -1,4 +1,4 @@
-const locations = require("./locations");
+const locations = require("./routes/locations");
 const home = require("./routes/home");
 const goals = require("./routes/goals");
 const login = require("./routes/login");
@@ -59,11 +59,12 @@ router.post("/homeMenu/:id", redirectIfLoggedOut("/login"), homeMenu.post)
 
 //APIs
 router.get('/api/locations', locations.getAllLocations);
-router.get('/iframe/locations', locations.getLocationsIframe);
+router.post('/api/locations', locations.setAllLocations);
 router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/goals', goals.apiGet)
 router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/homeMenu', homeMenu.getApi)
+router.get('/iframe/locations', locations.getLocationsIframe);
 
 
 

@@ -1,4 +1,4 @@
-const {getDataFromMada} = require("../controllers/locations");
+const {getLocationsFromMada} = require("../models/locations");
 const axios = require("axios")
 const {backendUrl} = require("./data.json")
 
@@ -7,7 +7,7 @@ console.log("fetching data from mada...")
 
 
 
-getDataFromMada().then(madaArr => {
+getLocationsFromMada().then(madaArr => {
 
     console.log("sending data to server...")
     if (!Array.isArray(madaArr))
