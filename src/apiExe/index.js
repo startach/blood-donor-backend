@@ -6,7 +6,7 @@ require("dotenv").config();
 
 
 //load Environment variable
-const backendUrl = process.env.THIS_SERVER_URL;
+const backendUrl = process.env.MADA_POST_URL_ROUTE;
 if (!backendUrl)
     throw new Error("THIS_SERVER_URL must be set as an environment variable")
 
