@@ -11,8 +11,10 @@ const helpers = require('./views/helpers/helpers')
 
 const app = express();
 
+const allowedCorsRoutes = (process.env.CORS_ORIGIN ||"").split(",");
+app.use(cors({credentials: true, origin: allowedCorsRoutes}));
 
-app.use(cors({credentials: true, origin: ['http://localhost:3000',"https://sad-pare-c4309e.netlify.app", "https://blood-donor.netlify.app"]}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
@@ -22,7 +24,6 @@ app.use(helmet())
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
-
 app.use(loadUserData)
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(router)
