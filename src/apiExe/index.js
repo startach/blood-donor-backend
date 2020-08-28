@@ -1,21 +1,43 @@
-
 const path = require("path");
 const fs = require("fs")
-const { exec} = require('pkg');
+const {exec} = require('pkg');
+const jsonFile = require("../models/jsonFile")
 require("dotenv").config();
 
 
+//load Environment variable
 const backendUrl = process.env.THIS_SERVER_URL;
-
-if(!backendUrl)
+if (!backendUrl)
     throw new Error("THIS_SERVER_URL must be set as an environment variable")
 
-const dataPath = path.join(__dirname,"data.json");
-fs.writeFileSync(dataPath, JSON.stringify({backendUrl}) , {flag:"w"} )
+//create exe function
+async function createExe(jsPath, outputPath) {
+    await exec([jsPath, '--targets', 'linux,macos,win', '--out-path', outputPath]);
+}
 
-exec([ path.join(__dirname,"exeScript.js") , '--target', 'host', '--output', path.join(__dirname,"..","..",process.argv[2]) ]).then(function() {
-    console.log('Done!')
-    fs.unlink(dataPath,err => err && console.log(err))
-}).catch(function(error) {
-    console.error(error)
-})
+//create "data.json" file storing the Environment variable
+const dataPath = path.join(__dirname, "data.json");
+jsonFile.writeJsonToFileSync(dataPath,{backendUrl});
+console.log('"data.json" created')
+
+//load all exe files in the directory
+const fileNamesInDir = fs.readdirSync(__dirname).filter(fileName => (/.exe.js$/i).test(fileName));
+const filePaths = fileNamesInDir.map(fileName => path.join(__dirname, fileName));
+const outputDir = path.join(__dirname, "/output/")
+
+
+async function createFiles () {
+    for (let index = 0; index < filePaths.length;index++) {
+        const fileNameWithoutExt = fileNamesInDir[index].split(".exe.js")[0]
+        const outputPath = path.join(outputDir,fileNameWithoutExt )
+        await createExe(filePaths[index], outputPath)
+        console.log("generated executable:",fileNameWithoutExt )
+    }
+   await jsonFile.deleteFile(dataPath)
+    console.log('"data.json" deleted')
+
+}
+
+createFiles().then(()=>console.log("done!"))
+
+
