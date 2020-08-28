@@ -27,7 +27,7 @@ exports.setAllLocations = async (req, res) => {
 
         data.map(location =>
             localData.find(localLocation =>
-                deepEquals({localLocation, lat: undefined, lan: undefined}, location)) || location)
+                deepEquals({...localLocation, lat: undefined, lan: undefined}, location)) || location)
 
         //todo make sure that getAllGeolocations searches for the correct address
 
