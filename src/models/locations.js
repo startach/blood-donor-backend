@@ -47,6 +47,8 @@ async function getGeolocationCoordinates(donationLocationsObject) {
     searchParams.append("language", "he")
     searchParams.append("key", process.env.GOOGLE_GEOCODER_API)
     searchParams.append("address", `${donationLocationsObject.Name.trim()} ${donationLocationsObject.numHouse} , ${donationLocationsObject.City.trim()}`)
+    //todo find the most optimal Algorithm
+    // searchParams.append("address", `${donationLocationsObject.Street.trim()} ${donationLocationsObject.NumHouse.trim()} , ${donationLocationsObject.Name.trim()} , ${donationLocationsObject.City.trim()}`)
 
     const {data} = await axios.get(googleUrl.href)
     return data;

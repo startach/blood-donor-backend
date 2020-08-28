@@ -29,8 +29,6 @@ exports.setAllLocations = async (req, res) => {
             localData.find(localLocation =>
                 deepEquals({localLocation, lat: undefined, lan: undefined}, location)) || location)
 
-
-        //todo merge the request object with the response
         //todo make sure that getAllGeolocations searches for the correct address
 
         data = await locationsModule.getAllGeolocations(data)
