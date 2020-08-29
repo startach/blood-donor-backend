@@ -16,14 +16,12 @@ router.all(["/",
     /^\/alerts.*/,
     /^\/homeMenu.*/,
     /^\/goals.*/,
-    /^\/locations.*/
+    /^\/locations.*/,
 ], redirectIfLoggedOut("/login"))
 
-router.all(["/login",
+router.all([
+    "/login",
     '/resetPassword',
-    /^\/homeMenu.*/,
-    /^\/goals.*/,
-    /^\/locations.*/
 ], redirectIfLoggedIn("/"))
 
 
@@ -65,13 +63,13 @@ router.post("/homeMenu/:id", homeMenu.post)
 
 
 //routes that work all the time ------------------------------------
-router.get('/api/locations', locations.getAllLocations);
-router.post('/api/locations', locations.setAllLocations);
+router.get('/api/locations', locations.getLocationsApi);
+router.post('/api/locations', locations.setLocationsApi);
+router.get('/iframe/locations', locations.getLocationsIframe);
 router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/goals', goals.apiGet)
 router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/homeMenu', homeMenu.getApi)
-router.get('/iframe/locations', locations.getLocationsIframe);
 
 
 router.use((err, req, res, next) => {
