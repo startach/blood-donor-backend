@@ -17,9 +17,7 @@ exports.getAllLocations = async (req, res) => {
         );
     }
 }
-
-
-exports.setAllLocations = async (req, res) => {
+exports.setLocationsApi = async (req, res) => {
 
     try {
         let data = req.body
@@ -46,13 +44,11 @@ exports.setAllLocations = async (req, res) => {
     }
 
 }
-
-
 exports.getLocationsIframe = async (req, res) => {
 
     try {
         const data = await jsonFile.readJsonFile('src/database/locations.json') || []
-        res.status(200).render('locations', {
+        res.status(200).render('locationsIframe', {
             // encodeURIComponent so later we can use the data in the script tag as a javascript value
             result: encodeURIComponent(JSON.stringify(data)),
             layout: 'locations-iframe'
