@@ -2,7 +2,14 @@ const jsonFile = require("../../models/jsonFile")
 const locationsModule = require("../../models/locations")
 const deepEquals = require("deep-equal")
 
-exports.getAllLocations = async (req, res) => {
+
+exports.get = (req, res) => {
+
+    res.render("locations", {
+        selectedNavbarItem: 'locations'
+    })
+}
+exports.getLocationsApi = async (req, res) => {
 
     try {
         const data = await jsonFile.readJsonFile('src/database/locations.json') || []
