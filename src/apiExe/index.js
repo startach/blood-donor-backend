@@ -12,7 +12,7 @@ if (!backendUrl)
 
 //create exe function
 async function createExe(jsPath, outputPath) {
-    await exec([jsPath, '--targets', 'linux,macos,win', '--out-path', outputPath]);
+    await exec([jsPath, '--targets', 'linux,macos,win', '--output', outputPath]);
 }
 
 //create "data.json" file storing the Environment variable
@@ -23,7 +23,7 @@ console.log('"data.json" created')
 //load all exe files in the directory
 const fileNamesInDir = fs.readdirSync(__dirname).filter(fileName => (/.exe.js$/i).test(fileName));
 const filePaths = fileNamesInDir.map(fileName => path.join(__dirname, fileName));
-const outputDir = path.join(__dirname, "/output/")
+const outputDir = process.argv[2];
 
 
 async function createFiles () {
