@@ -25,34 +25,59 @@ async function getLocationsFromMada() {
     })
     return JSON.parse(response.data.Result)
 }
+
 async function getAllGeolocations(madaArr) {
 
-    const promises = madaArr.map(async (locationData)=>{
-        try {
-            const geolocationResponse = await getGeolocationCoordinates(locationData)
-            let coords = geolocationResponse.results[0].geometry.location
-            locationData.lon = coords.lng;
-            locationData.lat = coords.lat;
-        } catch (e){console.error(e)}
-
+    const promises = madaArr.map(async (locationData) => {
+        if(locationData.lat && locationData.lon)
+            return locationData;
+        const {lng, lat} = await getGeolocationCoordinates(locationData)
+        locationData.lon = lng;
+        locationData.lat = lat;
         return locationData;
     })
 
     return await Promise.all(promises)
 }
+
 async function getGeolocationCoordinates(donationLocationsObject) {
     const googleUrl = new URL("https://maps.googleapis.com/maps/api/geocode/json")
     const searchParams = googleUrl.searchParams;
     searchParams.append("region", "il")
     searchParams.append("language", "he")
     searchParams.append("key", process.env.GOOGLE_GEOCODER_API)
-    searchParams.append("address", `${donationLocationsObject.Name.trim()} ${donationLocationsObject.numHouse} , ${donationLocationsObject.City.trim()}`)
-    //todo find the most optimal Algorithm
-    // searchParams.append("address", `${donationLocationsObject.Street.trim()} ${donationLocationsObject.NumHouse.trim()} , ${donationLocationsObject.Name.trim()} , ${donationLocationsObject.City.trim()}`)
 
-    const {data} = await axios.get(googleUrl.href)
-    return data;
+    const searchOptions = [
+        `${donationLocationsObject.Street.trim()} ${donationLocationsObject.NumHouse.trim()} , ${donationLocationsObject.City.trim()}`,
+        `${donationLocationsObject.Street.trim()} ${donationLocationsObject.NumHouse.trim()} , ${donationLocationsObject.Name.trim()} , ${donationLocationsObject.City.trim()}`,
+        `${donationLocationsObject.Name.trim()} ${donationLocationsObject.numHouse} , ${donationLocationsObject.City.trim()}`,
+        `${donationLocationsObject.Name.trim()}`,
+        `${donationLocationsObject.City.trim()}`,
+    ]
+
+    let data;
+    for (const address of searchOptions) {
+        searchParams.append("address", address)
+
+        let response = await axios.get(googleUrl.href)
+        data = response.data;
+
+        if (data && data.results && data.results.length)
+            break;
+        await timeout(100)
+    }
+
+
+    if (!data || !data.results || !data.results.length)
+        return {};
+
+    return data.results[0].geometry.location;
 }
+
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 module.exports = {
     getLocationsFromMada,
