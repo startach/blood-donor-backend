@@ -30,13 +30,17 @@ exports.setLocationsApi = async (req, res) => {
         let data = req.body
         const localData = await jsonFile.readJsonFile('src/database/locations.json') || []
 
-        data.map(location =>
-            localData.find(localLocation =>
-                deepEquals({...localLocation, lat: undefined, lan: undefined}, location)) || location)
+        //check if the location already exists locally
+        data = data.map(location =>
+            localData.find(localLocation => deepEquals(
+                {...localLocation, lat: undefined, lon: undefined},
+                {...location, lat: undefined, lon: undefined}))
+            || location)
 
-        //todo make sure that getAllGeolocations searches for the correct address
-
+        //get the geolocation for the non-existing data
         data = await locationsModule.getAllGeolocations(data)
+
+        //update local data
         await jsonFile.writeJsonToFile('src/database/locations.json', data)
         res.end()
 
