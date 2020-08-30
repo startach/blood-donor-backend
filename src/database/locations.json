@@ -1,447 +1,11 @@
 [
   {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "אשדוד",
-    "Street": "הרפואה",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חיפה",
-    "Street": "יצחק שדה",
-    "NumHouse": "10",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.989571,
-    "lat": 32.7940463
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "כפר סבא",
-    "Street": "טשרנחובסקי",
-    "NumHouse": "51",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.90761,
-    "lat": 32.178195
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חדרה",
-    "Street": "גבעת בילו",
-    "NumHouse": "",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.9196518,
-    "lat": 32.4340458
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חולון",
-    "Street": "הרוקמים",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.787384,
-    "lat": 32.015833
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "12:45",
-    "Name": "",
-    "City": "נתניה",
-    "Street": "מינץ",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "קרית מוצקין",
-    "Street": "החשמונאים",
-    "NumHouse": "75",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.079523,
-    "lat": 32.838202
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "פתח תקווה",
-    "Street": "המכבים",
-    "NumHouse": "30",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.887762,
-    "lat": 32.084041
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רחובות",
-    "Street": "0363",
-    "NumHouse": "69",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.81650279999999,
-    "lat": 31.8994247
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "13:30",
-    "Name": "דודג' סנטר                            ",
-    "City": "נצרת עילית",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 35.3036111,
-    "lat": 32.6933333
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "12:30",
-    "Name": "מרכז מסחרי- מול קניון לב העיר                      ",
-    "City": "קרית גת",
-    "Street": "שד' לכיש",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.7729488,
-    "lat": 31.6088873
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "12:45",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "12:30",
-    "Name": "תחנת מגן דוד אדום",
-    "City": "טבריה",
-    "Street": "הבנים מול מלון לאונרדו",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.530973,
-    "lat": 32.795859
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "  תחנת מ.ד.א אשקלון                                  ",
-    "City": "אשקלון",
-    "Street": "התחיה",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "13:30",
-    "Name": "תחנה מרכזית                               ",
-    "City": "עפולה",
-    "Street": "קהילת ציון ",
-    "NumHouse": "2",
-    "AccountType": "",
-    "lon": 35.292171,
-    "lat": 32.607536
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "13:00",
-    "Name": "קניון הזהב                             ",
-    "City": "ראשון לציון",
-    "Street": "סחרוב",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "  מול זכרון יעקב                                     ",
-    "City": "זכרון יעקב",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-08-28T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "13:00",
-    "Name": "  תחנה מרכזית                                  ",
-    "City": "באר שבע",
-    "Street": "יצחק בן צבי",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.796741,
-    "lat": 31.243017
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "10:30",
-    "ToHour": "19:00",
-    "Name": "  תחנה מרכזית                                  ",
-    "City": "באר שבע",
-    "Street": "יצחק בן צבי",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.796741,
-    "lat": 31.243017
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "15:00",
-    "Name": "  מול זכרון יעקב                                     ",
-    "City": "זכרון יעקב",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.95427,
-    "lat": 32.573689
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "15:45",
-    "ToHour": "21:00",
-    "Name": "  מול זכרון יעקב                                     ",
-    "City": "זכרון יעקב",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.95427,
-    "lat": 32.573689
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "22:00",
-    "Name": "  רחבת הבנים                                         ",
-    "City": "הוד השרון",
-    "Street": "הבנים",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "15:00",
-    "ToHour": "21:30",
-    "Name": "כיכר המייסדים",
-    "City": "פתח תקווה",
-    "Street": "חיים עוזר",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.885592,
-    "lat": 32.089673
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "09:30",
-    "ToHour": "21:00",
-    "Name": "מתחם בילו סנטר",
-    "City": "רחובות",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.8166232,
-    "lat": 31.8648919
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "15:00",
-    "ToHour": "21:00",
-    "Name": "  כיכר ציון                                          ",
-    "City": "נתניה",
-    "Street": "הרצל פינת סימלנסקי",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "16:45",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "11:00",
-    "ToHour": "18:00",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "17:00",
-    "ToHour": "21:00",
-    "Name": "  מועדון                                             ",
-    "City": "גן יאשיה",
-    "Street": "ד.נ חפר",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "17:00",
-    "ToHour": "22:00",
-    "Name": "מד\"א טבעון",
-    "City": "קרית טבעון",
-    "Street": "המגדל",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.1262653,
-    "lat": 32.7128803
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "16:30",
-    "ToHour": "21:00",
-    "Name": "מרכז קהילתי פסגת השבע",
-    "City": "בית שמש",
-    "Street": "התבור",
-    "NumHouse": "18",
-    "AccountType": "",
-    "lon": 34.9941639,
-    "lat": 31.744339
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "21:00",
-    "Name": "אולם אורנית\\ מועדון",
-    "City": "כפר תפוח",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.99081,
-    "lat": 32.131924
-  },
-  {
     "DateDonation": "2020-08-30T00:00:00",
     "FromHour": "09:30",
     "ToHour": "15:00",
-    "Name": "בי\"ח בני ציון בלובי",
-    "City": "חיפה",
-    "Street": "גולומב",
-    "NumHouse": "47",
-    "AccountType": "",
-    "lon": 34.9925934,
-    "lat": 32.8056092
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "15:00",
-    "Name": "בי\"ח רמב\"ם - קניון סגול",
-    "City": "חיפה",
-    "Street": "העליה השניה",
-    "NumHouse": "8",
-    "AccountType": "",
-    "lon": 34.985835,
-    "lat": 32.8330867
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "14:00",
-    "ToHour": "20:00",
-    "Name": "קניון T.L.V",
-    "City": "תל אביב יפו",
-    "Street": "החשמונאים",
-    "NumHouse": "96",
-    "AccountType": "",
-    "lon": 34.7835404,
-    "lat": 32.0685633
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "09:30",
-    "ToHour": "15:00",
-    "Name": "ביה\"ח סורוקה ליד בית מרקחת מול חדר אוכל עובדים",
-    "City": "באר שבע",
+    "Name": "  ביג כרמיאל                                         ",
+    "City": "",
     "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.7994009,
-    "lat": 31.2580633
-  },
-  {
-    "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "17:00",
-    "Name": "קניון הסיטי",
-    "City": "אשדוד",
-    "Street": "הרצל פינת מנחם בגין",
     "NumHouse": "",
     "AccountType": ""
   },
@@ -459,18 +23,6 @@
   },
   {
     "DateDonation": "2020-08-30T00:00:00",
-    "FromHour": "09:30",
-    "ToHour": "15:00",
-    "Name": "  ביג כרמיאל                                         ",
-    "City": "",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 35.323513,
-    "lat": 32.9271698
-  },
-  {
-    "DateDonation": "2020-08-31T00:00:00",
     "FromHour": "08:00",
     "ToHour": "14:30",
     "Name": "",
@@ -478,56 +30,260 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
-    "DateDonation": "2020-08-31T00:00:00",
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "09:30",
+    "ToHour": "15:00",
+    "Name": "ביה\"ח סורוקה ליד בית מרקחת מול חדר אוכל עובדים",
+    "City": "באר שבע",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.791462,
+    "lat": 31.252973
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
     "FromHour": "10:00",
-    "ToHour": "16:30",
+    "ToHour": "17:00",
+    "Name": "קניון הסיטי",
+    "City": "אשדוד",
+    "Street": "הרצל פינת מנחם בגין",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.6403824,
+    "lat": 31.78944139999999
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "17:00",
+    "ToHour": "21:00",
+    "Name": "  מועדון                                             ",
+    "City": "גן יאשיה",
+    "Street": "ד.נ חפר",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.996245,
+    "lat": 32.349487
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "17:00",
+    "ToHour": "22:00",
+    "Name": "מד\"א טבעון",
+    "City": "קרית טבעון",
+    "Street": "המגדל",
+    "NumHouse": "1",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1253807,
+    "lat": 32.7133899
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "16:30",
+    "ToHour": "21:00",
+    "Name": "מרכז קהילתי פסגת השבע",
+    "City": "בית שמש",
+    "Street": "התבור",
+    "NumHouse": "18",
+    "AccountType": "",
+    "lon": 34.9941081,
+    "lat": 31.7443562
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "15:00",
+    "Name": "  ליד קניון נחמיה                                    ",
+    "City": "קרית שמונה",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 35.570246,
+    "lat": 33.207933
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "16:45",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "11:00",
+    "ToHour": "18:00",
     "Name": "משביר י-ם",
     "City": "ירושלים",
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
-    "DateDonation": "2020-08-31T00:00:00",
+    "DateDonation": "2020-08-30T00:00:00",
     "FromHour": "16:00",
     "ToHour": "21:00",
-    "Name": "בית הכנסת מורשת אברהם",
-    "City": "ירושלים",
-    "Street": "אדם",
-    "NumHouse": "22",
-    "AccountType": "",
-    "lon": 35.2181206,
-    "lat": 31.7752915
-  },
-  {
-    "DateDonation": "2020-08-31T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "21:30",
-    "Name": "מודיעין סנטר",
-    "City": "מודיעין מכבים רעות",
-    "Street": "צאלון",
-    "NumHouse": "21",
-    "AccountType": "",
-    "lon": 35.016995,
-    "lat": 31.9058171
-  },
-  {
-    "DateDonation": "2020-08-31T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "22:00",
-    "Name": "גדרה החדשה",
-    "City": "גדרה",
-    "Street": "בן גוריון פינת רח' מנחם בגין",
+    "Name": "אולם אורנית\\ מועדון",
+    "City": "כפר תפוח",
+    "Street": "",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.783861,
-    "lat": 31.80419
+    "lon": 35.249829,
+    "lat": 32.117973
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "09:30",
+    "ToHour": "15:00",
+    "Name": "בי\"ח בני ציון בלובי",
+    "City": "חיפה",
+    "Street": "גולומב",
+    "NumHouse": "47",
+    "AccountType": "",
+    "lon": 34.9924545,
+    "lat": 32.8055981
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "15:00",
+    "Name": "בי\"ח רמב\"ם - קניון סגול",
+    "City": "חיפה",
+    "Street": "העליה השניה",
+    "NumHouse": "8",
+    "AccountType": "",
+    "lon": 34.9854297,
+    "lat": 32.8320167
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "14:00",
+    "ToHour": "20:00",
+    "Name": "קניון T.L.V",
+    "City": "תל אביב יפו",
+    "Street": "החשמונאים",
+    "NumHouse": "96",
+    "AccountType": "",
+    "lon": 34.7855231,
+    "lat": 32.0691568
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "15:00",
+    "ToHour": "21:00",
+    "Name": "  כיכר ציון                                          ",
+    "City": "נתניה",
+    "Street": "הרצל פינת סימלנסקי",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.85649,
+    "lat": 32.328777
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "17:00",
+    "Name": "תחנה מרכזית                               ",
+    "City": "עפולה",
+    "Street": "קהילת ציון ",
+    "NumHouse": "2",
+    "AccountType": "",
+    "lon": 35.2923872,
+    "lat": 32.6079613
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "15:00",
+    "ToHour": "21:30",
+    "Name": "כיכר המייסדים",
+    "City": "פתח תקווה",
+    "Street": "חיים עוזר",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.8868818,
+    "lat": 32.0881119
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "09:30",
+    "ToHour": "21:00",
+    "Name": "מתחם בילו סנטר",
+    "City": "רחובות",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.811272,
+    "lat": 31.892773
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "15:00",
+    "Name": "  מול זכרון יעקב                                     ",
+    "City": "זכרון יעקב",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.951977,
+    "lat": 32.573905
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "15:45",
+    "ToHour": "21:00",
+    "Name": "  מול זכרון יעקב                                     ",
+    "City": "זכרון יעקב",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.951977,
+    "lat": 32.573905
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "22:00",
+    "Name": "  רחבת הבנים                                         ",
+    "City": "הוד השרון",
+    "Street": "הבנים",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.8845912,
+    "lat": 32.1562671
+  },
+  {
+    "DateDonation": "2020-08-30T00:00:00",
+    "FromHour": "10:30",
+    "ToHour": "19:00",
+    "Name": "  תחנה מרכזית                                  ",
+    "City": "באר שבע",
+    "Street": "יצחק בן צבי",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.797531,
+    "lat": 31.244006
+  },
+  {
+    "DateDonation": "2020-08-31T00:00:00",
+    "FromHour": "10:30",
+    "ToHour": "17:30",
+    "Name": "שער ריגר אוניברסיטה",
+    "City": "באר שבע",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.791462,
+    "lat": 31.252973
   },
   {
     "DateDonation": "2020-08-31T00:00:00",
@@ -538,8 +294,8 @@
     "Street": "סוקולוב פינת בן גוריון",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.844675,
-    "lat": 32.162413
+    "lon": 34.8419668,
+    "lat": 32.1515978
   },
   {
     "DateDonation": "2020-08-31T00:00:00",
@@ -550,44 +306,164 @@
     "Street": "רבינוביץ'",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7483987,
-    "lat": 32.0135311
+    "lon": 34.74765319999999,
+    "lat": 32.0123191
+  },
+  {
+    "DateDonation": "2020-08-31T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "21:00",
+    "Name": "בית הכנסת מורשת אברהם",
+    "City": "ירושלים",
+    "Street": "אדם",
+    "NumHouse": "22",
+    "AccountType": "",
+    "lon": 35.22958,
+    "lat": 31.7488009
+  },
+  {
+    "DateDonation": "2020-08-31T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "22:00",
+    "Name": "גדרה החדשה",
+    "City": "גדרה",
+    "Street": "בן גוריון פינת רח' מנחם בגין",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.78390419999999,
+    "lat": 31.8029296
+  },
+  {
+    "DateDonation": "2020-08-31T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-08-31T00:00:00",
+    "FromHour": "15:30",
+    "ToHour": "21:30",
+    "Name": "מודיעין סנטר",
+    "City": "מודיעין מכבים רעות",
+    "Street": "צאלון",
+    "NumHouse": "21",
+    "AccountType": "",
+    "lon": 35.0170871,
+    "lat": 31.9059346
+  },
+  {
+    "DateDonation": "2020-08-31T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
     "FromHour": "15:30",
     "ToHour": "21:30",
-    "Name": "  בתחנה                                              ",
-    "City": "חולון",
-    "Street": "הרוקמים",
-    "NumHouse": "1",
+    "Name": "",
+    "City": "חדרה",
+    "Street": "גבעת בילו",
+    "NumHouse": "",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.787384,
-    "lat": 32.015833
+    "lon": 34.923398,
+    "lat": 32.44625
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
     "FromHour": "15:30",
     "ToHour": "21:30",
     "Name": "  תחנה                                               ",
-    "City": "אשקלון",
-    "Street": "התחיה",
+    "City": "אשדוד",
+    "Street": "הרפואה",
     "NumHouse": "1",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.5742523,
-    "lat": 31.6687885
+    "lon": 34.6534399,
+    "lat": 31.7802556
+  },
+  {
+    "DateDonation": "2020-09-01T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "18:00",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-01T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "19:00",
+    "Name": "קרואן במתחם צים אורבן נתיבות",
+    "City": "נתיבות",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.595254,
+    "lat": 31.423196
+  },
+  {
+    "DateDonation": "2020-09-01T00:00:00",
+    "FromHour": "13:00",
+    "ToHour": "18:00",
+    "Name": "מול הים אילת בקומה מינוס-1 ליד זארה ופלאפון",
+    "City": "אילת",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.951925,
+    "lat": 29.557669
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
     "FromHour": "15:30",
     "ToHour": "21:30",
-    "Name": "מד\"א",
-    "City": "ראשון לציון",
-    "Street": "זבוטינסקי",
-    "NumHouse": "102",
+    "Name": "",
+    "City": "כפר סבא",
+    "Street": "טשרנחובסקי",
+    "NumHouse": "51",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.7974184,
-    "lat": 31.9740116
+    "lon": 34.8965718,
+    "lat": 32.1803678
+  },
+  {
+    "DateDonation": "2020-09-01T00:00:00",
+    "FromHour": "15:30",
+    "ToHour": "21:30",
+    "Name": "",
+    "City": "נתניה",
+    "Street": "מינץ",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.8645215,
+    "lat": 32.3284579
+  },
+  {
+    "DateDonation": "2020-09-01T00:00:00",
+    "FromHour": "15:30",
+    "ToHour": "21:30",
+    "Name": "  תחנה                                               ",
+    "City": "רחובות",
+    "Street": "0363",
+    "NumHouse": "69",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.811272,
+    "lat": 31.892773
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
@@ -609,7 +485,9 @@
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
@@ -620,122 +498,68 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-01T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "18:00",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
     "FromHour": "15:30",
     "ToHour": "21:30",
-    "Name": "  תחנה                                               ",
-    "City": "אשדוד",
-    "Street": "הרפואה",
+    "Name": "  בתחנה                                              ",
+    "City": "חולון",
+    "Street": "הרוקמים",
     "NumHouse": "1",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.666058,
-    "lat": 31.774061
-  },
-  {
-    "DateDonation": "2020-09-01T00:00:00",
-    "FromHour": "13:00",
-    "ToHour": "18:00",
-    "Name": "מול הים אילת בקומה מינוס-1 ליד זארה ופלאפון",
-    "City": "אילת",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.9539158,
-    "lat": 29.5497876
-  },
-  {
-    "DateDonation": "2020-09-01T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "19:00",
-    "Name": "קרואן במתחם צים אורבן נתיבות",
-    "City": "נתיבות",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.594029,
-    "lat": 31.4169498
+    "lon": 34.7967928,
+    "lat": 32.0108836
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
     "FromHour": "15:30",
     "ToHour": "21:30",
     "Name": "  תחנה                                               ",
-    "City": "רחובות",
-    "Street": "0363",
-    "NumHouse": "69",
+    "City": "אשקלון",
+    "Street": "התחיה",
+    "NumHouse": "1",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.807735,
-    "lat": 31.893459
+    "lon": 34.5893259,
+    "lat": 31.6599003
   },
   {
     "DateDonation": "2020-09-01T00:00:00",
     "FromHour": "15:30",
     "ToHour": "21:30",
-    "Name": "",
-    "City": "נתניה",
-    "Street": "מינץ",
-    "NumHouse": "7",
+    "Name": "מד\"א",
+    "City": "ראשון לציון",
+    "Street": "זבוטינסקי",
+    "NumHouse": "102",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.853196,
-    "lat": 32.321458
-  },
-  {
-    "DateDonation": "2020-09-01T00:00:00",
-    "FromHour": "15:30",
-    "ToHour": "21:30",
-    "Name": "",
-    "City": "חדרה",
-    "Street": "גבעת בילו",
-    "NumHouse": "",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.9196518,
-    "lat": 32.4340458
-  },
-  {
-    "DateDonation": "2020-09-01T00:00:00",
-    "FromHour": "15:30",
-    "ToHour": "21:30",
-    "Name": "",
-    "City": "כפר סבא",
-    "Street": "טשרנחובסקי",
-    "NumHouse": "51",
-    "AccountType": " - תחנת מד\"א"
+    "lon": 34.7975083,
+    "lat": 31.97346259999999
   },
   {
     "DateDonation": "2020-09-02T00:00:00",
     "FromHour": "16:00",
-    "ToHour": "20:00",
-    "Name": "  מועדון                                             ",
-    "City": "דברת",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": ""
+    "ToHour": "22:00",
+    "Name": "מתחם שרונים",
+    "City": "הוד השרון",
+    "Street": "הרקון",
+    "NumHouse": "2",
+    "AccountType": "",
+    "lon": 34.9014664,
+    "lat": 32.1333401
   },
   {
     "DateDonation": "2020-09-02T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
+    "FromHour": "14:00",
+    "ToHour": "19:00",
+    "Name": "  תחנה מרכזית                                  ",
+    "City": "באר שבע",
+    "Street": "יצחק בן צבי",
     "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "AccountType": "",
+    "lon": 34.797531,
+    "lat": 31.244006
   },
   {
     "DateDonation": "2020-09-02T00:00:00",
@@ -746,8 +570,8 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-02T00:00:00",
@@ -758,8 +582,56 @@
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-02T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "20:00",
+    "Name": "מועדון גדול ",
+    "City": "רמת מגשימים",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 35.80658,
+    "lat": 32.84406600000001
+  },
+  {
+    "DateDonation": "2020-09-02T00:00:00",
+    "FromHour": "11:00",
+    "ToHour": "18:00",
+    "Name": "עזריאלי בלובי הכניסה בשער קפלן ",
+    "City": "תל אביב יפו",
+    "Street": "קפלן",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.7861242,
+    "lat": 32.0734749
+  },
+  {
+    "DateDonation": "2020-09-02T00:00:00",
+    "FromHour": "11:00",
+    "ToHour": "17:00",
+    "Name": "כיכר אנטין                                         ",
+    "City": "תל אביב יפו",
+    "Street": "חיים לבנון פינת אינשטיין",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.801538,
+    "lat": 32.113325
+  },
+  {
+    "DateDonation": "2020-09-02T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-02T00:00:00",
@@ -775,83 +647,27 @@
   },
   {
     "DateDonation": "2020-09-02T00:00:00",
-    "FromHour": "11:00",
-    "ToHour": "18:00",
-    "Name": "עזריאלי בלובי הכניסה בשער קפלן ",
-    "City": "תל אביב יפו",
-    "Street": "קפלן",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.7922028,
-    "lat": 32.0740769
-  },
-  {
-    "DateDonation": "2020-09-02T00:00:00",
-    "FromHour": "11:00",
-    "ToHour": "17:00",
-    "Name": "כיכר אנטין                                         ",
-    "City": "תל אביב יפו",
-    "Street": "חיים לבנון פינת אינשטיין",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 34.8019533,
-    "lat": 32.113481
-  },
-  {
-    "DateDonation": "2020-09-02T00:00:00",
     "FromHour": "16:00",
-    "ToHour": "22:00",
-    "Name": "מתחם שרונים",
-    "City": "הוד השרון",
-    "Street": "הרקון",
-    "NumHouse": "2",
-    "AccountType": "",
-    "lon": 34.9012534,
-    "lat": 32.1332427
-  },
-  {
-    "DateDonation": "2020-09-02T00:00:00",
-    "FromHour": "14:00",
-    "ToHour": "19:00",
-    "Name": "  תחנה מרכזית                                  ",
-    "City": "באר שבע",
-    "Street": "יצחק בן צבי",
+    "ToHour": "20:00",
+    "Name": "  מועדון                                             ",
+    "City": "דברת",
+    "Street": "",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.796741,
-    "lat": 31.243017
+    "lon": 35.350085,
+    "lat": 32.646729
   },
   {
     "DateDonation": "2020-09-03T00:00:00",
-    "FromHour": "09:30",
-    "ToHour": "16:00",
-    "Name": "  תחנה מרכזית                                  ",
-    "City": "באר שבע",
-    "Street": "יצחק בן צבי",
+    "FromHour": "16:00",
+    "ToHour": "20:00",
+    "Name": "מועדון לחבר                                ",
+    "City": "בית קשת",
+    "Street": "",
     "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-09-03T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "16:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-03T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.394952,
+    "lat": 32.718446
   },
   {
     "DateDonation": "2020-09-03T00:00:00",
@@ -862,8 +678,8 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-03T00:00:00",
@@ -873,9 +689,7 @@
     "City": "",
     "Street": "",
     "NumHouse": "",
-    "AccountType": "",
-    "lon": 35.319875,
-    "lat": 31.82351899999999
+    "AccountType": ""
   },
   {
     "DateDonation": "2020-09-03T00:00:00",
@@ -885,87 +699,45 @@
     "City": "כפר ורבורג",
     "Street": "",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.72868,
+    "lat": 31.718747
   },
   {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חולון",
-    "Street": "הרוקמים",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חיפה",
-    "Street": "יצחק שדה",
-    "NumHouse": "10",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.989571,
-    "lat": 32.7940463
-  },
-  {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "קרית מוצקין",
-    "Street": "החשמונאים",
-    "NumHouse": "75",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.079523,
-    "lat": 32.838202
-  },
-  {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
-  },
-  {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רחובות",
-    "Street": "0363",
-    "NumHouse": "69",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
+    "DateDonation": "2020-09-03T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "16:00",
     "Name": "  המ'ג 7 רוממה                                       ",
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
-    "DateDonation": "2020-09-04T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "12:45",
+    "DateDonation": "2020-09-03T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
     "Name": "משביר י-ם",
     "City": "ירושלים",
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-03T00:00:00",
+    "FromHour": "09:30",
+    "ToHour": "16:00",
+    "Name": "  תחנה מרכזית                                  ",
+    "City": "באר שבע",
+    "Street": "יצחק בן צבי",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.797531,
+    "lat": 31.244006
   },
   {
     "DateDonation": "2020-09-04T00:00:00",
@@ -976,8 +748,8 @@
     "Street": "יצחק בן צבי",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.796741,
-    "lat": 31.243017
+    "lon": 34.797531,
+    "lat": 31.244006
   },
   {
     "DateDonation": "2020-09-04T00:00:00",
@@ -988,78 +760,90 @@
     "Street": "הבנים מול מלון לאונרדו",
     "NumHouse": "1",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.530973,
-    "lat": 32.795859
+    "lon": 35.5429317,
+    "lat": 32.7858998
   },
   {
-    "DateDonation": "2020-09-06T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "22:00",
-    "Name": "צופי פתח תקוה",
-    "City": "פתח תקווה",
-    "Street": "חיים ארלוזורוב",
-    "NumHouse": "33 א",
-    "AccountType": "",
-    "lon": 34.8721263,
-    "lat": 32.0841222
-  },
-  {
-    "DateDonation": "2020-09-06T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "19:00",
-    "Name": "  תחנה מרכזית                                  ",
-    "City": "באר שבע",
-    "Street": "יצחק בן צבי",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-09-06T00:00:00",
-    "FromHour": "12:00",
-    "ToHour": "18:00",
-    "Name": "טויוטה רכב נתניה",
-    "City": "נתניה",
-    "Street": "דוד פנקס",
-    "NumHouse": "28",
-    "AccountType": "",
-    "lon": 34.8736257,
-    "lat": 32.3177069
-  },
-  {
-    "DateDonation": "2020-09-06T00:00:00",
-    "FromHour": "17:00",
-    "ToHour": "21:30",
-    "Name": "מתנס קהילתי",
-    "City": "ירושלים",
-    "Street": "ההגנה",
-    "NumHouse": "13",
-    "AccountType": "",
-    "lon": 35.1800734,
-    "lat": 31.76803839999999
-  },
-  {
-    "DateDonation": "2020-09-06T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
+    "DateDonation": "2020-09-04T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "12:45",
     "Name": "משביר י-ם",
     "City": "ירושלים",
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
-    "DateDonation": "2020-09-06T00:00:00",
+    "DateDonation": "2020-09-04T00:00:00",
     "FromHour": "08:00",
-    "ToHour": "16:45",
+    "ToHour": "12:30",
     "Name": "  המ'ג 7 רוממה                                       ",
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-04T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "קרית מוצקין",
+    "Street": "החשמונאים",
+    "NumHouse": "75",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.0802042,
+    "lat": 32.8440668
+  },
+  {
+    "DateDonation": "2020-09-04T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חולון",
+    "Street": "הרוקמים",
+    "NumHouse": "1",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.7967928,
+    "lat": 32.0108836
+  },
+  {
+    "DateDonation": "2020-09-04T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חיפה",
+    "Street": "יצחק שדה",
+    "NumHouse": "10",
+    "AccountType": " - תחנת מד\"א"
+  },
+  {
+    "DateDonation": "2020-09-04T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-04T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רחובות",
+    "Street": "0363",
+    "NumHouse": "69",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.811272,
+    "lat": 31.892773
   },
   {
     "DateDonation": "2020-09-06T00:00:00",
@@ -1070,8 +854,8 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-06T00:00:00",
@@ -1082,8 +866,8 @@
     "Street": "",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7994009,
-    "lat": 31.2580633
+    "lon": 34.791462,
+    "lat": 31.252973
   },
   {
     "DateDonation": "2020-09-06T00:00:00",
@@ -1094,8 +878,8 @@
     "Street": "",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 35.5834346,
-    "lat": 32.6582919
+    "lon": 35.579637,
+    "lat": 32.65877
   },
   {
     "DateDonation": "2020-09-06T00:00:00",
@@ -1106,8 +890,104 @@
     "Street": "",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.9426989,
-    "lat": 29.5540313
+    "lon": 34.951925,
+    "lat": 29.557669
+  },
+  {
+    "DateDonation": "2020-09-06T00:00:00",
+    "FromHour": "17:00",
+    "ToHour": "22:00",
+    "Name": "מתנס קהילתי",
+    "City": "ירושלים",
+    "Street": "ההגנה",
+    "NumHouse": "13",
+    "AccountType": "",
+    "lon": 35.2377359,
+    "lat": 31.8045048
+  },
+  {
+    "DateDonation": "2020-09-06T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-06T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "16:45",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-06T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "22:00",
+    "Name": "צופי פתח תקוה",
+    "City": "פתח תקווה",
+    "Street": "חיים ארלוזורוב",
+    "NumHouse": "33 א",
+    "AccountType": "",
+    "lon": 34.8736813,
+    "lat": 32.0840469
+  },
+  {
+    "DateDonation": "2020-09-06T00:00:00",
+    "FromHour": "12:00",
+    "ToHour": "18:00",
+    "Name": "טויוטה רכב נתניה",
+    "City": "נתניה",
+    "Street": "דוד פנקס",
+    "NumHouse": "28",
+    "AccountType": "",
+    "lon": 34.8738126,
+    "lat": 32.3176146
+  },
+  {
+    "DateDonation": "2020-09-06T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "19:00",
+    "Name": "  תחנה מרכזית                                  ",
+    "City": "באר שבע",
+    "Street": "יצחק בן צבי",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.797531,
+    "lat": 31.244006
+  },
+  {
+    "DateDonation": "2020-09-07T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-07T00:00:00",
+    "FromHour": "17:30",
+    "ToHour": "22:00",
+    "Name": "נחליאל",
+    "City": "נחליאל",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 35.140431,
+    "lat": 31.973542
   },
   {
     "DateDonation": "2020-09-07T00:00:00",
@@ -1118,44 +998,8 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
-  },
-  {
-    "DateDonation": "2020-09-07T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-08T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-08T00:00:00",
-    "FromHour": "13:00",
-    "ToHour": "20:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-08T00:00:00",
@@ -1166,8 +1010,32 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-08T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-08T00:00:00",
+    "FromHour": "13:00",
+    "ToHour": "20:00",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-08T00:00:00",
@@ -1178,8 +1046,32 @@
     "Street": "משכית",
     "NumHouse": "8",
     "AccountType": "",
-    "lon": 34.844675,
-    "lat": 32.162413
+    "lon": 34.8115137,
+    "lat": 32.1665615
+  },
+  {
+    "DateDonation": "2020-09-09T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-09T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "16:00",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-09T00:00:00",
@@ -1189,7 +1081,9 @@
     "City": "רמת גן",
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-09T00:00:00",
@@ -1202,66 +1096,6 @@
     "AccountType": "",
     "lon": 35.501973,
     "lat": 32.47071
-  },
-  {
-    "DateDonation": "2020-09-09T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-09T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "16:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-09-10T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "16:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-09-10T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-10T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "22:30",
-    "Name": "קרני שומרון                              ",
-    "City": "קרני שומרון",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 35.09020940000001,
-    "lat": 32.1740772
   },
   {
     "DateDonation": "2020-09-10T00:00:00",
@@ -1284,108 +1118,44 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חיפה",
-    "Street": "יצחק שדה",
-    "NumHouse": "10",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.989571,
-    "lat": 32.7940463
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חולון",
-    "Street": "הרוקמים",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "קרית מוצקין",
-    "Street": "החשמונאים",
-    "NumHouse": "75",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רחובות",
-    "Street": "0363",
-    "NumHouse": "69",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.81650279999999,
-    "lat": 31.8994247
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
+    "DateDonation": "2020-09-10T00:00:00",
     "FromHour": "09:00",
-    "ToHour": "12:45",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
+    "ToHour": "16:00",
     "Name": "  המ'ג 7 רוממה                                       ",
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "בי\"ס שקד רעננה",
-    "City": "רעננה",
-    "Street": "יאיר שטרן",
-    "NumHouse": "6",
-    "AccountType": "",
-    "lon": 34.8484113,
-    "lat": 32.1944427
-  },
-  {
-    "DateDonation": "2020-09-11T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "12:30",
-    "Name": "תחנת מגן דוד אדום",
-    "City": "טבריה",
-    "Street": "הבנים מול מלון לאונרדו",
-    "NumHouse": "1",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.530973,
-    "lat": 32.795859
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-10T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-10T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "22:30",
+    "Name": "קרני שומרון                              ",
+    "City": "קרני שומרון",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 35.097462,
+    "lat": 32.171553
   },
   {
     "DateDonation": "2020-09-11T00:00:00",
@@ -1396,8 +1166,128 @@
     "Street": "כורזין",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7873263,
-    "lat": 32.0908224
+    "lon": 34.816523,
+    "lat": 32.0596894
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "12:45",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חיפה",
+    "Street": "יצחק שדה",
+    "NumHouse": "10",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.9882598,
+    "lat": 32.824678
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חולון",
+    "Street": "הרוקמים",
+    "NumHouse": "1",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.7967928,
+    "lat": 32.0108836
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "קרית מוצקין",
+    "Street": "החשמונאים",
+    "NumHouse": "75",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.0802042,
+    "lat": 32.8440668
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רחובות",
+    "Street": "0363",
+    "NumHouse": "69",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.811272,
+    "lat": 31.892773
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:30",
+    "ToHour": "12:30",
+    "Name": "תחנת מגן דוד אדום",
+    "City": "טבריה",
+    "Street": "הבנים מול מלון לאונרדו",
+    "NumHouse": "1",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.5429317,
+    "lat": 32.7858998
+  },
+  {
+    "DateDonation": "2020-09-11T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "בי\"ס שקד רעננה",
+    "City": "רעננה",
+    "Street": "יאיר שטרן",
+    "NumHouse": "6",
+    "AccountType": "",
+    "lon": 34.8480729,
+    "lat": 32.19415620000001
+  },
+  {
+    "DateDonation": "2020-09-13T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-13T00:00:00",
@@ -1408,8 +1298,8 @@
     "Street": "אהרון רבינוביץ",
     "NumHouse": "33",
     "AccountType": "",
-    "lon": 35.174674,
-    "lat": 31.76272
+    "lon": 35.1747988,
+    "lat": 31.7616184
   },
   {
     "DateDonation": "2020-09-13T00:00:00",
@@ -1420,8 +1310,8 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-13T00:00:00",
@@ -1432,32 +1322,8 @@
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-09-13T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
-  },
-  {
-    "DateDonation": "2020-09-14T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-14T00:00:00",
@@ -1468,8 +1334,32 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-14T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-15T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "18:00",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-15T00:00:00",
@@ -1480,8 +1370,8 @@
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-15T00:00:00",
@@ -1492,32 +1382,8 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-15T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "18:00",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
-  },
-  {
-    "DateDonation": "2020-09-16T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-16T00:00:00",
@@ -1527,7 +1393,9 @@
     "City": "ירושלים",
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-16T00:00:00",
@@ -1538,47 +1406,11 @@
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
-    "DateDonation": "2020-09-17T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-17T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "16:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-09-17T00:00:00",
-    "FromHour": "16:00",
-    "ToHour": "22:00",
-    "Name": "  ביהכנ קהילה                                        ",
-    "City": "צור הדסה",
-    "Street": "",
-    "NumHouse": "",
-    "AccountType": "",
-    "lon": 35.0967038,
-    "lat": 31.7157715
-  },
-  {
-    "DateDonation": "2020-09-17T00:00:00",
+    "DateDonation": "2020-09-16T00:00:00",
     "FromHour": "08:00",
     "ToHour": "14:30",
     "Name": "",
@@ -1586,8 +1418,8 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-17T00:00:00",
@@ -1598,64 +1430,56 @@
     "Street": "",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 35.618331,
-    "lat": 33.1854506
+    "lon": 35.62307,
+    "lat": 33.188234
   },
   {
-    "DateDonation": "2020-09-18T00:00:00",
+    "DateDonation": "2020-09-17T00:00:00",
+    "FromHour": "16:00",
+    "ToHour": "22:00",
+    "Name": "  ביהכנ קהילה                                        ",
+    "City": "צור הדסה",
+    "Street": "",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 35.096958,
+    "lat": 31.719374
+  },
+  {
+    "DateDonation": "2020-09-17T00:00:00",
     "FromHour": "08:00",
-    "ToHour": "12:30",
+    "ToHour": "14:30",
     "Name": "",
     "City": "רמת גן",
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
-    "DateDonation": "2020-09-18T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רחובות",
-    "Street": "0363",
-    "NumHouse": "69",
+    "DateDonation": "2020-09-17T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-17T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "16:00",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 34.81650279999999,
-    "lat": 31.8994247
-  },
-  {
-    "DateDonation": "2020-09-18T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "קרית מוצקין",
-    "Street": "החשמונאים",
-    "NumHouse": "75",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-18T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חולון",
-    "Street": "הרוקמים",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 34.787384,
-    "lat": 32.015833
-  },
-  {
-    "DateDonation": "2020-09-18T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חיפה",
-    "Street": "יצחק שדה",
-    "NumHouse": "10",
-    "AccountType": " - תחנת מד\"א"
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-18T00:00:00",
@@ -1666,8 +1490,8 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-18T00:00:00",
@@ -1677,7 +1501,69 @@
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-18T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רחובות",
+    "Street": "0363",
+    "NumHouse": "69",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.811272,
+    "lat": 31.892773
+  },
+  {
+    "DateDonation": "2020-09-18T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חולון",
+    "Street": "הרוקמים",
+    "NumHouse": "1",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.7967928,
+    "lat": 32.0108836
+  },
+  {
+    "DateDonation": "2020-09-18T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "קרית מוצקין",
+    "Street": "החשמונאים",
+    "NumHouse": "75",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.0802042,
+    "lat": 32.8440668
+  },
+  {
+    "DateDonation": "2020-09-18T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חיפה",
+    "Street": "יצחק שדה",
+    "NumHouse": "10",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.9882598,
+    "lat": 32.824678
+  },
+  {
+    "DateDonation": "2020-09-18T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-18T00:00:00",
@@ -1687,7 +1573,21 @@
     "City": "טבריה",
     "Street": "הבנים מול מלון לאונרדו",
     "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.5429317,
+    "lat": 32.7858998
+  },
+  {
+    "DateDonation": "2020-09-21T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-21T00:00:00",
@@ -1698,18 +1598,32 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
-    "DateDonation": "2020-09-21T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
+    "DateDonation": "2020-09-22T00:00:00",
+    "FromHour": "13:00",
+    "ToHour": "20:00",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-22T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-22T00:00:00",
@@ -1720,8 +1634,8 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-22T00:00:00",
@@ -1744,30 +1658,8 @@
     "Street": "דרך מנחם בגין",
     "NumHouse": "125",
     "AccountType": "",
-    "lon": 34.78176759999999,
-    "lat": 32.0852999
-  },
-  {
-    "DateDonation": "2020-09-22T00:00:00",
-    "FromHour": "13:00",
-    "ToHour": "20:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-22T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 34.7891528,
+    "lat": 32.0729837
   },
   {
     "DateDonation": "2020-09-23T00:00:00",
@@ -1777,7 +1669,21 @@
     "City": "יראון",
     "Street": "",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 35.454291,
+    "lat": 33.077239
+  },
+  {
+    "DateDonation": "2020-09-23T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-23T00:00:00",
@@ -1788,8 +1694,8 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-23T00:00:00",
@@ -1799,31 +1705,33 @@
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-23T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-24T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "FromHour": "09:00",
+    "ToHour": "16:00",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
+  },
+  {
+    "DateDonation": "2020-09-24T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-24T00:00:00",
@@ -1834,32 +1742,8 @@
     "Street": "בניינים במעגל 1-12",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.862854,
-    "lat": 32.12997
-  },
-  {
-    "DateDonation": "2020-09-24T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "16:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
-  },
-  {
-    "DateDonation": "2020-09-24T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 34.840278,
+    "lat": 32.137793
   },
   {
     "DateDonation": "2020-09-24T00:00:00",
@@ -1869,7 +1753,81 @@
     "City": "בית חורון",
     "Street": "",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 35.124097,
+    "lat": 31.87989
+  },
+  {
+    "DateDonation": "2020-09-24T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-25T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חיפה",
+    "Street": "יצחק שדה",
+    "NumHouse": "10",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.9882598,
+    "lat": 32.824678
+  },
+  {
+    "DateDonation": "2020-09-25T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רחובות",
+    "Street": "0363",
+    "NumHouse": "69",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.811272,
+    "lat": 31.892773
+  },
+  {
+    "DateDonation": "2020-09-25T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
+  },
+  {
+    "DateDonation": "2020-09-25T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "קרית מוצקין",
+    "Street": "החשמונאים",
+    "NumHouse": "75",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.0802042,
+    "lat": 32.8440668
+  },
+  {
+    "DateDonation": "2020-09-25T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "12:30",
+    "Name": "",
+    "City": "חולון",
+    "Street": "הרוקמים",
+    "NumHouse": "1",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 34.7967928,
+    "lat": 32.0108836
   },
   {
     "DateDonation": "2020-09-25T00:00:00",
@@ -1879,7 +1837,9 @@
     "City": "ירושלים",
     "Street": "המ\"ג",
     "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-25T00:00:00",
@@ -1890,60 +1850,8 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
-  },
-  {
-    "DateDonation": "2020-09-25T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רחובות",
-    "Street": "0363",
-    "NumHouse": "69",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-25T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
-  },
-  {
-    "DateDonation": "2020-09-25T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "קרית מוצקין",
-    "Street": "החשמונאים",
-    "NumHouse": "75",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-25T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חולון",
-    "Street": "הרוקמים",
-    "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
-  },
-  {
-    "DateDonation": "2020-09-25T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "12:30",
-    "Name": "",
-    "City": "חיפה",
-    "Street": "יצחק שדה",
-    "NumHouse": "10",
-    "AccountType": " - תחנת מד\"א"
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
     "DateDonation": "2020-09-25T00:00:00",
@@ -1953,7 +1861,9 @@
     "City": "טבריה",
     "Street": "הבנים מול מלון לאונרדו",
     "NumHouse": "1",
-    "AccountType": " - תחנת מד\"א"
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.5429317,
+    "lat": 32.7858998
   },
   {
     "DateDonation": "2020-09-25T00:00:00",
@@ -1963,17 +1873,9 @@
     "City": "רמת גן",
     "Street": "",
     "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-09-27T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
+    "AccountType": "",
+    "lon": 34.824785,
+    "lat": 32.068424
   },
   {
     "DateDonation": "2020-09-27T00:00:00",
@@ -1984,8 +1886,8 @@
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-27T00:00:00",
@@ -1995,27 +1897,21 @@
     "City": "ירושלים",
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
   },
   {
-    "DateDonation": "2020-09-29T00:00:00",
-    "FromHour": "10:00",
-    "ToHour": "16:30",
-    "Name": "משביר י-ם",
-    "City": "ירושלים",
-    "Street": "המלך ג'ורג'",
-    "NumHouse": "20",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-09-29T00:00:00",
-    "FromHour": "13:00",
-    "ToHour": "20:00",
-    "Name": "  המ'ג 7 רוממה                                       ",
-    "City": "ירושלים",
-    "Street": "המ\"ג",
-    "NumHouse": "7",
-    "AccountType": " - תחנת מד\"א"
+    "DateDonation": "2020-09-27T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-09-29T00:00:00",
@@ -2026,18 +1922,32 @@
     "Street": "בית חולים תה\"ש",
     "NumHouse": "",
     "AccountType": " - שרותי הדם מד\"א",
-    "lon": 34.824785,
-    "lat": 32.068424
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
-    "DateDonation": "2020-09-30T00:00:00",
-    "FromHour": "08:00",
-    "ToHour": "14:30",
-    "Name": "",
-    "City": "רמת גן",
-    "Street": "בית חולים תה\"ש",
-    "NumHouse": "",
-    "AccountType": " - שרותי הדם מד\"א"
+    "DateDonation": "2020-09-29T00:00:00",
+    "FromHour": "10:00",
+    "ToHour": "16:30",
+    "Name": "משביר י-ם",
+    "City": "ירושלים",
+    "Street": "המלך ג'ורג'",
+    "NumHouse": "20",
+    "AccountType": "",
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-29T00:00:00",
+    "FromHour": "13:00",
+    "ToHour": "20:00",
+    "Name": "  המ'ג 7 רוממה                                       ",
+    "City": "ירושלים",
+    "Street": "המ\"ג",
+    "NumHouse": "7",
+    "AccountType": " - תחנת מד\"א",
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-30T00:00:00",
@@ -2048,8 +1958,8 @@
     "Street": "המ\"ג",
     "NumHouse": "7",
     "AccountType": " - תחנת מד\"א",
-    "lon": 35.2001065,
-    "lat": 31.7904656
+    "lon": 35.1996482,
+    "lat": 31.7916038
   },
   {
     "DateDonation": "2020-09-30T00:00:00",
@@ -2060,8 +1970,20 @@
     "Street": "המלך ג'ורג'",
     "NumHouse": "20",
     "AccountType": "",
-    "lon": 35.1865447,
-    "lat": 31.7520627
+    "lon": 35.21602,
+    "lat": 31.78153
+  },
+  {
+    "DateDonation": "2020-09-30T00:00:00",
+    "FromHour": "08:00",
+    "ToHour": "14:30",
+    "Name": "",
+    "City": "רמת גן",
+    "Street": "בית חולים תה\"ש",
+    "NumHouse": "",
+    "AccountType": " - שרותי הדם מד\"א",
+    "lon": 34.842852,
+    "lat": 32.04671
   },
   {
     "DateDonation": "2020-10-11T00:00:00",
@@ -2071,37 +1993,9 @@
     "City": "קרית עקרון",
     "Street": "הרצל",
     "NumHouse": "44",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-10-16T00:00:00",
-    "FromHour": "09:00",
-    "ToHour": "13:30",
-    "Name": "כורזין ליד בנק הפועלים",
-    "City": "גבעתיים",
-    "Street": "כורזין",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-10-16T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "14:00",
-    "Name": "רחבת הבנים                                     ",
-    "City": "הוד השרון",
-    "Street": "הבנים",
-    "NumHouse": "",
-    "AccountType": ""
-  },
-  {
-    "DateDonation": "2020-10-16T00:00:00",
-    "FromHour": "08:30",
-    "ToHour": "14:00",
-    "Name": "  מגדיאל                                             ",
-    "City": "הוד השרון",
-    "Street": "מגדיאל",
-    "NumHouse": "67",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.8224781,
+    "lat": 31.8607337
   },
   {
     "DateDonation": "2020-10-16T00:00:00",
@@ -2112,8 +2006,44 @@
     "Street": "הבנים",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.8895372,
-    "lat": 32.3275802
+    "lon": 34.8845912,
+    "lat": 32.1562671
+  },
+  {
+    "DateDonation": "2020-10-16T00:00:00",
+    "FromHour": "08:30",
+    "ToHour": "14:00",
+    "Name": "  מגדיאל                                             ",
+    "City": "הוד השרון",
+    "Street": "מגדיאל",
+    "NumHouse": "67",
+    "AccountType": "",
+    "lon": 34.9023055,
+    "lat": 32.1602771
+  },
+  {
+    "DateDonation": "2020-10-16T00:00:00",
+    "FromHour": "08:30",
+    "ToHour": "14:00",
+    "Name": "רחבת הבנים                                     ",
+    "City": "הוד השרון",
+    "Street": "הבנים",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.8845912,
+    "lat": 32.1562671
+  },
+  {
+    "DateDonation": "2020-10-16T00:00:00",
+    "FromHour": "09:00",
+    "ToHour": "13:30",
+    "Name": "כורזין ליד בנק הפועלים",
+    "City": "גבעתיים",
+    "Street": "כורזין",
+    "NumHouse": "",
+    "AccountType": "",
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2020-10-20T00:00:00",
@@ -2124,8 +2054,8 @@
     "Street": "דרך לב השרון פינת השקמה ",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.919297,
-    "lat": 32.277644
+    "lon": 34.945224,
+    "lat": 32.287673
   },
   {
     "DateDonation": "2020-11-08T00:00:00",
@@ -2135,7 +2065,9 @@
     "City": "אור יהודה",
     "Street": "סיני",
     "NumHouse": "15",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.8518807,
+    "lat": 32.0252652
   },
   {
     "DateDonation": "2020-11-13T00:00:00",
@@ -2146,8 +2078,8 @@
     "Street": "כורזין",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7873263,
-    "lat": 32.0908224
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2020-12-04T00:00:00",
@@ -2157,7 +2089,9 @@
     "City": "גבעתיים",
     "Street": "כורזין",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-01-15T00:00:00",
@@ -2167,7 +2101,9 @@
     "City": "גבעתיים",
     "Street": "כורזין",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-01-18T00:00:00",
@@ -2178,8 +2114,8 @@
     "Street": "ש\"ד גולדה מאיר",
     "NumHouse": "109",
     "AccountType": "",
-    "lon": 34.8547964,
-    "lat": 32.2779609
+    "lon": 34.8526946,
+    "lat": 32.2779514
   },
   {
     "DateDonation": "2021-02-12T00:00:00",
@@ -2190,8 +2126,8 @@
     "Street": "כורזין",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7873263,
-    "lat": 32.0908224
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-03-04T00:00:00",
@@ -2201,7 +2137,9 @@
     "City": "נס ציונה",
     "Street": "ההסתדרות",
     "NumHouse": "62",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.7925541,
+    "lat": 31.9321392
   },
   {
     "DateDonation": "2021-03-19T00:00:00",
@@ -2212,8 +2150,8 @@
     "Street": "כורזין",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7873263,
-    "lat": 32.0908224
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-04-23T00:00:00",
@@ -2224,8 +2162,8 @@
     "Street": "כורזין",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7873263,
-    "lat": 32.0908224
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-05-14T00:00:00",
@@ -2235,7 +2173,9 @@
     "City": "הוד השרון",
     "Street": "הבנים",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.8845912,
+    "lat": 32.1562671
   },
   {
     "DateDonation": "2021-05-14T00:00:00",
@@ -2245,7 +2185,9 @@
     "City": "הוד השרון",
     "Street": "מגדיאל",
     "NumHouse": "67",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.9023055,
+    "lat": 32.1602771
   },
   {
     "DateDonation": "2021-05-14T00:00:00",
@@ -2255,7 +2197,9 @@
     "City": "הוד השרון",
     "Street": "מגדיאל",
     "NumHouse": "67",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.9023055,
+    "lat": 32.1602771
   },
   {
     "DateDonation": "2021-05-14T00:00:00",
@@ -2265,7 +2209,9 @@
     "City": "הוד השרון",
     "Street": "הבנים",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.8845912,
+    "lat": 32.1562671
   },
   {
     "DateDonation": "2021-05-21T00:00:00",
@@ -2276,8 +2222,8 @@
     "Street": "כורזין",
     "NumHouse": "",
     "AccountType": "",
-    "lon": 34.7873263,
-    "lat": 32.0908224
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-06-18T00:00:00",
@@ -2287,7 +2233,9 @@
     "City": "גבעתיים",
     "Street": "כורזין",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-07-16T00:00:00",
@@ -2297,7 +2245,9 @@
     "City": "גבעתיים",
     "Street": "כורזין",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.816523,
+    "lat": 32.0596894
   },
   {
     "DateDonation": "2021-08-13T00:00:00",
@@ -2307,6 +2257,8 @@
     "City": "גבעתיים",
     "Street": "כורזין",
     "NumHouse": "",
-    "AccountType": ""
+    "AccountType": "",
+    "lon": 34.816523,
+    "lat": 32.0596894
   }
 ]
