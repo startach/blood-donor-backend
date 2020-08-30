@@ -1,7 +1,7 @@
 const schedule = require("node-schedule")
 const fetchAndSendData = require("./fetchAndSendData")
 
-//run thr first time
+//run the first time
 fetchAndSendData()
     .then(() => console.log("next round is in 3 hours."))
 
