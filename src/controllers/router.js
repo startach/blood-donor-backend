@@ -74,6 +74,9 @@ router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/homeMenu', homeMenu.getApi)
 
 
+router.use(( req, res, next) => {
+    apiResponse(res,{code:404,message:"not found"})
+})
 router.use((err, req, res, next) => {
     apiResponse(res,{code:500,message:"server error"})
 })
