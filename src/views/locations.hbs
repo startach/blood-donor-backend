@@ -1,27 +1,36 @@
 <link rel="stylesheet" href="/css/locations.css">
-<div style="direction: rtl;">
-    <div class="input-container">
-        <label class="date-input-container" for="datePicker">
-            תאריך
-            <input type="date" class="date-input" name="" id="datePicker">
-        </label>
+<div class="container">
 
-        <label class="city-input-container" for="cityPicker">
-            כתובת
-            <select class="city-input" name="" id="cityPicker">
+    <fieldset >
+        <legend>Download - runs once</legend>
+        <div class="buttonsContainer">
 
-            </select>
-        </label>
-    </div>
+            <a href="/exeFiles/fetchDataFromMada-win.exe" target="_blank" download>
+                <button>windows</button>
+            </a>
+            <a href="/exeFiles/fetchDataFromMada-macos" target="_blank" download>
+                <button>mac os</button>
+            </a>
+            <a href="/exeFiles/fetchDataFromMada-linux" target="_blank" download>
+                <button>linux</button>
+            </a>
+        </div>
 
-    <div id="showData">
+    </fieldset>
+    <div class="space"></div>
+    <fieldset>
+        <legend>Download - runs every 3 hours</legend>
+        <div class="buttonsContainer">
+            <a href="/exeFiles/fetchDataFromMadaEvery3Hours-win.exe" target="_blank" download>
+                <button>windows</button>
+            </a>
+            <a href="/exeFiles/fetchDataFromMadaEvery3Hours-macos" target="_blank" download>
+                <button>mac os</button>
+            </a>
+            <a href="/exeFiles/fetchDataFromMadaEvery3Hours-linux" target="_blank" download>
+                <button>linux</button>
+            </a>
+        </div>
 
-    </div>
+    </fieldset>
 </div>
-
-
-<script>
-    var original = decodeURIComponent("{{{result}}}");
-</script>
-<script src="/scripts/locations.js" ></script>
-

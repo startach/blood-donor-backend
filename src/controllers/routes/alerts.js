@@ -1,5 +1,5 @@
 const ModelsAlerts = require('../../models/alerts');
-
+const apiResponse = require("../../models/apiResponse")
 const moment = require("moment")
 
 
@@ -66,10 +66,10 @@ exports.add = async ({ body }, res) => {
 
 exports.getAlertsApi = async (req, res) => {
     try {
-        const data = await ModelsAlerts.get()
-        res.status(200).json({ data: data || [], message: 'successful request', ok: true, code: 200 })
+        const data = await ModelsAlerts.get() || []
+        apiResponse(res,{data})
+
     } catch(e) {
-        console.log(err);
-        res.status(500).json({ message: 'Ops, could not retrieve data', ok: false, code: 500 })
+        apiResponse(res,{message:"server error",code:500})
     }
 }

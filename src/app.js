@@ -7,14 +7,15 @@ const path = require('path');
 const router = require("./controllers/router")
 const { loadUserData } = require("./middleware/authValidator");
 const helpers = require('./views/helpers/helpers')
-const schedule = require('node-schedule');
-const { getAllLocationsFromServer } = require('./controllers/locations');
+const { redirectIfLoggedOut } = require("./middleware/authValidator");
 
 
 const app = express();
 
+const allowedCorsRoutes = (process.env.CORS_ORIGIN ||"").split(",");
+app.use(cors({credentials: true, origin: allowedCorsRoutes}));
 
-app.use(cors({credentials: true, origin: ['http://localhost:3000',"https://sad-pare-c4309e.netlify.app", "https://blood-donor.netlify.app"]}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
@@ -24,8 +25,8 @@ app.use(helmet())
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
-
 app.use(loadUserData)
+app.use("/exeFiles",redirectIfLoggedOut("/"));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(router)
 
@@ -40,15 +41,6 @@ app.engine(
 		helpers,
 	})
 );
-
-getAllLocationsFromServer();
-
-schedule.scheduleJob('00 00 * * *', function () {
-	getAllLocationsFromServer();
-
-});
-
-
 
 
 module.exports = app;
