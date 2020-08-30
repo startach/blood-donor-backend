@@ -1,4 +1,5 @@
 const ModelsHomeMenuItems = require('../../models/home_menu_items');
+const apiResponse = require("../../models/apiResponse")
 
 
 exports.get = async (req, res, next) => {
@@ -64,10 +65,10 @@ exports.add = async ({ body }, res) => {
 exports.getApi = async (req, res) => {
 
     try {
-        const goals = await ModelsHomeMenuItems.get()
-        res.json({ data: goals || [], ok: true, code: 200 })
+        const data = await ModelsHomeMenuItems.get()
+        apiResponse(res,{data})
     } catch (e) {
-        res.status(500).json({ message: e.message, ok: false, code: 500 })
+        apiResponse(res,{message:"server error",code:500})
     }
 
 }

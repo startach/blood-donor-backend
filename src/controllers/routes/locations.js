@@ -1,6 +1,7 @@
+const deepEquals = require("deep-equal")
 const jsonFile = require("../../models/jsonFile")
 const locationsModule = require("../../models/locations")
-const deepEquals = require("deep-equal")
+const apiResponse = require("../../models/apiResponse")
 
 
 exports.get = (req, res) => {
@@ -13,15 +14,9 @@ exports.getLocationsApi = async (req, res) => {
 
     try {
         const data = await jsonFile.readJsonFile('src/database/locations.json') || []
-        res.status(200).json({data, ok: true, code: 200});
+        apiResponse(res,{data})
     } catch (e) {
-        res.status(200).json(
-            {
-                "code": 500,
-                "ok": false,
-                "message": "server side error"
-            }
-        );
+        apiResponse(res,{message:"server error",code:500})
     }
 }
 exports.setLocationsApi = async (req, res) => {
@@ -42,16 +37,11 @@ exports.setLocationsApi = async (req, res) => {
 
         //update local data
         await jsonFile.writeJsonToFile('src/database/locations.json', data)
-        res.end()
+        apiResponse(res,{message:"updated successfully!"})
 
-    } catch (e) {
-        res.status(200).json(
-            {
-                "code": 500,
-                "ok": false,
-                "message": "server side error"
-            }
-        );
+    } catch ({message}) {
+        apiResponse(res,{message,code:500})
+
     }
 
 }

@@ -9,6 +9,7 @@ const alerts = require("./routes/alerts");
 const homeMenu = require("./routes/homeMenu");
 const {redirectIfLoggedIn, redirectIfLoggedOut} = require("../middleware/authValidator");
 const router = require("express").Router()
+const apiResponse = require("../models/apiResponse")
 
 
 router.all(["/",
@@ -74,7 +75,7 @@ router.get('/api/homeMenu', homeMenu.getApi)
 
 
 router.use((err, req, res, next) => {
-    res.json({ok: false, message: 'Server Error'})
+    apiResponse(res,{code:500,message:"server error"})
 })
 module.exports = router;
 

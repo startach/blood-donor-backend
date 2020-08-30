@@ -1,4 +1,5 @@
 const ModelsGoals = require("../../models/goals");
+const apiResponse = require("../../models/apiResponse")
 
 exports.get = async (req, res) => {
 
@@ -44,10 +45,10 @@ exports.post = async (req, res) => {
 
 exports.apiGet = async (req, res) => {
     try {
-        const data = await ModelsGoals.get() 
-        res.status(200).json({ data: data || [], message: 'successful request', ok: true, code: 200 })
+        const data = await ModelsGoals.get()
+        apiResponse(res,{data})
     } catch (e) {
         console.error(e)
-        res.status(500).json({ message: 'Ops, could not retrieve data', ok: false, code: 500 })
+        apiResponse(res,{message:"server error",code:500})
     }
 }
