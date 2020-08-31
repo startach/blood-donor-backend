@@ -1,4 +1,4 @@
-const { db } = require('./index')
+const {db} = require('./index')
 
 const add = async (data) => {
     await db.collection('alerts').doc().set(data)
@@ -24,7 +24,10 @@ const get = async () => {
     const doc = await alertsRef.get();
     var result = []
     doc.forEach(doc => {
-        result.push({ id: doc.id, ...doc.data() })
+        const data = doc.data()
+        data.addedDate = data.addedDate.toDate();
+        data.expDate = data.expDate.toDate();
+        result.push({id: doc.id, ...data})
     });
     return result;
 };
