@@ -6,7 +6,7 @@ const moment = require("moment")
 exports.get = async (req, res, next) => {
     try {
         let data = await ModelsAlerts.get()
-        data = data.map(x => ({ ...x, expDate: moment(x.expDate.toDate()).format("YYYY-MM-DD") }));
+        data = data.map(x => ({ ...x,addedDate:x.addedDate.toISOString() ,expDate: moment(x.expDate).format("YYYY-MM-DD") }));
         res.render("alerts", { data, selectedNavbarItem: 'alerts' })
     } catch(e) {
         next(e)
@@ -29,7 +29,7 @@ exports.post = async ({ params: { id }, body }, res) => {
         },
         bloodType: Object.keys(body).filter(x => x.includes("bloodType")).map(x => body[x]),
         expDate: moment(body.expDate, "YYYY-MM-DD").toDate(),
-        addedDate: moment(Number(body.addedDate), "s").toDate()
+        addedDate:moment(body.addedDate).toDate()
 
     })
     res.redirect("/alerts");
