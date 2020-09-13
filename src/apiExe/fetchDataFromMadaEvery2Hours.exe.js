@@ -6,8 +6,8 @@ const successMessage = "next round is in 2 hours. please don't close this window
 fetchAndSendData()
     .then(() => console.log(successMessage))
 
-//run every 3 hours
-schedule.scheduleJob('* * */2 * *', function () {
+//run every 2 hours
+schedule.scheduleJob('* */2 * * *', function () {
     fetchAndSendData()
         .then(() => console.log(successMessage))
 });
