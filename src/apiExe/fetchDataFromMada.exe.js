@@ -1,3 +1,7 @@
 const fetchAndSendData = require("./fetchAndSendData")
+const pauseConsole = require("./pauseConsole")
 
-fetchAndSendData();
+
+fetchAndSendData()
+    .then(pauseConsole)
+    .catch(pauseConsole)

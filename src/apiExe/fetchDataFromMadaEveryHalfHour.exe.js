@@ -1,13 +1,19 @@
 const schedule = require("node-schedule")
 const fetchAndSendData = require("./fetchAndSendData")
+const pauseConsole = require("./pauseConsole")
 const successMessage = "next round is in half an hour. please don't close this window...";
 
-//run the first time
+
 fetchAndSendData()
     .then(() => console.log(successMessage))
+    .catch(pauseConsole)
 
-//run every 3 hours
-schedule.scheduleJob('* */30 * * *', function () {
+
+const job = schedule.scheduleJob('*/30 * * * *', function () {
     fetchAndSendData()
         .then(() => console.log(successMessage))
+        .catch(()=>{
+            schedule.cancelJob(job)
+            pauseConsole()
+        })
 });
