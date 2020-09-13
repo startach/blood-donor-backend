@@ -102,6 +102,14 @@ function buildTable(result, date, city) {
             tabCell.classList.add('spacing')
             tabCell.innerHTML = normalizedResults[i][col[j]];
         }
+
+        //create horizontal line
+        tr = table.insertRow(-1);
+        tabCell = tr.insertCell(-1);
+        tabCell.setAttribute("colspan",normalizedResults.length)
+        var div = document.createElement("div")
+        div.classList.add("hrDiv")
+        tabCell.appendChild(div)
     }
 
     // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
