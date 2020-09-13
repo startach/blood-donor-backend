@@ -12,7 +12,7 @@ if (!backendUrl)
 
 //create exe function
 async function createExe(jsPath, outputPath) {
-    await exec([jsPath, '--targets', 'linux,macos,win', '--output', outputPath]);
+    await exec([jsPath, '--targets', 'win', '--output', outputPath]);
 }
 
 //create "data.json" file storing the Environment variable
