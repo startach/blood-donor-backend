@@ -7,7 +7,7 @@ fetchAndSendData()
     .then(() => console.log(successMessage))
 
 //run every 3 hours
-schedule.scheduleJob('* */3 * * *', function () {
+schedule.scheduleJob('* * */3 * *', function () {
     fetchAndSendData()
         .then(() => console.log(successMessage))
 });
