@@ -1,18 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 300px;
 }
 
-.buttonsContainer {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.buttonsContainer > * {
-    width: 30%;
-}
-.buttonsContainer button {
+.button  {
     width: 100%;
     height: 40px;
     background-color: var(--color-entry-background);
@@ -21,13 +13,13 @@
     transition: all .2s linear;
     cursor: pointer;
 }
-.buttonsContainer button:focus {
+.button:focus {
     outline: none;
 }
-.buttonsContainer button:hover {
+.button:hover {
     transform: scale(1.05)  ;
 
 }
 .space{
-    height: 30px;
+    height: 10px;
 }
