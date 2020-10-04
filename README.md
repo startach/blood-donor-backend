@@ -39,7 +39,7 @@ or
  npm run build 
  ```
  
- 5. run the app/server using one of the following commands
+ 5. run the app/server using one of the following command
 ```
 npm start
 or
