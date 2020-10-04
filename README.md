@@ -21,23 +21,31 @@ git clone git@github.com:startach/blood-donor-backend.git
     - Create new .env file in the root directory
     - add the following variables to it(you can get them from the firebase project settings page)
         ```
-        FIREBASE_API_KEY = 
-        FIREBASE_AUTH_DOMAIN = 
-        FIREBASE_DATABASE_URL= 
-        FIREBASE_PROJECT_ID = 
-        FIREBASE_STORAGE_BUCKET = 
-        FIREBASE_MESSAGING_SENDER_ID = 
-        FIREBASE_APP_ID = 
-        GOOGLE_GEOCODER_API=
+         FIREBASE_API_KEY = 
+         FIREBASE_AUTH_DOMAIN = 
+         FIREBASE_DATABASE_URL= 
+         FIREBASE_PROJECT_ID =
+         FIREBASE_STORAGE_BUCKET =
+         FIREBASE_MESSAGING_SENDER_ID =
+         FIREBASE_APP_ID =
+         GOOGLE_GEOCODER_API=
+         MADA_POST_URL_ROUTE=
+         CORS_ORIGIN= 
         ```
-            
- 4. run the app/server using one of the following commands
+ 4. (optional) run the following command to generate the exe files (this will only work after adding the .env file ot the project)
+ ```
+ npm run buildExe
+or
+ npm run build 
+ ```
+ 
+ 5. run the app/server using one of the following commands
 ```
 npm start
 or
 npm run dev (runs with nodemon)
 ```
-4. Open http://localhost:4000/ 
+6. Open http://localhost:4000/ 
 
 
 ## Documintation 
