@@ -1,17 +1,18 @@
 const {firebase} = require("../../database")
+const apiResponse = require("../../models/apiResponse")
 
-exports.get = (req, res) => res.render('resetpassword')
+
 
 exports.post = (req, res) => {
     const emailAddress = req.body.emailAddress;
 
     firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
-        return res.render('resetpassword', {
+         apiResponse(res, {
             message: 'Please check your email to reset your password',
         }) // Email sent.
     }).catch((e) => {
-        return res.render('resetpassword', {
-            error: e,
+         apiResponse(res, {
+            message: e.message, code: 500
         }) // An error happened.
     });
 }

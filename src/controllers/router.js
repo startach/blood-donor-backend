@@ -28,12 +28,9 @@ router.all([
 
 //routes that require the user to be logged out -----------------------
 router.route('/login')
-    .get(login.get)
     .post(login.post)
 
-
 router.route('/resetPassword')
-    .get(resetPassword.get)
     .post(resetPassword.post)
 
 
