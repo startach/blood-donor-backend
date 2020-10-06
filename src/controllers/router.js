@@ -7,6 +7,8 @@ const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
 const alerts = require("./routes/alerts");
 const homeMenu = require("./routes/homeMenu");
+const notifications = require("./routes/notifications");
+
 const {redirectIfLoggedIn, redirectIfLoggedOut} = require("../middleware/authValidator");
 const router = require("express").Router()
 const apiResponse = require("../models/apiResponse")
@@ -70,8 +72,11 @@ router.post('/api/locations', locations.setLocationsApi);
 router.get('/iframe/locations', locations.getLocationsIframe);
 router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/goals', goals.apiGet)
-router.get('/api/alerts', alerts.getAlertsApi)
 router.get('/api/homeMenu', homeMenu.getApi)
+
+router.get("/notifications/public_key", notifications.getPublicKey )
+router.post("/notifications/subscribe", notifications.subscribe )
+
 
 
 router.use(( req, res, next) => {
