@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi');
 
 const schema = Joi.object({
     endpoint: Joi.string(),
+    expirationTime: Joi.any(),
     keys: Joi.object({
         auth: Joi.string(),
         p256dh: Joi.string()
