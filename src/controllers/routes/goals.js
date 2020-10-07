@@ -17,30 +17,20 @@ exports.get = async (req, res) => {
 
 }
 
-exports.post = async (req, res) => {
 
+
+
+
+exports.post = async (req, res) => {
+console.log(req.body);
     try {
         await ModelsGoals.edit(Number(req.body.current), Number(req.body.goal));
 
-        res.render('goals', {
-            data: {
-                current: req.body.current,
-                goal: req.body.goal
-            },
-            message: 'Saved',
-            selectedNavbarItem: 'goals'
-        })
-    } catch (e) {
-        console.error(e)
-        res.render('goals', {
-            data: {
-                current: req.body.current,
-                goal: req.body.goal
-            },
-            error: e.message,
-            selectedNavbarItem: 'goals'
-        })
+        apiResponse(res, { message: " added successfully" });
+    } catch ({ message }) {
+    apiResponse(res, { message, code: 500 });
     }
+
 }
 
 exports.apiGet = async (req, res) => {
@@ -52,3 +42,32 @@ exports.apiGet = async (req, res) => {
         apiResponse(res,{message:"server error",code:500})
     }
 }
+
+
+
+
+// exports.post = async (req, res) => {
+
+//     try {
+//         await ModelsGoals.edit(Number(req.body.current), Number(req.body.goal));
+
+//         res.render('goals', {
+//             data: {
+//                 current: req.body.current,
+//                 goal: req.body.goal
+//             },
+//             message: 'Saved',
+//             selectedNavbarItem: 'goals'
+//         })
+//     } catch (e) {
+//         console.error(e)
+//         res.render('goals', {
+//             data: {
+//                 current: req.body.current,
+//                 goal: req.body.goal
+//             },
+//             error: e.message,
+//             selectedNavbarItem: 'goals'
+//         })
+//     }
+// }
