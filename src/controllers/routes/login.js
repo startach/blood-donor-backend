@@ -1,10 +1,10 @@
 const { firebase } = require("../../database");
 const apiResponse = require("../../models/apiResponse")
 
-// exports.get = (req, res) => {
-//   if (firebase.auth().currentUser) return res.redirect("/");
-//   res.render("login");
-// };
+exports.get = (req, res) => {
+  if (firebase.auth().currentUser) return res.redirect("/");
+  res.render("login");
+};
 
 exports.post = (req, res) => {
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
