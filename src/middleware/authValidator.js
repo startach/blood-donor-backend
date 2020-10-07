@@ -1,4 +1,5 @@
 const {firebase} = require("../database")
+var admin = require('firebase-admin');
 
 exports.redirectIfLoggedIn = (route) => (req, res, next) => {
     if (firebase.auth().currentUser)
