@@ -1,6 +1,6 @@
 const notificationSubscribers = require("../../models/notificationSubscribers");
 const apiResponse = require("../../models/apiResponse")
-const publicKey = process.env.NORIFICATIONS_PUBLIC_KEY;
+const publicKey = process.env.NOTIFICATIONS_PUBLIC_KEY;
 
 
 exports.subscribe = async (req, res) => {
