@@ -6,7 +6,7 @@ exports.add = async function add(subscriptionObject) {
     if(data.length)
         return subscriptionObject;
 
-    await db.collection("subscriptions").set(subscriptionObject)
+    await db.collection("subscriptions").doc().set(subscriptionObject)
     return subscriptionObject;
 }
 

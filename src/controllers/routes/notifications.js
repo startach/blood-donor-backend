@@ -5,9 +5,15 @@ const publicKey = process.env.NORIFICATIONS_PUBLIC_KEY;
 
 exports.subscribe = async (req, res) => {
 
-    const subscription = req.body;
-    await notificationSubscribers.add(subscription)
-    apiResponse(res, {message: "registered successfully"})
+    try {
+        const subscription = req.body;
+        await notificationSubscribers.add(subscription)
+        apiResponse(res, {message: "registered successfully"})
+    } catch({message}) {
+        console.error(message)
+        apiResponse(res,{message:"server error",code:500})
+    }
+    
 
     //todo- schedule push notifications
 }
