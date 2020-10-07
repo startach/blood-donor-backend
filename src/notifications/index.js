@@ -1,4 +1,7 @@
 const webPush = require("web-push")
+const  {getAll} = require("../models/notificationSubscribers")
+const Joi = require('@hapi/joi');
+
 
 const publicKey =process.env.NOTIFICATIONS_PUBLIC_KEY;
 const privateKey =process.env.NOTIFICATIONS_PRIVATE_KEY;
@@ -6,6 +9,43 @@ const privateKey =process.env.NOTIFICATIONS_PRIVATE_KEY;
 if(!publicKey || !privateKey)
     throw new Error("NOTIFICATIONS_PUBLIC_KEY and NOTIFICATIONS_PRIVATE_KEY must be set ")
 
+
 webPush.setVapidDetails("mailto:moris.rafol@gmail.com",publicKey,privateKey);
+exports.webPush = webPush;
+
 //todo remove my email
-module.exports = webPush;
+
+
+//
+// {
+//     title:{
+//         he:"",
+//         en:"",
+//         ar:""
+//     },
+//     subTitle:{
+//         he:"",
+//         en:"",
+//         ar:""
+//     }
+// }
+const schema = Joi.object({
+    title: Joi.object({
+        en: Joi.string(),
+        he: Joi.string(),
+        ar: Joi.string()
+    }),
+    src: Joi.string(),
+    redirectionLink: Joi.string(),
+})
+
+exports.pushNotification = function (data){
+    //todo use joi
+    const payload = JSON.stringify(data)
+
+    getAll().then(subsArr=>{
+        subsArr.forEach(sub=> webPush.sendNotification(sub, payload))
+    })
+
+}
+
