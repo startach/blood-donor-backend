@@ -1,7 +1,8 @@
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
 var firebase = require("firebase");
-
+var admin = require("firebase-admin");
+var serviceAccount = require("../../private/backendAdmin.json");
 // Loading the entire SDK is not efficient for production web apps.
 // Use this option for development purposes only.
 // var firebase = require("firebase");
@@ -29,4 +30,14 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 
-module.exports = {db,firebase};
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://webahead6-blood-donor-backend.firebaseio.com"
+});
+
+module.exports = {db,firebase,admin};
+
+
+
+
+
