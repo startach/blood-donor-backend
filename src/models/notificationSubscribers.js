@@ -19,3 +19,11 @@ exports.getAll = async function () {
     return await subscribers.getAll()
 }
 
+exports.remove = async function (id) {
+    return await subscribers.remove(id)
+}
+
+exports.updateLastResponseDate = async function (id) {
+    return await subscribers.updateLastResponseDate(id)
+}
+

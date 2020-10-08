@@ -1,5 +1,6 @@
+const moment = require("moment");
 const webPush = require("web-push")
-const { getAll } = require("../models/notificationSubscribers")
+const {getAll,updateLastResponseDate,remove} = require("../models/notificationSubscribers")
 const Joi = require('@hapi/joi');
 
 
@@ -44,14 +45,22 @@ const schema = Joi.object({
 })
 
 exports.pushNotification = function (data) {
-    //todo use joi
+
+
     if (schema.validate(data).error)
         throw new Error(schema.validate(data).error.message)
-        
+
     const payload = JSON.stringify(data)
-    console.log(payload);
+
     getAll().then(subsArr => {
-        subsArr.forEach(sub => webPush.sendNotification(sub, payload))
+        subsArr.forEach(sub =>
+            webPush.sendNotification(sub, payload)
+                .then(()=> updateLastResponseDate(sub.id))
+                .catch(()=>{
+                    if( moment(sub.lastResponseDate).add("60","days").isBefore(moment()))
+                        remove(sub.id)
+                }))
+
     }).catch(({message}) => console.error(message))
 
 }
