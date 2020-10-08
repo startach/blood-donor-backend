@@ -40,6 +40,7 @@ const schema = Joi.object({
         he: Joi.string(),
         ar: Joi.string()
     }),
+    type: Joi.string().valid('personalGoal', 'alert')
 })
 
 exports.pushNotification = function (data) {
@@ -48,10 +49,10 @@ exports.pushNotification = function (data) {
         throw new Error(schema.validate(data).error.message)
         
     const payload = JSON.stringify(data)
-
+    console.log(payload);
     getAll().then(subsArr => {
         subsArr.forEach(sub => webPush.sendNotification(sub, payload))
-    })
+    }).catch(({message}) => console.error(message))
 
 }
 

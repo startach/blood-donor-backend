@@ -8,6 +8,8 @@ const router = require("./controllers/router")
 const { loadUserData } = require("./middleware/authValidator");
 const helpers = require('./views/helpers/helpers')
 const { redirectIfLoggedOut } = require("./middleware/authValidator");
+const schedule = require("node-schedule")
+const {pushNotification} = require('./notifications')
 
 
 const app = express();
@@ -41,6 +43,28 @@ app.engine(
 		helpers,
 	})
 );
+
+// schedule.scheduleJob('* 0 * * * *', () => {
+
+	try {
+		const data = {
+			title: {
+				en: 'hello0',
+				he: 'hello',
+				ar: 'hello'
+			},
+			subTitle: {
+				en: 'hhh',
+				he: 'hello',
+				ar: 'hello'
+			},
+			type: 'personalGoal'
+		}
+		 pushNotification(data)
+	} catch({message}) {
+		console.error(message)
+	}
+// })
 
 
 module.exports = app;
