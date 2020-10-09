@@ -44,7 +44,7 @@ app.engine(
 	})
 );
 
-// schedule.scheduleJob('* 0 * * * *', () => {
+schedule.scheduleJob('* 14 * * * *', () => {
 
 	try {
 		const data = {
@@ -64,7 +64,10 @@ app.engine(
 	} catch({message}) {
 		console.error(message)
 	}
-// })
+})
+
+
+
 
 
 module.exports = app;

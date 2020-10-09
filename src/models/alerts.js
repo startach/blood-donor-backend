@@ -1,6 +1,6 @@
 const QueriesAlerts = require('../database/alerts');
 const Joi = require('@hapi/joi');
-const { pushNotification } = require('../notifications');
+const {sendAlertNotification} = require("../notifications");
 
 const schema = Joi.object({
     title: Joi.object({
@@ -24,7 +24,7 @@ const edit = async (id, alert) => {
         throw new Error("id should be defined");
     }
     if (schema.validate(alert).error)
-        throw new Error (schema.validate(alert).error.message);
+        throw new Error(schema.validate(alert).error.message);
     return await QueriesAlerts.edit(id, alert);
 }
 
@@ -43,15 +43,19 @@ const del = async (id) => {
 const add = async (alert) => {
     if (schema.validate(alert).error)
         throw new Error(schema.validate(alert).error);
-        const newAlert = {
-            title: alert.title,
-            subTitle: alert.context,
-            type: 'alert'
-        }
-    pushNotification(newAlert)
-    return await QueriesAlerts.add(alert);
+
+    const id = await QueriesAlerts.add(alert);
+    sendAlertNotification(id, 1000 * 60 * 15);
+
+    return id;
+
 }
 
+const getById = async (id) => {
+
+    return await QueriesAlerts.getById(id);
+
+}
 
 
 module.exports = {
@@ -59,4 +63,5 @@ module.exports = {
     get,
     del,
     add,
+    getById
 }

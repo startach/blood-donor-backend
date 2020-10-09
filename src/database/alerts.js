@@ -1,8 +1,9 @@
 const {db} = require('./index')
 
 const add = async (data) => {
-    await db.collection('alerts').doc().set(data)
-    return data
+    const doc = await db.collection('alerts').doc()
+    doc.set(data)
+    return doc.id;
 }
 
 
@@ -32,9 +33,20 @@ const get = async () => {
     return result;
 };
 
+const getById = async (id) => {
+    const doc = await db.collection('alerts').doc(id).get();
+    const data = doc.data()
+    data.addedDate = data.addedDate.toDate();
+    data.id =  doc.id
+    return data;
+
+}
+
+
 module.exports = {
     add,
     edit,
     del,
-    get
+    get,
+    getById
 };
