@@ -39,8 +39,9 @@ exports.updateLastResponseDate = async function (id) {
     const doc = await db.collection('subscriptions').doc(id)
     const data = (await doc.get()).data();
     data.lastResponseDate = new Date();
-    await doc.set(data)
+    await db.collection('subscriptions').doc(id).set(data)
 }
+
 
 
 
