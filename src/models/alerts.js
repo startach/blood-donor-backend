@@ -51,7 +51,6 @@ const add = async (alert) => {
 }
 
 const getById = async (id) => {
-    console.log(id)
     return await QueriesAlerts.getById(id);
 
 }
