@@ -44,8 +44,7 @@ app.engine(
 	})
 );
 
-schedule.scheduleJob('* 14 * * * *', () => {
-
+ schedule.scheduleJob('0 0 12 * * *', () => {
 	try {
 		const data = {
 			title: {
@@ -64,7 +63,7 @@ schedule.scheduleJob('* 14 * * * *', () => {
 	} catch({message}) {
 		console.error(message)
 	}
-})
+ })
 
 
 
