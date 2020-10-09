@@ -1,8 +1,9 @@
 const moment = require("moment");
 const webPush = require("web-push")
+const {getById:getAlertById} = require("../models/alerts");
 const {getAll,updateLastResponseDate,remove} = require("../models/notificationSubscribers")
 const Joi = require('@hapi/joi');
-const QueriesAlerts = require("../models/alerts");
+
 
 
 const publicKey = process.env.NOTIFICATIONS_PUBLIC_KEY;
@@ -41,8 +42,9 @@ const schema = Joi.object({
         en: Joi.string(),
         he: Joi.string(),
         ar: Joi.string()
-    }),
-    type: Joi.string().valid('personalGoal', 'alert')
+    }).optional(),
+    type: Joi.string().valid('personalGoal', 'alert'),
+    bloodType: Joi.array().items(Joi.string()).optional()
 })
 
 exports.pushNotification = function (data) {
@@ -68,12 +70,13 @@ exports.pushNotification = function (data) {
 
 exports.sendAlertNotification = function(id, delayMS) {
     setTimeout(() => {
-        QueriesAlerts.getById(id).then(data => {
+
+        getAlertById(id).then(data => {
             const newAlert = {
                 title: data.title,
                 subTitle: data.context,
                 type: 'alert',
-                // bloodType: data.bloodType || []
+                bloodType: data.bloodType || []
             }
             exports.pushNotification(newAlert)
         })
