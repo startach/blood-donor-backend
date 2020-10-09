@@ -1,6 +1,5 @@
 const QueriesAlerts = require('../database/alerts');
 const Joi = require('@hapi/joi');
-const {sendAlertNotification} = require("../notifications");
 
 const schema = Joi.object({
     title: Joi.object({
@@ -52,11 +51,10 @@ const add = async (alert) => {
 }
 
 const getById = async (id) => {
-
+    console.log(id)
     return await QueriesAlerts.getById(id);
 
 }
-
 
 module.exports = {
     edit,
@@ -65,3 +63,5 @@ module.exports = {
     add,
     getById
 }
+
+const {sendAlertNotification} = require("../notifications");
