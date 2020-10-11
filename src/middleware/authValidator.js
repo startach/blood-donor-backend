@@ -1,3 +1,4 @@
+const { response } = require("express");
 const { relativeTimeRounding } = require("moment");
 const {admin} = require("../database")
 
@@ -23,6 +24,7 @@ exports.loadUserData =async (req, res,next) => {
     }   
     catch(e){
         res.locals.signedIn = false; 
+        res.clearCookie("session")
     }
 
     next()
