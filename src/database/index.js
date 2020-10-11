@@ -3,6 +3,7 @@
 var firebase = require("firebase");
 var admin = require("firebase-admin");
 var serviceAccount = require("../../private/backendAdmin.json");
+
 // Loading the entire SDK is not efficient for production web apps.
 // Use this option for development purposes only.
 // var firebase = require("firebase");
@@ -26,13 +27,13 @@ var firebaseConfig = {
 
 
 firebase.initializeApp(firebaseConfig);
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
 
 const db = firebase.firestore();
 
-
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://webahead6-blood-donor-backend.firebaseio.com"
+   credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://webahead6-blood-donor-backend.firebaseio.com",
 });
 
 module.exports = {db,firebase,admin};

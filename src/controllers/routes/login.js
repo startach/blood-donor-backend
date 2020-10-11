@@ -1,6 +1,6 @@
-const { firebase } = require("../../database");
+const { firebase,admin } = require("../../database");
 const apiResponse = require("../../models/apiResponse")
-var admin = require('firebase-admin');
+
 
 exports.get = (req, res) => {
   if (firebase.auth().currentUser) return res.redirect("/");
@@ -8,24 +8,33 @@ exports.get = (req, res) => {
 };
 
 exports.post = (req, res) => {
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
-    firebase.auth().currentUser.getIdToken( true).then(function(idToken) {return     user.getIdToken()
-    });
-    admin.auth().verifyIdToken(idToken)
-    .then(decodedToken => {
-      console.log(decodedToken);
-      let uid = decodedToken.uid;
-      // ...
+  const expiresIn = 60 * 60 * 24 * 5 * 1000;
+
       
-    }).catch(function(error) {
-      // Handle error
-    });
-    firebase
-    .auth()
-    .signInWithEmailAndPassword(req.body.email, req.body.password)
-    .then(user =>{console.log(user)
+      firebase
+      .auth()
+      .signInWithEmailAndPassword(req.body.email, req.body.password)
+    .then(user =>firebase.auth().currentUser.getIdToken())
+    .then(idToken =>
+        admin.auth().createSessionCookie(idToken, {expiresIn}))
+    .then(sessionCookie=>{
+        res.cookie("session",sessionCookie,{maxAge:expiresIn})
+        console.log(sessionCookie);
+        return firebase.auth().signOut()
     })
     .then(() => apiResponse(res,{message:"successfuly"}))
     .catch(({message}) => apiResponse(res,{message,code:500}))
     ;
+
 } 
+
+exports.isLoggedIn = (req,res) => {
+  apiResponse(res, {data: {isLoggedIn:res.locals.signedIn}})
+
+
+}
+
+exports.logOut =  (req, res) => {
+  res.clearCookie('session')
+  apiResponse(res,{message:"Logged Out"})
+}
