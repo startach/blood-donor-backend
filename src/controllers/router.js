@@ -2,7 +2,6 @@ const locations = require("./routes/locations");
 const home = require("./routes/home");
 const goals = require("./routes/goals");
 const login = require("./routes/login");
-const logout = require("./routes/logout");
 const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
 const alerts = require("./routes/alerts");
