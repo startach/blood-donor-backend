@@ -45,18 +45,12 @@ exports.delete = async ({ params: { id } }, res) => {
 exports.add = async ({ body }, res) => {
 
     try {
-        await ModelsHomeMenuItems.add({
-            title: {
-                he: body.title_he,
-                en: body.title_en,
-                ar: body.title_ar,
-            },
-            src: body.src,
-            redirectionLink: body.redirectionLink
-        })
-        res.redirect("/homeMenu")
+        await ModelsHomeMenuItems.add(
+          body
+        )
+        apiResponse(res, { message: " edit successfully" });
     } catch ({ message }) {
-        console.error(message)
+      apiResponse(res, { message, code: 500 });
     }
 }
 
