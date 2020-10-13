@@ -37,7 +37,7 @@ const schema = Joi.object({
         en: Joi.string(),
         he: Joi.string(),
         ar: Joi.string()
-    }),
+    }).optional(),
     subTitle: Joi.object({
         en: Joi.string(),
         he: Joi.string(),
