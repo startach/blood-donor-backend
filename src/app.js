@@ -47,16 +47,6 @@ app.engine(
  schedule.scheduleJob('0 0 12 * * *', () => {
 	try {
 		const data = {
-			title: {
-				en: 'hello0',
-				he: 'hello',
-				ar: 'hello'
-			},
-			subTitle: {
-				en: 'hhh',
-				he: 'hello',
-				ar: 'hello'
-			},
 			type: 'personalGoal'
 		}
 		 pushNotification(data)
