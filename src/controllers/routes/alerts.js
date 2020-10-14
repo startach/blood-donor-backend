@@ -38,6 +38,7 @@ exports.delete = async ({ params: { id } }, res) => {
 };
 
 exports.add = async (req, res) => {
+  console.log(req.body);
   const newAlert = req.body;
   try {
     await ModelsAlerts.add({ ...newAlert, addedDate: new Date() });
