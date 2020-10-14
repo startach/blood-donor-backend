@@ -14,6 +14,7 @@ const schema = Joi.object({
     ar: Joi.string(),
   }),
   bloodType: Joi.array().items(Joi.string()),
+  member: Joi.boolean(),
   addedDate: Joi.date(),
 });
 
