@@ -6,6 +6,7 @@ const resetPassword = require("./routes/resetPassword");
 const changePassword = require("./routes/changePassword");
 const alerts = require("./routes/alerts");
 const homeMenu = require("./routes/homeMenu");
+const generalSetting = require("./routes/generalSetting");
 
 const {
   redirectIfLoggedIn,
@@ -30,7 +31,7 @@ router.all(["/login", "/resetPassword"], redirectIfLoggedIn("/"));
 
 //routes that require the user to be logged out -----------------------
 router.route("/login").get(login.get).post(login.post);
-router.get("/isLoggedIn", login.isLoggedIn)
+router.get("/isLoggedIn", login.isLoggedIn);
 
 router.route("/resetPassword").post(resetPassword.post);
 
@@ -57,6 +58,11 @@ router.post("/homeMenu/delete/:id", homeMenu.delete);
 router.post("/homeMenu/:id", homeMenu.post);
 
 router.get("/locations", locations.get);
+
+router.post("/genernalSetting", generalSetting.add);
+// router.post("/genernalSetting/delete/:id", genernalSetting.delete);
+// router.post("/genernalSetting/:id", genernalSetting.post);
+router.get("/api/genernalSetting", generalSetting.getGeneralSettingApi);
 
 //routes that work all the time ------------------------------------
 router.get("/api/locations", locations.getLocationsApi);
